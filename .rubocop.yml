@@ -1,0 +1,30 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.0
+
+Layout/LineLength:
+  Exclude:
+    - config/initializers/simple_form_bootstrap.rb
+    - config/initializers/simple_form.rb
+
+Metrics/AbcSize:
+  Exclude:
+    - db/migrate/**/*
+
+Metrics/BlockLength:
+  Exclude:
+    - config/environments/**/*
+    - config/initializers/simple_form_bootstrap.rb
+    - spec/**/*
+
+Metrics/MethodLength:
+  Exclude:
+    - db/migrate/**/*
+
+Style/Documentation:
+  Enabled: false
