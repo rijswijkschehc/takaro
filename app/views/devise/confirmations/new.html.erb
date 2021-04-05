@@ -1,0 +1,24 @@
+<div class="row justify-content-center">
+  <div class="col-sm-10 col-md-8 col-lg-4 mt-5">
+    <div class="card">
+      <div class="card-header"><%= _('Resend confirmation instructions') %></div>
+      <div class="card-body">
+        <%= simple_form_for(resource,
+                            as: resource_name,
+                            url: confirmation_path(resource_name),
+                            wrapper: :floating_labels_form,
+                            defaults: { placeholder: 'true' },
+                            html: { method: :post }) do |f| %>
+          <%= f.input :email,
+                      autofocus: true,
+                      value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email),
+                      input_html: { autocomplete: 'email' } %>
+          <%= f.submit _('Resend confirmation instructions'), class: 'btn btn-primary w-100' %>
+        <% end %>
+      </div>
+      <div class="card-footer text-center">
+        <%= render 'devise/shared/links' %>
+      </div>
+    </div>
+  </div>
+</div>

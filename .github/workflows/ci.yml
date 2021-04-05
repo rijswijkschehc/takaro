@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
+      CUCUMBER_PUBLISH_TOKEN: ${{ secrets.CUCUMBER_PUBLISH_TOKEN }}
+    services:
+      postgres:
+        image: postgres:12.5
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_USER: takaro
+          POSTGRES_PASSWORD: takaro
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0.0
+          bundler-cache: true
+      - name: Install modules
+        run: yarn
+      - name: Run RuboCop
+        run: bin/rubocop --color
+      - name: Run ERB Lint
+        run: bin/erblint app/views
+      - name: Run eslint
+        run: yarn run eslint --color app/frontend config/webpack
+      - name: Run stylelint
+        run: npx stylelint --color "app/frontend/stylesheets/**/*.scss"
+      - name: Run gherkin-lint
+        run: yarn run gherkin-lint features
+      - name: Run Brakeman
+        run: bin/brakeman
+      - name: Prepare the database
+        run: RAILS_ENV=test bin/rake db:test:prepare
+      - name: Run RSpec
+        run: bin/rspec --format Fuubar --color spec
+      - name: Run Cucumber
+        run: bin/cucumber --format progress --color --publish

@@ -1,0 +1,27 @@
+<div class="row justify-content-center">
+  <div class="col-sm-10 col-md-8 col-lg-4 mt-5">
+    <div class="card">
+      <div class="card-header"><%= _('Join Riswa') %></div>
+      <div class="card-body">
+        <%= simple_form_for(resource,
+                            as: resource_name,
+                            url: registration_path(resource_name),
+                            wrapper: :floating_labels_form,
+                            defaults: { placeholder: 'true' }) do |f| %>
+          <%= f.input :email,
+                      autofocus: true,
+                      input_html: { autocomplete: 'email' } %>
+          <%= f.input :password,
+                      hint: format(_('%<minimum_password_length>i characters minimum'),
+                                   minimum_password_length: @minimum_password_length),
+                      input_html: { autocomplete: 'password' } %>
+          <%= f.input :password_confirmation %>
+          <%= f.submit _('Join Takaro'), class: 'btn btn-primary w-100' %>
+        <% end %>
+      </div>
+      <div class="card-footer text-center">
+        <%= render 'devise/shared/links' %>
+      </div>
+    </div>
+  </div>
+</div>

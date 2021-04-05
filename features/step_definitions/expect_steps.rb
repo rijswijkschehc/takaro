@@ -9,3 +9,9 @@ Then 'a(n) {string} alert containing {string} is displayed' do |type, content|
                            with: { class: "alert alert-#{type}" },
                            text: /#{content}/)
 end
+
+Then 'a validation error containing {string} is displayed' do |content|
+  expect(page).to have_tag(:div,
+                           with: { class: 'invalid-feedback' },
+                           text: /#{content}/)
+end

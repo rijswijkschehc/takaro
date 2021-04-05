@@ -1,0 +1,5 @@
+<tr>
+  <td><%= user.email %></td>
+  <td><%= user.created_at %></td>
+  <td><%= safe_join(user.roles.map(&:badge)) %></td>
+</tr>

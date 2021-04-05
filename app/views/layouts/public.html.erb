@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Takaro</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_pack_tag 'application', media: 'all' %>
+  <%= javascript_pack_tag 'application' %>
+</head>
+
+<body>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <%= link_to 'Takaro', root_path, class: 'navbar-brand' %>
+    <%= link_to _('Sign in'), new_user_session_path, class: 'btn btn-outline-primary' %>
+  </div>
+</nav>
+<%= render_flash_messages %>
+<%= yield %>
+</body>
+</html>
