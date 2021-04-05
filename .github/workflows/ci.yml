@@ -36,7 +36,7 @@ jobs:
       - name: Run eslint
         run: yarn run eslint --color app/frontend config/webpack
       - name: Run stylelint
-        run: npx stylelint --color "app/frontend/stylesheets/**/*.scss"
+        run: yarn run stylelint --color "app/frontend/stylesheets/**/*.scss"
       - name: Run gherkin-lint
         run: yarn run gherkin-lint features
       - name: Run Brakeman
