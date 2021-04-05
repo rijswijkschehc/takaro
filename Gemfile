@@ -15,6 +15,7 @@ gem 'pry-rails', '~> 0.3'
 gem 'pry-stack_explorer', '~> 0.6'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 6.1.1'
+gem 'simple_form', '~> 5.1.0'
 gem 'webpacker', '~> 5.0'
 
 group :development do
