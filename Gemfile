@@ -52,3 +52,7 @@ group :test do
   gem 'shoulda-matchers', '~> 4.5'
   gem 'simplecov', require: false
 end
+
+group :production do
+  gem 'mailgun-ruby', '~> 1.2.4'
+end

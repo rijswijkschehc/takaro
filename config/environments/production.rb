@@ -58,6 +58,14 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "takaro_production"
 
+  config.action_mailer.default_url_options = { host: 'rhc-takaro.herokuapp.com' }
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+    api_key: Credentials.fetch(:mailgun, :api_key),
+    domain: 'mg.rhcspeelwijze.nl',
+    api_host: 'api.eu.mailgun.net'
+  }
+
   config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.
