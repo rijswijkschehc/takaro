@@ -18,6 +18,8 @@ gem 'puma', '~> 5.0'
 gem 'pundit', '~> 2.1'
 gem 'rails', '~> 6.1.1'
 gem 'rolify', '~> 5.3'
+gem 'sentry-rails', '~> 4.3.3'
+gem 'sentry-ruby', '~> 4.3.1'
 gem 'simple_form', '~> 5.1.0'
 gem 'translation', '~> 1.23'
 gem 'webpacker', '~> 5.0'
@@ -34,8 +36,6 @@ group :development do
   gem 'rubocop-performance', '~> 1.9', require: false
   gem 'rubocop-rails', '~> 2.9', require: false
   gem 'rubocop-rspec', '~> 2.1', require: false
-  gem 'sentry-rails', '~> 4.3.3'
-  gem 'sentry-ruby', '~> 4.3.1'
   gem 'spring'
 end
 
