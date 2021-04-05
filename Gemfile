@@ -34,6 +34,8 @@ group :development do
   gem 'rubocop-performance', '~> 1.9', require: false
   gem 'rubocop-rails', '~> 2.9', require: false
   gem 'rubocop-rspec', '~> 2.1', require: false
+  gem 'sentry-rails', '~> 4.3.3'
+  gem 'sentry-ruby', '~> 4.3.1'
   gem 'spring'
 end
 

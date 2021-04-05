@@ -163,6 +163,11 @@ GEM
       rubocop
       smart_properties
     erubi (1.10.0)
+    faraday (1.3.0)
+      faraday-net_http (~> 1.0)
+      multipart-post (>= 1.2, < 3)
+      ruby2_keywords
+    faraday-net_http (1.0.1)
     ffi (1.15.0)
     fuubar (2.5.1)
       rspec-core (~> 3.0)
@@ -201,6 +206,7 @@ GEM
     minitest (5.14.4)
     msgpack (1.4.2)
     multi_test (0.1.2)
+    multipart-post (2.1.1)
     nio4r (2.5.7)
     nokogiri (1.11.2-x86_64-darwin)
       racc (~> 1.4)
@@ -328,6 +334,7 @@ GEM
       rubocop (~> 1.0)
       rubocop-ast (>= 1.1.0)
     ruby-progressbar (1.11.0)
+    ruby2_keywords (0.0.4)
     rubyzip (2.3.0)
     selenium-webdriver (4.0.0.beta2)
       childprocess (>= 0.5, < 5.0)
@@ -335,6 +342,16 @@ GEM
       rubyzip (>= 1.2.2)
       websocket (~> 1.0)
     semantic_range (3.0.0)
+    sentry-rails (4.3.3)
+      railties (>= 5.0)
+      sentry-ruby-core (~> 4.3.0)
+    sentry-ruby (4.3.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      faraday (>= 1.0)
+      sentry-ruby-core (= 4.3.1)
+    sentry-ruby-core (4.3.1)
+      concurrent-ruby
+      faraday
     shoulda-matchers (4.5.1)
       activesupport (>= 4.2.0)
     simple_form (5.1.0)
@@ -415,6 +432,8 @@ DEPENDENCIES
   rubocop-rails (~> 2.9)
   rubocop-rspec (~> 2.1)
   selenium-webdriver (= 4.0.0.beta2)
+  sentry-rails (~> 4.3.3)
+  sentry-ruby (~> 4.3.1)
   shoulda-matchers (~> 4.5)
   simple_form (~> 5.1.0)
   simplecov
