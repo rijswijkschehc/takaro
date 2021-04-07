@@ -1,0 +1,14 @@
+.sidenav {
+  margin-left: -$sidenav-width;
+  width: $sidenav-width;
+
+  &.show {
+    margin-left: 0;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .sidenav {
+    margin-left: 0;
+  }
+}
