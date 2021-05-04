@@ -29,6 +29,9 @@ group :development do
   gem 'binding_of_caller', '~> 1.0'
   gem 'brakeman', '~> 5.0'
   gem 'erb_lint', '~> 0.0', require: false
+  gem 'guard', '~> 2.16', require: false
+  gem 'guard-rspec', '~> 4.7', require: false
+  gem 'guard-rubocop', '~> 1.4', require: false
   gem 'listen', '~> 3.3'
   gem 'pry-rescue', '~> 1.5'
   gem 'rack-mini-profiler', '~> 2.0'
