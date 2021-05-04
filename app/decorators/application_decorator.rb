@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 class ApplicationDecorator < Draper::Decorator
-  delegate_all
+  delegate :email, :created_at
 end
