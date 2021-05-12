@@ -18,6 +18,7 @@ require 'action_cable/engine'
 # require "rails/test_unit/railtie"
 
 require_relative '../lib/credentials'
+require_relative '../lib/paper_trail_global_id/paper_trail_global_id'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
