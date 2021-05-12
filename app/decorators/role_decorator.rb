@@ -4,6 +4,6 @@ class RoleDecorator < ApplicationDecorator
   delegate :name
 
   def badge
-    Badge.new(content: name).html
+    h.tag.span(name, class: 'badge bg-secondary')
   end
 end
