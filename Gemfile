@@ -8,6 +8,7 @@ ruby '3.0.0'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise', '~> 4.7.3'
 gem 'draper', '~> 4.0'
+gem 'image_processing', '~> 1.12.1'
 gem 'lograge', '~> 0.11'
 gem 'memoist', '~> 0.16'
 gem 'paper_trail', '~> 12.0'
