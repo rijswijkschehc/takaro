@@ -5,6 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
 
+gem 'aasm', '~> 5.2.0'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise', '~> 4.7.3'
 gem 'draper', '~> 4.0'
