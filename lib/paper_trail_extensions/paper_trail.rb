@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module PaperTrailGlobalId
+module PaperTrailExtensions
   module PaperTrail
     def whodunnit=(value)
       value = value.respond_to?(:to_gid) ? value.to_gid.to_s : value

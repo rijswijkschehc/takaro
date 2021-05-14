@@ -2,24 +2,24 @@
 
 require_relative './paper_trail'
 
-module PaperTrailGlobalId
+module PaperTrailExtensions
   module ::PaperTrail
     class << self
-      prepend ::PaperTrailGlobalId::PaperTrail
+      prepend ::PaperTrailExtensions::PaperTrail
     end
   end
 
   module ::PaperTrail
     module Request
       class << self
-        prepend ::PaperTrailGlobalId::PaperTrail
+        prepend ::PaperTrailExtensions::PaperTrail
       end
     end
   end
 
   module ::PaperTrail
     module VersionConcern
-      include ::PaperTrailGlobalId::PaperTrail
+      include ::PaperTrailExtensions::PaperTrail
     end
   end
 end
