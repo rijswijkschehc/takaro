@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :static_pages
+    resources :target_categories
     resources :users
   end
 
