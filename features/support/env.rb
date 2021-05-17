@@ -60,3 +60,4 @@ Cucumber::Rails::Database.javascript_strategy = :truncation
 
 World RSpecHtmlMatchers
 World Warden::Test::Helpers
+World FactoryBot::Syntax::Methods

@@ -65,6 +65,7 @@ RSpec.configure do |config|
   config.include Capybara::RSpecMatchers, type: :decorator
   # Include RequestSpecHelper to aide with signing users in and out
   config.include RequestSpecHelper, type: :request
+  config.include FactoryBot::Syntax::Methods
 
   # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!
