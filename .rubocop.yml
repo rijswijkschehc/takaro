@@ -26,5 +26,9 @@ Metrics/MethodLength:
   Exclude:
     - db/migrate/**/*
 
+RSpec/DescribeClass:
+  Exclude:
+    - spec/requests/**/*
+
 Style/Documentation:
   Enabled: false
