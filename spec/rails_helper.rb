@@ -63,6 +63,8 @@ RSpec.configure do |config|
 
   # Include capybara matchers for custom decorator spec type
   config.include Capybara::RSpecMatchers, type: :decorator
+  # Include RequestSpecHelper to aide with signing users in and out
+  config.include RequestSpecHelper, type: :request
 
   # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!
