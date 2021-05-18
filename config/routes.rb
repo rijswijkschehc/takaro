@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/dashboard' => 'dashboard#show', as: :user_root
 
   namespace :admin do
+    resources :periods
     resources :static_pages
     resources :target_categories
     resources :users
