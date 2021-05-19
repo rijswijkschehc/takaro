@@ -3,7 +3,7 @@
 class StaticPage < ApplicationRecord
   include AASM
 
-  has_paper_trail only: %i[content title]
+  has_paper_trail only: %i[aasm_state content title]
   has_rich_text :content
 
   validates :title, presence: true
