@@ -4,6 +4,6 @@ class Skill < ApplicationRecord
   has_paper_trail only: %i[description name]
   has_rich_text :description
 
-  validates :name, presence: true
   validates :description, presence: true
+  validates :name, presence: true
 end
