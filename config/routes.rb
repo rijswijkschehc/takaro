@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :periods
+    resources :principles
     resources :skills
     resources :static_pages
     resources :target_categories
