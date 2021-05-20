@@ -1,0 +1,1 @@
+exclude: "ActionText::RichText,ActiveStorage::Attachment,ActiveStorage::Blob,ActiveStorage::VariantRecord,PaperTrail::Version"

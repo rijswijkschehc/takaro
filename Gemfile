@@ -38,6 +38,7 @@ group :development do
   gem 'listen', '~> 3.3'
   gem 'pry-rescue', '~> 1.5'
   gem 'rack-mini-profiler', '~> 2.0'
+  gem 'rails-erd', '~> 1.6.1'
   gem 'rubocop', '~> 1.8', require: false
   gem 'rubocop-performance', '~> 1.9', require: false
   gem 'rubocop-rails', '~> 2.9', require: false
