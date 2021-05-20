@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :principles
     resources :skills
     resources :static_pages
+    resources :steps
     resources :target_categories
     resources :users
   end

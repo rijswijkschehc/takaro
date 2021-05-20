@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col">
+    <h1><%= _('Steps') %></h1>
+    <%= link_to _('New step'), new_admin_step_path, class: 'btn btn-outline-primary' %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <table class="table">
+      <thead>
+      <tr>
+        <th><%= _('Name') %></th>
+      </tr>
+      </thead>
+      <tbody>
+      <%= render @steps %>
+      </tbody>
+    </table>
+  </div>
+</div>
