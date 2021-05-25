@@ -1,5 +1,5 @@
 <%= simple_form_for([:admin, @skill]) do |f| %>
   <%= f.input :name %>
-  <%= f.rich_text_area :description %>
+  <%= f.input :description, as: :rich_text_area %>
   <%= f.submit %>
 <% end %>

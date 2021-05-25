@@ -3,6 +3,6 @@
   <%= f.input :tagline %>
   <%= f.input :icon %>
   <%= f.input :hex_color %>
-  <%= f.rich_text_area :description %>
+  <%= f.input :description, as: :rich_text_area %>
   <%= f.submit %>
 <% end %>

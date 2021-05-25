@@ -1,6 +1,6 @@
 <%= simple_form_for([:admin, @step]) do |f| %>
   <%= f.input :name %>
-  <%= f.rich_text_area :description %>
+  <%= f.input :description, as: :rich_text_area %>
   <%= f.input :icon %>
   <%= f.submit %>
 <% end %>
