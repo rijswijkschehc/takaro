@@ -1,4 +1,5 @@
 <%= simple_form_for([:admin, @period]) do |f| %>
   <%= f.input :name %>
+  <%= f.input :description, as: :rich_text_area %>
   <%= f.submit %>
 <% end %>
