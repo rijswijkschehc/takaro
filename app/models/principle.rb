@@ -5,6 +5,9 @@ class Principle < ApplicationRecord
   has_rich_text :description
 
   belongs_to :possession_phase
+  has_many :principle_steps, dependent: :destroy
+
+  accepts_nested_attributes_for :principle_steps
 
   validates :description, presence: true
   validates :hex_color, presence: true

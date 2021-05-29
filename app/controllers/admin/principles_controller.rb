@@ -2,6 +2,8 @@
 
 module Admin
   class PrinciplesController < AdminController
+    before_action :find_or_initialize_steps, only: %i[new show]
+
     def index
       @principles = Principle.all
     end
@@ -28,8 +30,13 @@ module Admin
 
     private
 
+    def find_or_initialize_steps
+      Step.all.each.map { |step| @principle.principle_steps.find_or_initialize_by(step: step) }
+    end
+
     def safe_params
-      params.require(:principle).permit(:description, :hex_color, :icon, :name, :possession_phase_id, :tagline)
+      params.require(:principle).permit(:description, :hex_color, :icon, :name, :possession_phase_id, :tagline,
+                                        principle_steps_attributes: %i[description step_id])
     end
 
     def authorize_action
