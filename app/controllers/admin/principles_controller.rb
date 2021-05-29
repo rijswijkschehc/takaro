@@ -29,7 +29,7 @@ module Admin
     private
 
     def safe_params
-      params.require(:principle).permit(:description, :hex_color, :icon, :name, :tagline)
+      params.require(:principle).permit(:description, :hex_color, :icon, :name, :possession_phase_id, :tagline)
     end
 
     def authorize_action

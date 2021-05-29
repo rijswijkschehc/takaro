@@ -1,5 +1,6 @@
 <%= simple_form_for([:admin, @principle]) do |f| %>
   <%= f.input :name %>
+  <%= f.association :possession_phase %>
   <%= f.input :tagline %>
   <%= f.input :icon %>
   <%= f.input :hex_color %>
