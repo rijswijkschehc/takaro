@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_26_165716) do
+ActiveRecord::Schema.define(version: 2021_05_29_153225) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,7 +71,6 @@ ActiveRecord::Schema.define(version: 2021_05_26_165716) do
     t.string "tagline"
     t.string "hex_color", limit: 6
     t.string "icon"
-    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "possession_phase_id"
@@ -90,7 +89,6 @@ ActiveRecord::Schema.define(version: 2021_05_26_165716) do
 
   create_table "skills", force: :cascade do |t|
     t.string "name"
-    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -105,7 +103,6 @@ ActiveRecord::Schema.define(version: 2021_05_26_165716) do
 
   create_table "steps", force: :cascade do |t|
     t.string "name"
-    t.string "description"
     t.string "icon"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
