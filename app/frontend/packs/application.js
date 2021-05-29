@@ -8,6 +8,7 @@ import * as ActiveStorage from '@rails/activestorage';
 import 'trix';
 import '@rails/actiontext';
 import 'channels';
+import '@fortawesome/fontawesome-free/js/all';
 
 import '../stylesheets/application.scss';
 
