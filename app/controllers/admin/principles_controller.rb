@@ -2,6 +2,8 @@
 
 module Admin
   class PrinciplesController < AdminController
+    include Sortable
+
     before_action :find_or_initialize_steps, only: %i[new show]
 
     def index
@@ -42,7 +44,7 @@ module Admin
     def authorize_action
       @principle =
         case action_name
-        when 'index' then authorize(Principle)
+        when 'index', 'reposition' then authorize(Principle)
         when 'new', 'create' then authorize(Principle.new)
         when 'show', 'update' then authorize(Principle.find(params[:id]))
         else

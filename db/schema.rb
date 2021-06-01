@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_29_153742) do
+ActiveRecord::Schema.define(version: 2021_05_29_201859) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,6 +83,7 @@ ActiveRecord::Schema.define(version: 2021_05_29_153742) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "possession_phase_id"
+    t.integer "position"
     t.index ["possession_phase_id"], name: "index_principles_on_possession_phase_id"
   end
 

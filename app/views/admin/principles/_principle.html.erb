@@ -1,3 +1,4 @@
-<tr>
+<%= sortable_item(element: :tr, item: principle) do %>
+  <td><%= sortable_handle %></td>
   <td><%= link_to principle.name, [:admin, principle] %></td>
-</tr>
+<% end %>

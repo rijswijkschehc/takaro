@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  concern :sortable do
+    collection do
+      patch :reposition
+    end
+  end
+
   devise_for :users
 
   root to: 'landing#index'
@@ -9,7 +15,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :periods
-    resources :principles
+    resources :principles, concerns: %i[sortable]
     resources :skills
     resources :static_pages
     resources :steps

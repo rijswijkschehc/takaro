@@ -20,4 +20,8 @@ class PrinciplePolicy < ApplicationPolicy
   def update?
     user.admin?
   end
+
+  def reposition?
+    user.admin?
+  end
 end

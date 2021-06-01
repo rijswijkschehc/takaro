@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 class Principle < ApplicationRecord
-  has_paper_trail only: %i[description hex_color icon name possession_phase tagline]
+  acts_as_list
+  has_paper_trail only: %i[description hex_color icon name position possession_phase tagline]
   has_rich_text :description
+
+  default_scope { order(:position) }
 
   belongs_to :possession_phase
   has_many :principle_steps, dependent: :destroy
