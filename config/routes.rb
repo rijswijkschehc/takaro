@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :periods
     resources :principles, concerns: %i[sortable]
-    resources :skills
+    resources :techniques
     resources :static_pages
     resources :steps
     resources :target_categories

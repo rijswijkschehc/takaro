@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Skill < ApplicationRecord
+class Technique < ApplicationRecord
   has_paper_trail only: %i[description name]
   has_rich_text :description
 
