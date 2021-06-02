@@ -6,6 +6,7 @@
   <%= f.input :hex_color %>
   <%= f.input :description, as: :rich_text_area %>
   <%= f.simple_fields_for :principle_steps do |psf| %>
+    <%= psf.input :id, as: :hidden %>
     <%= psf.association :step, as: :hidden %>
     <%= psf.input :description, as: :rich_text_area, label: psf.object.step.name %>
   <% end %>
