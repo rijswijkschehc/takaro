@@ -29,7 +29,7 @@ module Admin
     private
 
     def safe_params
-      params.require(:period).permit(:description, :name)
+      params.require(:period).permit(:description, :ends_on, :name, :starts_on)
     end
 
     def authorize_action
