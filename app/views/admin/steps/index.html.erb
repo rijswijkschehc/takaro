@@ -10,12 +10,13 @@
     <table class="table">
       <thead>
       <tr>
+        <th></th>
         <th><%= _('Name') %></th>
       </tr>
       </thead>
-      <tbody>
-      <%= render @steps %>
-      </tbody>
+      <%= tag.tbody(render(@steps),
+                    data: { controller: 'sortable',
+                            reposition_path: reposition_admin_steps_path }) %>
     </table>
   </div>
 </div>

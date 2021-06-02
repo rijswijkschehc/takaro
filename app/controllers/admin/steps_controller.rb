@@ -2,6 +2,8 @@
 
 module Admin
   class StepsController < AdminController
+    include Sortable
+
     def index
       @steps = Step.all
     end
@@ -35,7 +37,7 @@ module Admin
     def authorize_action
       @step =
         case action_name
-        when 'index' then authorize(Step)
+        when 'index', 'reposition' then authorize(Step)
         when 'new', 'create' then authorize(Step.new)
         when 'show', 'update' then authorize(Step.find(params[:id]))
         else

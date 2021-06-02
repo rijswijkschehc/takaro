@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 class Step < ApplicationRecord
-  has_paper_trail only: %i[description icon name]
+  acts_as_list
+  has_paper_trail only: %i[description icon name position]
   has_rich_text :description
+
+  default_scope { order(:position) }
 
   has_many :principle_steps, dependent: :destroy
 

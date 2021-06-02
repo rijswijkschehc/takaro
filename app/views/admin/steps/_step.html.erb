@@ -1,3 +1,4 @@
-<tr>
+<%= sortable_item(element: :tr, item: step) do %>
+  <td><%= sortable_handle %></td>
   <td><%= link_to step.name, [:admin, step] %></td>
-</tr>
+<% end %>
