@@ -48,6 +48,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'bullet', '~> 6.1.4'
   gem 'factory_bot_rails', '~> 6.2.0'
   gem 'fuubar', '~> 2.5'
   gem 'rspec-rails', '~> 5.0.1'
