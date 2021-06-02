@@ -6,10 +6,17 @@
   <%= f.input :hex_color %>
   <%= f.input :description, as: :rich_text_area %>
   <%= f.simple_fields_for :principle_steps do |psf| %>
-    <%= psf.input :id, as: :hidden %>
-    <%= psf.association :step, as: :hidden %>
-    <%= psf.input :tag_line %>
-    <%= psf.input :description, as: :rich_text_area, label: psf.object.step.name %>
+    <div class="card mb-3">
+      <div class="card-header">
+        <%= psf.object.step.name %>
+      </div>
+      <div class="card-body">
+        <%= psf.input :id, as: :hidden %>
+        <%= psf.association :step, as: :hidden %>
+        <%= psf.input :tag_line %>
+        <%= psf.input :description, as: :rich_text_area %>
+      </div>
+    </div>
   <% end %>
   <%= f.submit %>
 <% end %>
