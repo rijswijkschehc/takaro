@@ -29,7 +29,7 @@ module Admin
     private
 
     def safe_params
-      params.require(:technique).permit(:description, :name)
+      params.require(:technique).permit(:description, :grip, :name, :video)
     end
 
     def authorize_action
