@@ -36,7 +36,14 @@
               </ul>
             </li>
           </ul>
-          <%= link_to _('Sign out'), destroy_user_session_path, method: :delete, class: 'btn btn-outline-danger' %>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <%= link_to current_user.screen_name, '#', class: 'nav-link dropdown-toggle', data: { bs_toggle: 'dropdown' } %>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><%= link_to _('Sign out'), destroy_user_session_path, method: :delete, class: 'dropdown-item' %></li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
