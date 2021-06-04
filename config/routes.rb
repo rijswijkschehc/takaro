@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   root to: 'landing#index'
 
-  get '/dashboard' => 'dashboard#show', as: :user_root
+  get 'dashboard' => 'dashboard#show', as: :user_root
 
   namespace :admin do
     resources :periods
