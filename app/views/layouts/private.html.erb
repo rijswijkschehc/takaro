@@ -40,7 +40,9 @@
             <li class="nav-item dropdown">
               <%= link_to current_user.screen_name, '#', class: 'nav-link dropdown-toggle', data: { bs_toggle: 'dropdown' } %>
               <ul class="dropdown-menu dropdown-menu-end">
-                <li><%= link_to _('Sign out'), destroy_user_session_path, method: :delete, class: 'dropdown-item' %></li>
+                <li><%= link_to _('Your profile'), profile_path, class: 'dropdown-item' %></li>
+                <li class="dropdown-divider"></li>
+                <li><%= link_to _('Sign out'), destroy_user_session_path, method: :delete, class: 'dropdown-item text-danger' %></li>
               </ul>
             </li>
           </ul>

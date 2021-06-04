@@ -11,6 +11,8 @@ class User < ApplicationRecord
 
   has_one :person, dependent: :destroy
 
+  accepts_nested_attributes_for :person
+
   def screen_name
     person&.screen_name || email.split('@').first
   end

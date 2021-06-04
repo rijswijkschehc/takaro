@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   root to: 'landing#index'
 
   get 'dashboard' => 'dashboard#show', as: :user_root
+  get 'profile' => 'profile#show'
+  patch 'profile' => 'profile#update'
 
   namespace :admin do
     resources :periods
