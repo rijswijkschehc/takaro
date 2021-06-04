@@ -82,4 +82,6 @@ Rails.application.configure do
 
   # Don't write to development.log
   config.logger = ActiveSupport::Logger.new(nil)
+
+  ActiveRecordQueryTrace.enabled = false
 end

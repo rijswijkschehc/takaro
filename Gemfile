@@ -29,6 +29,7 @@ gem 'translation', '~> 1.23'
 gem 'webpacker', '~> 5.0'
 
 group :development do
+  gem 'active_record_query_trace', '~> 1.8'
   gem 'better_errors', '~> 2.9'
   gem 'binding_of_caller', '~> 1.0'
   gem 'brakeman', '~> 5.0'
