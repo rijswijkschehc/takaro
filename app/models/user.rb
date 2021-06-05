@@ -8,4 +8,10 @@ class User < ApplicationRecord
          :recoverable, :trackable, :confirmable, :lockable
   has_paper_trail only: %i[email encrypted_password]
   rolify role_join_table_name: :user_roles
+
+  has_one :person, dependent: :destroy
+
+  def screen_name
+    person&.screen_name || email.split('@').first
+  end
 end
