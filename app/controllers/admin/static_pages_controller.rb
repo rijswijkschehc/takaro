@@ -20,7 +20,7 @@ module Admin
 
     def update
       if @static_page.update(safe_params)
-        redirect_to admin_static_page_path(@static_page)
+        redirect_to admin_static_pages_path
       else
         render :show
       end

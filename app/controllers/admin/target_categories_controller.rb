@@ -20,7 +20,7 @@ module Admin
 
     def update
       if @target_category.update(safe_params)
-        redirect_to admin_target_category_path(@target_category)
+        redirect_to admin_target_categories_path
       else
         render :show
       end

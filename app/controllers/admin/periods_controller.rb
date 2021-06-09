@@ -20,7 +20,7 @@ module Admin
 
     def update
       if @period.update(safe_params)
-        redirect_to admin_period_path(@period)
+        redirect_to admin_periods_path
       else
         render :show
       end

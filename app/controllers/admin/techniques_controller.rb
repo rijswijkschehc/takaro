@@ -20,7 +20,7 @@ module Admin
 
     def update
       if @technique.update(safe_params)
-        redirect_to admin_technique_path(@technique)
+        redirect_to admin_techniques_path
       else
         render :show
       end

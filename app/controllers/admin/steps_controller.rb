@@ -22,7 +22,7 @@ module Admin
 
     def update
       if @step.update(safe_params)
-        redirect_to admin_step_path(@step)
+        redirect_to admin_steps_path
       else
         render :show
       end

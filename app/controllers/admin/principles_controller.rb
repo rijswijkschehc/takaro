@@ -24,7 +24,7 @@ module Admin
 
     def update
       if @principle.update(safe_params)
-        redirect_to admin_principle_path(@principle)
+        redirect_to admin_principles_path
       else
         render :show
       end
