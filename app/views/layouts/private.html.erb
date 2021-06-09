@@ -12,8 +12,12 @@
 
 <body>
 <div class="d-flex overflow-hidden">
-    <%= link_to 'Takaro', user_root_path, class: 'sidenav-brand' %>
   <div class="sidenav bg-primary border-end vh-100" id="sidenav">
+    <div class="d-flex justify-content-around my-3">
+      <%= link_to user_root_path do %>
+        <%= image_pack_tag('speelwijze.svg', style: { 'width:': '120px' }) %>
+      <% end %>
+    </div>
     <div class="list-group list-group-flush">
       <%= link_to _('8 tactical principles'), principles_path, class: 'list-group-item list-group-item-active' %>
     </div>
