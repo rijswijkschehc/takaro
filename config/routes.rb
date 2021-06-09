@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get 'profile' => 'profile#show'
   patch 'profile' => 'profile#update'
 
+  resources :principles, only: %i[index show]
+
   namespace :admin do
     resources :periods
     resources :principles, concerns: %i[sortable]

@@ -1,0 +1,5 @@
+<div class="list-group">
+  <% @principles.each do |principle| %>
+    <%= link_to principle.name, principle, class: 'list-group-item list-group-item-action' %>
+  <% end %>
+</div>

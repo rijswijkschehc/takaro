@@ -1,0 +1,40 @@
+<div class="row border-bottom">
+  <div class="col p-3">
+    <h1 class="display-6">
+      <%= icon(id: @principle.icon) %>
+      <%= @principle.name %>
+    </h1>
+    <p class="lead"><%= @principle.tagline %></p>
+    <div class="d-flex justify-content-end">
+      <div class="dropdown">
+        <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <%= _('Principles') %>
+        </button>
+        <ul class="dropdown-menu">
+          <% @principles.each do |principle| %>
+            <li><%= link_to principle.name, principle, class: 'dropdown-item' %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row bg-light py-3">
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <%= @principle.description %>
+        <% @principle.principle_steps.each do |principle_step| %>
+          <div class="mt-3">
+            <h4>
+              <%= icon(id: principle_step.step.icon) %>
+              <%= principle_step.step.name %>
+            </h4>
+            <p class="fw-light"><%= principle_step.tag_line %></p>
+            <%= principle_step.description %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
