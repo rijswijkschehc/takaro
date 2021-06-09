@@ -15,5 +15,7 @@ import '../stylesheets/application.scss';
 
 import('src/plugins');
 
+require.context('../images', true);
+
 Rails.start();
 ActiveStorage.start();
