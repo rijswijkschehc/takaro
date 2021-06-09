@@ -15,3 +15,7 @@ end
 When 'the admin users page is shown' do
   visit admin_users_path
 end
+
+When 'the profile page is shown' do
+  visit profile_path
+end

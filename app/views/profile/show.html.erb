@@ -10,6 +10,10 @@
       <%= f.simple_fields_for(:person) do |pf| %>
         <%= pf.input :screen_name %>
       <% end %>
+      <%= f.input :email %>
+      <%= f.input :password %>
+      <%= f.input :password_confirmation %>
+      <%= f.input :current_password, hint: _('Required when you change your email address or password') %>
       <%= f.submit class: 'btn btn-primary' %>
     <% end %>
   </div>
