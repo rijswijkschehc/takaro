@@ -8,6 +8,6 @@ module Roles
   end
 
   def admin?
-    has_any_role?(:superuser, :admin)
+    has_any_role?(:superuser, :administrator)
   end
 end

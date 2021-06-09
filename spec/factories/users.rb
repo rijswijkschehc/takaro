@@ -9,7 +9,7 @@ FactoryBot.define do
 
   factory :admin, parent: :user do
     after(:build) do |user|
-      user.add_role(:admin)
+      user.add_role(:administrator)
     end
   end
 end
