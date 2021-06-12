@@ -38,7 +38,7 @@ module Admin
 
     def safe_params
       params.require(:principle).permit(:description, :hex_color, :icon, :name, :possession_phase_id, :tagline,
-                                        principle_steps_attributes: %i[description id step_id tag_line])
+                                        principle_steps_attributes: %i[description id step_id tagline])
     end
 
     def authorize_action
