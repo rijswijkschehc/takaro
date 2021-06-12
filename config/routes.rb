@@ -9,12 +9,16 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  authenticated :user do
+    root 'dashboard#show', as: :authenticated_root
+  end
+
   root to: 'landing#index'
 
-  get 'dashboard' => 'dashboard#show', as: :user_root
   get 'profile' => 'profile#show'
   patch 'profile' => 'profile#update'
 
+  resources :periods, only: %i[show]
   resources :principles, only: %i[index show]
 
   namespace :admin do

@@ -20,6 +20,7 @@ Metrics/BlockLength:
   Exclude:
     - config/environments/**/*
     - config/initializers/simple_form_bootstrap.rb
+    - config/routes.rb
     - spec/**/*
 
 Metrics/MethodLength:
