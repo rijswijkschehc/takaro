@@ -29,7 +29,9 @@ module Admin
     private
 
     def safe_params
-      params.require(:period).permit(:description, :ends_on, :name, :starts_on)
+      params.require(:period).permit(:description, :ends_on, :name, :starts_on,
+                                     period_principles_attributes: %i[_destroy id description match_tips principle_id
+                                                                      tagline training_tips])
     end
 
     def authorize_action
@@ -37,7 +39,9 @@ module Admin
         case action_name
         when 'index' then authorize(Period)
         when 'new', 'create' then authorize(Period.new)
-        when 'show', 'update' then authorize(Period.find(params[:id]))
+        when 'show', 'update' then authorize(Period.includes(
+          period_principles: %i[rich_text_description rich_text_match_tips rich_text_training_tips]
+        ).find(params[:id]))
         else
           raise NotAuthorizedError
         end

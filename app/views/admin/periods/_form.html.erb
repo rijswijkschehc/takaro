@@ -1,7 +1,17 @@
-<%= simple_form_for([:admin, @period]) do |f| %>
+<%= simple_form_for([:admin, @period], data: { controller: 'nested-form' }) do |f| %>
   <%= f.input :name %>
   <%= f.input :description, as: :rich_text_area %>
   <%= f.input :starts_on %>
   <%= f.input :ends_on %>
+  <%= f.simple_fields_for :period_principles do |ppf| %>
+    <%= render 'period_principle_fields', f: ppf %>
+  <% end %>
+  <div data-nested-form-target="target"></div>
+  <%= link_to _('Add principle'), '#', data: { action: 'nested-form#addAssociation' } %>
+  <template data-nested-form-target="template">
+    <%= f.simple_fields_for :period_principles, PeriodPrinciple.new, child_index: 'TEMPLATE' do |ppf| %>
+      <%= render 'period_principle_fields', f: ppf %>
+    <% end %>
+  </template>
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>

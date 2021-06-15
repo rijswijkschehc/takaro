@@ -8,6 +8,7 @@ class Principle < ApplicationRecord
   default_scope { order(:position) }
 
   belongs_to :possession_phase
+  has_many :period_principles, dependent: :destroy
   has_many :principle_steps, dependent: :destroy
 
   accepts_nested_attributes_for :principle_steps

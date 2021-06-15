@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_11_102158) do
+ActiveRecord::Schema.define(version: 2021_06_11_174110) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,19 @@ ActiveRecord::Schema.define(version: 2021_06_11_102158) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_people_on_user_id"
+  end
+
+  create_table "period_principles", force: :cascade do |t|
+    t.bigint "period_id", null: false
+    t.bigint "principle_id", null: false
+    t.string "tagline"
+    t.string "description"
+    t.string "training_tips"
+    t.string "match_tips"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["period_id"], name: "index_period_principles_on_period_id"
+    t.index ["principle_id"], name: "index_period_principles_on_principle_id"
   end
 
   create_table "periods", force: :cascade do |t|
@@ -186,4 +199,6 @@ ActiveRecord::Schema.define(version: 2021_06_11_102158) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "period_principles", "periods"
+  add_foreign_key "period_principles", "principles"
 end

@@ -6,3 +6,26 @@
     <%= @period.description %>
   </div>
 </div>
+<div class="row bg-light py-3">
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <% @period.period_principles.each do |period_principle| %>
+          <h5><%= link_to safe_join([icon(id: 'plus-square', margin: 'e-2'), period_principle.principle.name]), dom_id(period_principle, '#tab'), data: { bs_toggle: 'collapse' } %></h5>
+          <p class="small"><%= period_principle.tagline %></p>
+          <%= tag.div class: 'collapse ps-3', id: dom_id(period_principle, 'tab') do %>
+            <%= period_principle.description %>
+            <% if period_principle.training_tips.present? %>
+              <h6><%= link_to safe_join([icon(id: 'plus-square', margin: 'e-2'), _('Tips for the training')]), dom_id(period_principle, '#tab_tips_for_training'), data: { bs_toggle: 'collapse' } %></h6>
+              <%= tag.div(period_principle.training_tips, class: 'collapse ps-3', id: dom_id(period_principle, 'tab_tips_for_training')) %>
+            <% end %>
+            <% if period_principle.match_tips.present? %>
+              <h6><%= link_to safe_join([icon(id: 'plus-square', margin: 'e-2'), _('Tips for matches')]), dom_id(period_principle, '#tab_tips_for_matches'), data: { bs_toggle: 'collapse' } %></h6>
+              <%= tag.div(period_principle.match_tips, class: 'collapse ps-3', id: dom_id(period_principle, 'tab_tips_for_matches')) %>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
