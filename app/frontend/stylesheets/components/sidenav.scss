@@ -1,14 +1,41 @@
-.sidenav {
+#sidenav {
+  @extend .text-white;
+  @extend .bg-primary;
+  @extend .border-end;
+  @extend .min-vh-100;
+  @extend .p-3;
+
   margin-left: -$sidenav-width;
   width: $sidenav-width;
+  line-height: $line-height-lg;
 
   &.show {
     margin-left: 0;
   }
+
+  #sidenav-logo {
+    @extend .d-flex;
+    @extend .justify-content-around;
+    @extend .my-3;
+  }
+
+  a {
+    @extend .link-light;
+
+    text-decoration: none;
+  }
+
+  ul {
+    @extend .list-unstyled;
+
+    ul {
+      @extend .ps-3;
+    }
+  }
 }
 
 @include media-breakpoint-up(lg) {
-  .sidenav {
+  #sidenav {
     margin-left: 0;
   }
 }

@@ -12,20 +12,28 @@
 
 <body>
 <div class="d-flex overflow-hidden">
-  <div class="sidenav bg-primary border-end min-vh-100" id="sidenav">
-    <div class="d-flex justify-content-around my-3">
+  <div id="sidenav">
+    <div id="sidenav-logo">
       <%= link_to authenticated_root_path do %>
         <%= image_pack_tag('speelwijze.svg', style: { 'width:': '120px' }) %>
       <% end %>
     </div>
-    <div class="list-group list-group-flush">
-      <div class="list-group-item"><%= _('RHC playing style') %></div>
-      <%= link_to _('8 tactical principles'), principles_path, class: 'list-group-item list-group-item-active' %>
-      <div class="list-group-item"><%= format(_('Season %<start>d - %<end>d'), start: 2021, end: 2022) %></div>
-      <% @periods.each do |period| %>
-        <%= link_to period.name, period, class: 'list-group-item list-group-item-active' %>
-      <% end %>
-    </div>
+    <ul>
+      <li>
+        <%= _('RHC playing style') %>
+        <ul>
+          <%= link_to _('8 tactical principles'), principles_path %>
+        </ul>
+      </li>
+      <li>
+        <%= format(_('Season %<start>d - %<end>d'), start: 2021, end: 2022) %>
+        <ul>
+          <% @periods.each do |period| %>
+            <li><%= link_to period.name, period %></li>
+          <% end %>
+        </ul>
+      </li>
+    </ul>
   </div>
   <div class="vw-100">
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
