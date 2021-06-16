@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
+  include SetLocale
   layout -> { user_signed_in? ? 'private' : 'public' }
 
   before_action :set_paper_trail_whodunnit
