@@ -16,4 +16,9 @@ class User < ApplicationRecord
   def screen_name
     person&.screen_name || email.split('@').first
   end
+
+  def role?(*roles)
+    @roles ||= self.roles.pluck(:name)
+    (@roles & roles.map(&:to_s)).any?
+  end
 end
