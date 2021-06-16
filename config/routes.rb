@@ -1,10 +1,16 @@
 # frozen_string_literal: true
 
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
   concern :sortable do
     collection do
       patch :reposition
     end
+  end
+
+  authenticate :user, ->(u) { u.role?(:superuser, :administrator) } do
+    mount Sidekiq::Web => 'admin/sidekiq'
   end
 
   devise_for :users
