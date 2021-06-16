@@ -14,7 +14,7 @@ class Principle < ApplicationRecord
   accepts_nested_attributes_for :principle_steps
 
   validates :description, presence: true
-  validates :hex_color, presence: true
+  validates :hex_color, presence: true, length: { is: 6 }
   validates :icon, presence: true
   validates :name, presence: true
   validates :possession_phase, presence: true
