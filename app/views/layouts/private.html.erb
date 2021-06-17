@@ -27,11 +27,7 @@
       </li>
       <li>
         <%= format(_('Season %<start>d - %<end>d'), start: 2021, end: 2022) %>
-        <ul>
-          <% @periods.each do |period| %>
-            <li><%= link_to period.name, period %></li>
-          <% end %>
-        </ul>
+        <%= sidenav_periods %>
       </li>
     </ul>
   </div>
