@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: takaro 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2021-06-17 20:10+0200\n"
-"PO-Revision-Date: 2021-06-17 20:10+0200\n"
+"POT-Creation-Date: 2021-06-18 01:52+0200\n"
+"PO-Revision-Date: 2021-06-18 01:52+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
@@ -27,7 +27,7 @@ msgid "Add principle"
 msgstr "Principe toevoegen"
 
 #: ../../../app/views/admin/periods/index.html.erb:3
-#: ../../../app/views/layouts/private.html.erb:53
+#: ../../../app/views/layouts/private.html.erb:51
 msgid "Periods"
 msgstr "Perioden"
 
@@ -45,8 +45,9 @@ msgid "Name"
 msgstr "Naam"
 
 #: ../../../app/views/admin/principles/index.html.erb:3
-#: ../../../app/views/layouts/private.html.erb:52
+#: ../../../app/views/layouts/private.html.erb:50
 #: ../../../app/views/principles/show.html.erb:11
+#: ../../../app/views/trainings/index.html.erb:14
 msgid "Principles"
 msgstr "Principes"
 
@@ -56,7 +57,7 @@ msgid "New principle"
 msgstr "Nieuw principe"
 
 #: ../../../app/views/admin/static_pages/index.html.erb:3
-#: ../../../app/views/layouts/private.html.erb:50
+#: ../../../app/views/layouts/private.html.erb:48
 msgid "Static pages"
 msgstr "Statische pagina's"
 
@@ -66,11 +67,12 @@ msgid "New static page"
 msgstr "Nieuwe statische pagina"
 
 #: ../../../app/views/admin/static_pages/index.html.erb:13
+#: ../../../app/views/trainings/index.html.erb:13
 msgid "Title"
 msgstr "Titel"
 
 #: ../../../app/views/admin/steps/index.html.erb:3
-#: ../../../app/views/layouts/private.html.erb:55
+#: ../../../app/views/layouts/private.html.erb:53
 msgid "Steps"
 msgstr "Stappen"
 
@@ -80,7 +82,7 @@ msgid "New step"
 msgstr "Nieuwe stap"
 
 #: ../../../app/views/admin/target_categories/index.html.erb:3
-#: ../../../app/views/layouts/private.html.erb:51
+#: ../../../app/views/layouts/private.html.erb:49
 msgid "Target categories"
 msgstr "Doelgroepen"
 
@@ -90,7 +92,7 @@ msgid "New target category"
 msgstr "Nieuwe doelgroep"
 
 #: ../../../app/views/admin/techniques/index.html.erb:3
-#: ../../../app/views/layouts/private.html.erb:54
+#: ../../../app/views/layouts/private.html.erb:52
 msgid "Techniques"
 msgstr "Technieken"
 
@@ -100,7 +102,7 @@ msgid "New technique"
 msgstr "Nieuwe techniek"
 
 #: ../../../app/views/admin/users/index.html.erb:3
-#: ../../../app/views/layouts/private.html.erb:49
+#: ../../../app/views/layouts/private.html.erb:47
 msgid "Users"
 msgstr "Gebruikers"
 
@@ -188,24 +190,29 @@ msgstr "Verzend de ontgrendelingsinstructies opnieuw"
 msgid "RHC playing style"
 msgstr "RHC speelwijze"
 
-#: ../../../app/views/layouts/private.html.erb:25
+#: ../../../app/views/layouts/private.html.erb:26
 msgid "8 tactical principles"
 msgstr "8 tactische principes"
 
-#: ../../../app/views/layouts/private.html.erb:29
+#: ../../../app/views/layouts/private.html.erb:30
 msgid "Season %<start>d - %<end>d"
 msgstr "Seizoen %<start>d - %<end>d"
 
-#: ../../../app/views/layouts/private.html.erb:47
+#: ../../../app/views/layouts/private.html.erb:43
+#: ../../../app/views/trainings/index.html.erb:3
+msgid "Trainings"
+msgstr ""
+
+#: ../../../app/views/layouts/private.html.erb:45
 msgid "Admin"
 msgstr "Beheerder"
 
-#: ../../../app/views/layouts/private.html.erb:63
+#: ../../../app/views/layouts/private.html.erb:61
 #: ../../../app/views/profile/show.html.erb:3
 msgid "Your profile"
-msgstr ""
+msgstr "Jouw profiel"
 
-#: ../../../app/views/layouts/private.html.erb:65
+#: ../../../app/views/layouts/private.html.erb:63
 msgid "Sign out"
 msgstr "Afmelden"
 
@@ -220,3 +227,12 @@ msgstr "Tips voor wedstrijden"
 #: ../../../app/views/profile/show.html.erb:16
 msgid "Required when you change your email address or password"
 msgstr "Vereist wanneer je je e-mailadres of wachtwoord wijzigt"
+
+#: ../../../app/views/trainings/index.html.erb:4
+#: ../../../app/views/trainings/new.html.erb:3
+msgid "New training"
+msgstr "Nieuwe training"
+
+#: ../../../app/views/trainings/index.html.erb:15
+msgid "Author"
+msgstr "Auteur"

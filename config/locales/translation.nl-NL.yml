@@ -66,8 +66,8 @@ nl-NL:
           mb: MB
           gb: GB
           tb: TB
-          pb:
-          eb:
+          pb: PB
+          eb: EB
       decimal_units:
         units:
           thousand: duizend
