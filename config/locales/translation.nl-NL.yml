@@ -6,7 +6,7 @@
 #
 ---
 nl-NL:
-  hello:
+  hello: Hallo Wereld
   date:
     day_names:
     - zondag
@@ -177,12 +177,12 @@ nl-NL:
   flash:
     actions:
       create:
-        notice:
+        notice: "%{resource_name} is succesvol aangemaakt."
       update:
-        notice:
+        notice: "%{resource_name} is succesvol bijgewerkt."
       destroy:
-        notice:
-        alert:
+        notice: "%{resource_name} is succesvol verwijderd."
+        alert: "%{resource_name} kon niet worden verwijderd."
   devise:
     confirmations:
       confirmed: Je account is bevestigd.
@@ -239,7 +239,8 @@ nl-NL:
         nog valideren. Een e-mail met een confirmatielink is naar je e-mailadres gestuurd.
         Open de link in je browser om je e-mailadres te confirmeren.
       updated: Je accountgegevens zijn opgeslagen.
-      updated_but_not_signed_in:
+      updated_but_not_signed_in: Je account is succesvol bijgewerkt, maar omdat je
+        wachtwoord is gewijzigd moet je opnieuw inloggen
     sessions:
       signed_in: Je bent succesvol ingelogd.
       signed_out: Je bent succesvol uitgelogd.

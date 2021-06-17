@@ -1,0 +1,222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021 takaro
+# This file is distributed under the same license as the takaro package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: takaro 1.0\n"
+"Report-Msgid-Bugs-To: contact@translation.io\n"
+"POT-Creation-Date: 2021-06-17 20:10+0200\n"
+"PO-Revision-Date: 2021-06-17 20:10+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: ../../../app/controllers/profile_controller.rb:12
+msgid "Profile updated successfully"
+msgstr ""
+
+#: ../../../app/views/admin/periods/_form.html.erb:10
+msgid "Add principle"
+msgstr ""
+
+#: ../../../app/views/admin/periods/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:53
+msgid "Periods"
+msgstr ""
+
+#: ../../../app/views/admin/periods/index.html.erb:4
+#: ../../../app/views/admin/periods/new.html.erb:3
+msgid "New period"
+msgstr ""
+
+#: ../../../app/views/admin/periods/index.html.erb:13
+#: ../../../app/views/admin/principles/index.html.erb:14
+#: ../../../app/views/admin/steps/index.html.erb:14
+#: ../../../app/views/admin/target_categories/index.html.erb:13
+#: ../../../app/views/admin/techniques/index.html.erb:13
+msgid "Name"
+msgstr ""
+
+#: ../../../app/views/admin/principles/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:52
+#: ../../../app/views/principles/show.html.erb:11
+msgid "Principles"
+msgstr ""
+
+#: ../../../app/views/admin/principles/index.html.erb:4
+#: ../../../app/views/admin/principles/new.html.erb:3
+msgid "New principle"
+msgstr ""
+
+#: ../../../app/views/admin/static_pages/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:50
+msgid "Static pages"
+msgstr ""
+
+#: ../../../app/views/admin/static_pages/index.html.erb:4
+#: ../../../app/views/admin/static_pages/new.html.erb:3
+msgid "New static page"
+msgstr ""
+
+#: ../../../app/views/admin/static_pages/index.html.erb:13
+msgid "Title"
+msgstr ""
+
+#: ../../../app/views/admin/steps/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:55
+msgid "Steps"
+msgstr ""
+
+#: ../../../app/views/admin/steps/index.html.erb:4
+#: ../../../app/views/admin/steps/new.html.erb:3
+msgid "New step"
+msgstr ""
+
+#: ../../../app/views/admin/target_categories/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:51
+msgid "Target categories"
+msgstr ""
+
+#: ../../../app/views/admin/target_categories/index.html.erb:4
+#: ../../../app/views/admin/target_categories/new.html.erb:3
+msgid "New target category"
+msgstr ""
+
+#: ../../../app/views/admin/techniques/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:54
+msgid "Techniques"
+msgstr ""
+
+#: ../../../app/views/admin/techniques/index.html.erb:4
+#: ../../../app/views/admin/techniques/new.html.erb:3
+msgid "New technique"
+msgstr ""
+
+#: ../../../app/views/admin/users/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:49
+msgid "Users"
+msgstr ""
+
+#: ../../../app/views/admin/users/index.html.erb:12
+msgid "Email address"
+msgstr ""
+
+#: ../../../app/views/admin/users/index.html.erb:13
+msgid "Created at"
+msgstr ""
+
+#: ../../../app/views/admin/users/index.html.erb:14
+msgid "Roles"
+msgstr ""
+
+#: ../../../app/views/dashboard/show.html.erb:3
+msgid "Dashboard"
+msgstr ""
+
+#: ../../../app/views/devise/confirmations/new.html.erb:4
+#: ../../../app/views/devise/confirmations/new.html.erb:16
+msgid "Resend confirmation instructions"
+msgstr ""
+
+#: ../../../app/views/devise/passwords/edit.html.erb:4
+msgid "Reset your password"
+msgstr ""
+
+#: ../../../app/views/devise/passwords/edit.html.erb:15
+msgid "New password"
+msgstr ""
+
+#: ../../../app/views/devise/passwords/edit.html.erb:17
+#: ../../../app/views/devise/registrations/new.html.erb:15
+msgid "%<minimum_password_length>i characters minimum"
+msgstr ""
+
+#: ../../../app/views/devise/passwords/edit.html.erb:21
+msgid "Confirm your new password"
+msgstr ""
+
+#: ../../../app/views/devise/passwords/edit.html.erb:23
+msgid "Change my password"
+msgstr ""
+
+#: ../../../app/views/devise/passwords/new.html.erb:4
+#: ../../../app/views/devise/shared/_links.html.erb:10
+msgid "Forgot your password?"
+msgstr ""
+
+#: ../../../app/views/devise/passwords/new.html.erb:16
+msgid "Send me reset password instructions"
+msgstr ""
+
+#: ../../../app/views/devise/registrations/new.html.erb:4
+msgid "Join Riswa"
+msgstr ""
+
+#: ../../../app/views/devise/registrations/new.html.erb:19
+#: ../../../app/views/devise/shared/_links.html.erb:6
+msgid "Join Takaro"
+msgstr ""
+
+#: ../../../app/views/devise/sessions/new.html.erb:4
+#: ../../../app/views/devise/sessions/new.html.erb:18
+#: ../../../app/views/devise/shared/_links.html.erb:2
+#: ../../../app/views/layouts/public.html.erb:17
+msgid "Sign in"
+msgstr ""
+
+#: ../../../app/views/devise/shared/_links.html.erb:14
+msgid "Didn't receive confirmation instructions?"
+msgstr ""
+
+#: ../../../app/views/devise/shared/_links.html.erb:18
+msgid "Didn't receive unlock instructions?"
+msgstr ""
+
+#: ../../../app/views/devise/unlocks/new.html.erb:4
+#: ../../../app/views/devise/unlocks/new.html.erb:15
+msgid "Resend unlock instructions"
+msgstr ""
+
+#: ../../../app/views/layouts/private.html.erb:23
+msgid "RHC playing style"
+msgstr ""
+
+#: ../../../app/views/layouts/private.html.erb:25
+msgid "8 tactical principles"
+msgstr ""
+
+#: ../../../app/views/layouts/private.html.erb:29
+msgid "Season %<start>d - %<end>d"
+msgstr ""
+
+#: ../../../app/views/layouts/private.html.erb:47
+msgid "Admin"
+msgstr ""
+
+#: ../../../app/views/layouts/private.html.erb:63
+#: ../../../app/views/profile/show.html.erb:3
+msgid "Your profile"
+msgstr ""
+
+#: ../../../app/views/layouts/private.html.erb:65
+msgid "Sign out"
+msgstr ""
+
+#: ../../../app/views/periods/show.html.erb:19
+msgid "Tips for the training"
+msgstr ""
+
+#: ../../../app/views/periods/show.html.erb:23
+msgid "Tips for matches"
+msgstr ""
+
+#: ../../../app/views/profile/show.html.erb:16
+msgid "Required when you change your email address or password"
+msgstr ""

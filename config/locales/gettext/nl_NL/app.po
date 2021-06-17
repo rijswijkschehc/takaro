@@ -1,0 +1,222 @@
+# Dutch translations for takaro package.
+# Copyright (C) 2021 takaro
+# This file is distributed under the same license as the takaro package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: takaro 1.0\n"
+"Report-Msgid-Bugs-To: contact@translation.io\n"
+"POT-Creation-Date: 2021-06-17 20:10+0200\n"
+"PO-Revision-Date: 2021-06-17 20:10+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Dutch\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"\n"
+
+#: ../../../app/controllers/profile_controller.rb:12
+msgid "Profile updated successfully"
+msgstr "Profiel succesvol bijgewerkt"
+
+#: ../../../app/views/admin/periods/_form.html.erb:10
+msgid "Add principle"
+msgstr "Principe toevoegen"
+
+#: ../../../app/views/admin/periods/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:53
+msgid "Periods"
+msgstr "Perioden"
+
+#: ../../../app/views/admin/periods/index.html.erb:4
+#: ../../../app/views/admin/periods/new.html.erb:3
+msgid "New period"
+msgstr "Nieuwe periode"
+
+#: ../../../app/views/admin/periods/index.html.erb:13
+#: ../../../app/views/admin/principles/index.html.erb:14
+#: ../../../app/views/admin/steps/index.html.erb:14
+#: ../../../app/views/admin/target_categories/index.html.erb:13
+#: ../../../app/views/admin/techniques/index.html.erb:13
+msgid "Name"
+msgstr "Naam"
+
+#: ../../../app/views/admin/principles/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:52
+#: ../../../app/views/principles/show.html.erb:11
+msgid "Principles"
+msgstr "Principes"
+
+#: ../../../app/views/admin/principles/index.html.erb:4
+#: ../../../app/views/admin/principles/new.html.erb:3
+msgid "New principle"
+msgstr "Nieuw principe"
+
+#: ../../../app/views/admin/static_pages/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:50
+msgid "Static pages"
+msgstr "Statische pagina's"
+
+#: ../../../app/views/admin/static_pages/index.html.erb:4
+#: ../../../app/views/admin/static_pages/new.html.erb:3
+msgid "New static page"
+msgstr "Nieuwe statische pagina"
+
+#: ../../../app/views/admin/static_pages/index.html.erb:13
+msgid "Title"
+msgstr "Titel"
+
+#: ../../../app/views/admin/steps/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:55
+msgid "Steps"
+msgstr "Stappen"
+
+#: ../../../app/views/admin/steps/index.html.erb:4
+#: ../../../app/views/admin/steps/new.html.erb:3
+msgid "New step"
+msgstr "Nieuwe stap"
+
+#: ../../../app/views/admin/target_categories/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:51
+msgid "Target categories"
+msgstr "Doelgroepen"
+
+#: ../../../app/views/admin/target_categories/index.html.erb:4
+#: ../../../app/views/admin/target_categories/new.html.erb:3
+msgid "New target category"
+msgstr "Nieuwe doelgroep"
+
+#: ../../../app/views/admin/techniques/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:54
+msgid "Techniques"
+msgstr "Technieken"
+
+#: ../../../app/views/admin/techniques/index.html.erb:4
+#: ../../../app/views/admin/techniques/new.html.erb:3
+msgid "New technique"
+msgstr "Nieuwe techniek"
+
+#: ../../../app/views/admin/users/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:49
+msgid "Users"
+msgstr "Gebruikers"
+
+#: ../../../app/views/admin/users/index.html.erb:12
+msgid "Email address"
+msgstr "E-mailadres"
+
+#: ../../../app/views/admin/users/index.html.erb:13
+msgid "Created at"
+msgstr "Aangemaakt op"
+
+#: ../../../app/views/admin/users/index.html.erb:14
+msgid "Roles"
+msgstr "Rollen"
+
+#: ../../../app/views/dashboard/show.html.erb:3
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: ../../../app/views/devise/confirmations/new.html.erb:4
+#: ../../../app/views/devise/confirmations/new.html.erb:16
+msgid "Resend confirmation instructions"
+msgstr "Verzend de bevestigingsinstructies opnieuw"
+
+#: ../../../app/views/devise/passwords/edit.html.erb:4
+msgid "Reset your password"
+msgstr "Stel je wachtwoord opnieuw in"
+
+#: ../../../app/views/devise/passwords/edit.html.erb:15
+msgid "New password"
+msgstr "Nieuw wachtwoord"
+
+#: ../../../app/views/devise/passwords/edit.html.erb:17
+#: ../../../app/views/devise/registrations/new.html.erb:15
+msgid "%<minimum_password_length>i characters minimum"
+msgstr "Minimaal %<minimum_password_length>i karakters"
+
+#: ../../../app/views/devise/passwords/edit.html.erb:21
+msgid "Confirm your new password"
+msgstr "Bevestig je nieuwe wachtwoord"
+
+#: ../../../app/views/devise/passwords/edit.html.erb:23
+msgid "Change my password"
+msgstr "Verander mijn wachtwoord"
+
+#: ../../../app/views/devise/passwords/new.html.erb:4
+#: ../../../app/views/devise/shared/_links.html.erb:10
+msgid "Forgot your password?"
+msgstr "Je wachtwoord vergeten?"
+
+#: ../../../app/views/devise/passwords/new.html.erb:16
+msgid "Send me reset password instructions"
+msgstr "Stuur mij instructies voor het opnieuw instellen van het wachtwoord"
+
+#: ../../../app/views/devise/registrations/new.html.erb:4
+msgid "Join Riswa"
+msgstr "Word lid van Riswa"
+
+#: ../../../app/views/devise/registrations/new.html.erb:19
+#: ../../../app/views/devise/shared/_links.html.erb:6
+msgid "Join Takaro"
+msgstr "Meld je aan"
+
+#: ../../../app/views/devise/sessions/new.html.erb:4
+#: ../../../app/views/devise/sessions/new.html.erb:18
+#: ../../../app/views/devise/shared/_links.html.erb:2
+#: ../../../app/views/layouts/public.html.erb:17
+msgid "Sign in"
+msgstr "Aanmelden"
+
+#: ../../../app/views/devise/shared/_links.html.erb:14
+msgid "Didn't receive confirmation instructions?"
+msgstr "Geen bevestigingsinstructies ontvangen?"
+
+#: ../../../app/views/devise/shared/_links.html.erb:18
+msgid "Didn't receive unlock instructions?"
+msgstr "Geen ontgrendelingsinstructies ontvangen?"
+
+#: ../../../app/views/devise/unlocks/new.html.erb:4
+#: ../../../app/views/devise/unlocks/new.html.erb:15
+msgid "Resend unlock instructions"
+msgstr "Verzend de ontgrendelingsinstructies opnieuw"
+
+#: ../../../app/views/layouts/private.html.erb:23
+msgid "RHC playing style"
+msgstr "RHC speelwijze"
+
+#: ../../../app/views/layouts/private.html.erb:25
+msgid "8 tactical principles"
+msgstr "8 tactische principes"
+
+#: ../../../app/views/layouts/private.html.erb:29
+msgid "Season %<start>d - %<end>d"
+msgstr "Seizoen %<start>d - %<end>d"
+
+#: ../../../app/views/layouts/private.html.erb:47
+msgid "Admin"
+msgstr "Beheerder"
+
+#: ../../../app/views/layouts/private.html.erb:63
+#: ../../../app/views/profile/show.html.erb:3
+msgid "Your profile"
+msgstr ""
+
+#: ../../../app/views/layouts/private.html.erb:65
+msgid "Sign out"
+msgstr "Afmelden"
+
+#: ../../../app/views/periods/show.html.erb:19
+msgid "Tips for the training"
+msgstr "Tips voor de training"
+
+#: ../../../app/views/periods/show.html.erb:23
+msgid "Tips for matches"
+msgstr "Tips voor wedstrijden"
+
+#: ../../../app/views/profile/show.html.erb:16
+msgid "Required when you change your email address or password"
+msgstr "Vereist wanneer je je e-mailadres of wachtwoord wijzigt"
