@@ -41,6 +41,7 @@ module Takaro
     # Don't generate system test files.
     config.generators.system_tests = nil
 
-    I18n.available_locales = %i[en nl]
+    config.i18n.default_locale = :nl_NL
+    config.i18n.available_locales = %i[en nl_NL]
   end
 end
