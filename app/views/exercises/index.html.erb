@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col">
+    <h1><%= _('Exercises') %></h1>
+    <%= link_to _('New exercise'), new_exercise_path, class: 'btn btn-outline-primary' %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <table class="table">
+      <thead>
+      <tr>
+        <th><%= _('Title') %></th>
+      </tr>
+      </thead>
+      <tbody>
+      <%= render @exercises %>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   resources :periods, only: %i[show]
   resources :principles, only: %i[index show]
   resources :trainings
+  resources :exercises
 
   namespace :admin do
     resources :periods

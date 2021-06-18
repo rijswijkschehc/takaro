@@ -1,0 +1,11 @@
+<%= simple_form_for(@exercise) do |f| %>
+  <%= f.input :title %>
+  <%= f.association :step %>
+  <%= f.association :principles %>
+  <%= f.input :objective %>
+  <%= f.input :description, as: :rich_text_area %>
+  <%= f.input :tips, as: :rich_text_area %>
+  <%= f.input :variation, as: :rich_text_area %>
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>

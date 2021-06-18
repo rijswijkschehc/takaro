@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_17_223134) do
+ActiveRecord::Schema.define(version: 2021_06_18_160830) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,35 @@ ActiveRecord::Schema.define(version: 2021_06_17_223134) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "exercise_principles", force: :cascade do |t|
+    t.bigint "exercise_id"
+    t.bigint "principle_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["exercise_id"], name: "index_exercise_principles_on_exercise_id"
+    t.index ["principle_id"], name: "index_exercise_principles_on_principle_id"
+  end
+
+  create_table "exercise_techniques", force: :cascade do |t|
+    t.bigint "exercise_id"
+    t.bigint "technique_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["exercise_id"], name: "index_exercise_techniques_on_exercise_id"
+    t.index ["technique_id"], name: "index_exercise_techniques_on_technique_id"
+  end
+
+  create_table "exercises", force: :cascade do |t|
+    t.string "title"
+    t.string "objective"
+    t.bigint "step_id"
+    t.string "aasm_state"
+    t.string "video"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["step_id"], name: "index_exercises_on_step_id"
   end
 
   create_table "people", force: :cascade do |t|
@@ -218,6 +247,11 @@ ActiveRecord::Schema.define(version: 2021_06_17_223134) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "exercise_principles", "exercises"
+  add_foreign_key "exercise_principles", "principles"
+  add_foreign_key "exercise_techniques", "exercises"
+  add_foreign_key "exercise_techniques", "techniques"
+  add_foreign_key "exercises", "steps"
   add_foreign_key "period_principles", "periods"
   add_foreign_key "period_principles", "principles"
 end

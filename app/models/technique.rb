@@ -6,6 +6,9 @@ class Technique < ApplicationRecord
 
   enum grip: { basic: 0, double_v: 1, frying_pan: 2 }
 
+  has_many :exercise_techniques, dependent: :destroy
+  has_many :exercises, through: :exercise_techniques
+
   validates :description, presence: true
   validates :grip, presence: true
   validates :name, presence: true

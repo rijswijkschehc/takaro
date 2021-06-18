@@ -8,6 +8,8 @@ class Principle < ApplicationRecord
   default_scope { order(:position) }
 
   belongs_to :possession_phase
+  has_many :exercise_principles, dependent: :destroy
+  has_many :exercises, through: :exercise_principles
   has_many :period_principles, dependent: :destroy
   has_many :principle_steps, dependent: :destroy
 
