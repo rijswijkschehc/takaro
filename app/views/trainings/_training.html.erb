@@ -1,0 +1,5 @@
+<tr>
+  <td><%= link_to training.title, training %></td>
+  <td><%= safe_join(training.principles.map(&:badge)) %></td>
+  <td><%= training.creator %></td>
+</tr>

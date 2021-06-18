@@ -1,0 +1,7 @@
+<%= simple_form_for(@training) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :objective %>
+  <%= f.association :step %>
+  <%= f.association :principles %>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>

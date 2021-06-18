@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_11_174110) do
+ActiveRecord::Schema.define(version: 2021_06_17_223134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -148,6 +148,25 @@ ActiveRecord::Schema.define(version: 2021_06_11_174110) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "grip"
     t.string "video"
+  end
+
+  create_table "training_principles", force: :cascade do |t|
+    t.bigint "training_id"
+    t.bigint "principle_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["principle_id"], name: "index_training_principles_on_principle_id"
+    t.index ["training_id"], name: "index_training_principles_on_training_id"
+  end
+
+  create_table "trainings", force: :cascade do |t|
+    t.string "title"
+    t.string "objective"
+    t.bigint "step_id"
+    t.string "aasm_state"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["step_id"], name: "index_trainings_on_step_id"
   end
 
   create_table "user_roles", force: :cascade do |t|
