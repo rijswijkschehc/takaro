@@ -10,7 +10,7 @@
 # https://github.com/translation/rails#custom-localization-key-prefixes
 #
 ---
-nl-NL:
+nl:
   date:
     formats:
       default: "%d-%m-%Y"

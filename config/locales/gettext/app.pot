@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: takaro 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2021-06-18 20:07+0200\n"
-"PO-Revision-Date: 2021-06-18 20:07+0200\n"
+"POT-Creation-Date: 2021-06-21 23:15+0200\n"
+"PO-Revision-Date: 2021-06-21 23:15+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -159,12 +159,9 @@ msgid "Send me reset password instructions"
 msgstr ""
 
 #: ../../../app/views/devise/registrations/new.html.erb:4
-msgid "Join Riswa"
-msgstr ""
-
 #: ../../../app/views/devise/registrations/new.html.erb:19
 #: ../../../app/views/devise/shared/_links.html.erb:6
-msgid "Join Takaro"
+msgid "Join"
 msgstr ""
 
 #: ../../../app/views/devise/sessions/new.html.erb:4
@@ -195,6 +192,18 @@ msgstr ""
 #: ../../../app/views/exercises/index.html.erb:4
 #: ../../../app/views/exercises/new.html.erb:3
 msgid "New exercise"
+msgstr ""
+
+#: ../../../app/views/exercises/show.html.erb:26
+msgid "Description"
+msgstr ""
+
+#: ../../../app/views/exercises/show.html.erb:33
+msgid "Tips and techniques"
+msgstr ""
+
+#: ../../../app/views/exercises/show.html.erb:41
+msgid "Variations"
 msgstr ""
 
 #: ../../../app/views/layouts/private.html.erb:23

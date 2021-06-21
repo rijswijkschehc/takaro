@@ -3,7 +3,7 @@
 TranslationIO.configure do |config|
   config.api_key        = Credentials.fetch(:translation, :api_key)
   config.source_locale  = 'en'
-  config.target_locales = ['nl-NL']
+  config.target_locales = ['nl']
 
   # Uncomment this if you don't want to use gettext
   # config.disable_gettext = true
