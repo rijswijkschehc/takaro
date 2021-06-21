@@ -5,6 +5,7 @@
   <%= f.input :objective %>
   <%= f.input :description, as: :rich_text_area %>
   <%= f.input :tips, as: :rich_text_area %>
+  <%= f.association :techniques %>
   <%= f.input :variation, as: :rich_text_area %>
 
   <%= f.submit class: 'btn btn-primary' %>
