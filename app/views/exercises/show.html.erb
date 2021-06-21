@@ -1,11 +1,49 @@
 <div class="row">
   <div class="col">
-    <h1><%= @exercise.title %></h1>
+    <h1>
+      <%= icon(id: 'dumbbell') %>
+      <%= @exercise.title %>
+      <% if policy(@exercise).update? %>
+        <%= link_to icon(id: 'edit'), edit_exercise_path(@exercise) %>
+      <% end %>
+    </h1>
   </div>
 </div>
-
-<div class="row">
+<div class="row border-bottom">
   <div class="col">
-    <%= render(partial: 'form') %>
+    <%= @exercise.step.badge %>
+    <%= safe_join(@exercise.principles.map(&:badge)) %>
+    <p class="lead"><%= @exercise.objective %></p>
+  </div>
+</div>
+<div class="row bg-light py-3">
+  <div class="col-md-4"></div>
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h6>
+          <%= icon(id: 'info', fixed: true) %>
+          <%= _('Description') %>
+        </h6>
+        <div class="ps-3 mb-3">
+          <%= @exercise.description %>
+        </div>
+        <h6>
+          <%= icon(id: 'tools', fixed: true) %>
+          <%= _('Tips and techniques') %>
+        </h6>
+        <div class="ps-3 mb-3">
+          <%= @exercise.tips %>
+          <%= safe_join(@exercise.techniques.map(&:badge)) %>
+        </div>
+        <h6>
+          <%= icon(id: 'tachometer-alt', fixed: true) %>
+          <%= _('Variations') %>
+        </h6>
+        <div class="ps-3">
+          <%= @exercise.variation %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

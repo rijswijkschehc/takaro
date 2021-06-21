@@ -15,7 +15,9 @@ class ExercisesController < PrivateController
     end
   end
 
-  def show; end
+  def show
+    @exercise = @exercise.decorate
+  end
 
   def update
     if @exercise.update(safe_params)
@@ -36,7 +38,7 @@ class ExercisesController < PrivateController
     @exercise =
       case action_name
       when 'index', 'new', 'create' then authorize(Exercise.new)
-      when 'show', 'update', 'destroy' then authorize(Exercise.find(params[:id]))
+      when 'show', 'edit', 'update', 'destroy' then authorize(Exercise.find(params[:id]))
       else
         raise NotAuthorizedError
       end
