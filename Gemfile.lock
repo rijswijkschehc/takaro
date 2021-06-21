@@ -173,6 +173,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-i18n (1.9.4)
+      devise (>= 4.7.1)
     diff-lcs (1.4.4)
     docile (1.4.0)
     domain_name (0.5.20190701)
@@ -520,6 +522,7 @@ DEPENDENCIES
   cucumber-rails (~> 2.2)
   database_cleaner-active_record (~> 2.0)
   devise (~> 4.7.3)
+  devise-i18n (~> 1.9.4)
   draper (~> 4.0)
   erb_lint (~> 0.0)
   factory_bot_rails (~> 6.2.0)

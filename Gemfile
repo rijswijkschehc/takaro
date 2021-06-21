@@ -10,6 +10,7 @@ gem 'acts_as_list', '~> 1.0.4'
 gem 'aws-sdk-s3', '~> 1.94'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise', '~> 4.7.3'
+gem 'devise-i18n', '~> 1.9.4'
 gem 'draper', '~> 4.0'
 gem 'image_processing', '~> 1.12.1'
 gem 'lograge', '~> 0.11'
