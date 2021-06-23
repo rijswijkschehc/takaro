@@ -2,15 +2,15 @@
 
 class TrainingsController < PrivateController
   def index
-    @trainings = authorize(Training.all).decorate
+    @trainings = Training.all.decorate
   end
 
   def new
-    @training = authorize(Training.new)
+    @training = Training.new
   end
 
   def create
-    @training = authorize(Training.new(safe_params))
+    @training = Training.new(safe_params)
 
     if @training.update(safe_params)
       redirect_to trainings_path
@@ -20,11 +20,11 @@ class TrainingsController < PrivateController
   end
 
   def show
-    @training = authorize(Training.find(params[:id]))
+    @training = Training.find(params[:id])
   end
 
   def update
-    @training = authorize(Training.find(params[:id]))
+    @training = Training.find(params[:id])
 
     if @training.update(safe_params)
       redirect_to trainings_path

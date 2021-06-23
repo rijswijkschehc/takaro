@@ -37,4 +37,8 @@ class ProfileController < PrivateController
     params.require(:user).permit(:email, :current_password, :password, :password_confirmation,
                                  person_attributes: %i[id screen_name])
   end
+
+  def authorize_user
+    authorize(current_user)
+  end
 end

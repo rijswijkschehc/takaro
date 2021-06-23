@@ -4,18 +4,17 @@ module Admin
   class PrinciplesController < AdminController
     include Sortable
 
-    before_action :find_or_initialize_steps, only: %i[new show]
-
     def index
-      @principles = authorize(Principle.all)
+      @principles = Principle.order(:position)
     end
 
     def new
-      @principle = authorize(Principle.new)
+      @principle = Principle.new
+      find_or_initialize_steps
     end
 
     def create
-      @principle = authorize(Principle.new(safe_params))
+      @principle = Principle.new(safe_params)
 
       if @principle.save
         redirect_to admin_principles_path
@@ -25,11 +24,11 @@ module Admin
     end
 
     def show
-      @principle = authorize(Principle.find(params[:id]))
+      @principle = Principle.find(params[:id])
     end
 
     def update
-      @principle = authorize(Principle.find(params[:id]))
+      @principle = Principle.find(params[:id])
 
       if @principle.update(safe_params)
         redirect_to admin_principles_path

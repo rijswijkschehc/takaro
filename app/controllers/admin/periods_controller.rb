@@ -3,15 +3,15 @@
 module Admin
   class PeriodsController < AdminController
     def index
-      @periods = authorize(Period.all)
+      @periods = Period.all
     end
 
     def new
-      @period = authorize(Period.new)
+      @period = Period.new
     end
 
     def create
-      @period = authorize(Period.new(safe_params))
+      @period = Period.new(safe_params)
 
       if @period.save
         redirect_to admin_periods_path
@@ -21,11 +21,11 @@ module Admin
     end
 
     def show
-      @period = authorize(Period.find(params[:id]))
+      @period = Period.find(params[:id])
     end
 
     def update
-      @period = authorize(Period.find(params[:id]))
+      @period = Period.find(params[:id])
 
       if @period.update(safe_params)
         redirect_to admin_periods_path

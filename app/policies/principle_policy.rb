@@ -1,27 +1,3 @@
 # frozen_string_literal: true
 
-class PrinciplePolicy < ApplicationPolicy
-  def index?
-    user.admin?
-  end
-
-  def new?
-    user.admin?
-  end
-
-  def create?
-    user.admin?
-  end
-
-  def show?
-    user.admin?
-  end
-
-  def update?
-    user.admin?
-  end
-
-  def reposition?
-    user.admin?
-  end
-end
+class PrinciplePolicy < PrivatePolicy; end

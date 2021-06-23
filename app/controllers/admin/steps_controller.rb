@@ -5,15 +5,15 @@ module Admin
     include Sortable
 
     def index
-      @steps = authorize(Step.all)
+      @steps = Step.all
     end
 
     def new
-      @step = authorize(Step.new)
+      @step = Step.new
     end
 
     def create
-      @step = authorize(Step.new(safe_params))
+      @step = Step.new(safe_params)
 
       if @step.save
         redirect_to admin_steps_path
@@ -23,11 +23,11 @@ module Admin
     end
 
     def show
-      @step = authorize(Step.find(params[:id]))
+      @step = Step.find(params[:id])
     end
 
     def update
-      @step = authorize(Step.find(params[:id]))
+      @step = Step.find(params[:id])
 
       if @step.update(safe_params)
         redirect_to admin_steps_path

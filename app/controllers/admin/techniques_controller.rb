@@ -3,15 +3,15 @@
 module Admin
   class TechniquesController < AdminController
     def index
-      @techniques = authorize(Technique.all)
+      @techniques = Technique.all
     end
 
     def new
-      @technique = authorize(Technique.new)
+      @technique = Technique.new
     end
 
     def create
-      @technique = authorize(Technique.new(safe_params))
+      @technique = Technique.new(safe_params)
 
       if @technique.save
         redirect_to admin_techniques_path
@@ -21,11 +21,11 @@ module Admin
     end
 
     def show
-      @technique = authorize(Technique.find(params[:id]))
+      @technique = Technique.find(params[:id])
     end
 
     def update
-      @technique = authorize(Technique.find(params[:id]))
+      @technique = Technique.find(params[:id])
 
       if @technique.update(safe_params)
         redirect_to admin_techniques_path

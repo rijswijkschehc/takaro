@@ -3,15 +3,15 @@
 module Admin
   class TargetCategoriesController < AdminController
     def index
-      @target_categories = authorize(TargetCategory.all)
+      @target_categories = TargetCategory.all
     end
 
     def new
-      @target_category = authorize(TargetCategory.new)
+      @target_category = TargetCategory.new
     end
 
     def create
-      @target_category = authorize(TargetCategory.new(safe_params))
+      @target_category = TargetCategory.new(safe_params)
 
       if @target_category.save
         redirect_to admin_target_categories_path
@@ -21,11 +21,11 @@ module Admin
     end
 
     def show
-      @target_category = authorize(TargetCategory.find(params[:id]))
+      @target_category = TargetCategory.find(params[:id])
     end
 
     def update
-      @target_category = authorize(TargetCategory.find(params[:id]))
+      @target_category = TargetCategory.find(params[:id])
 
       if @target_category.update(safe_params)
         redirect_to admin_target_categories_path

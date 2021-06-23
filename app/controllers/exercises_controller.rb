@@ -2,15 +2,15 @@
 
 class ExercisesController < PrivateController
   def index
-    @exercises = authorize(Exercise.all)
+    @exercises = Exercise.all
   end
 
   def new
-    @exercise = authorize(Exercise.new)
+    @exercise = Exercise.new
   end
 
   def create
-    @exercise = authorize(Exercise.new(safe_params))
+    @exercise = Exercise.new(safe_params)
 
     if @exercise.save
       redirect_to exercises_path
@@ -20,11 +20,11 @@ class ExercisesController < PrivateController
   end
 
   def show
-    @exercise = authorize(Exercise.find(params[:id])).decorate
+    @exercise = Exercise.find(params[:id]).decorate
   end
 
   def update
-    @exercise = authorize(Exercise.find(params[:id]))
+    @exercise = Exercise.find(params[:id])
 
     if @exercise.update(safe_params)
       redirect_to exercises_path
