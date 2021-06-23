@@ -1,0 +1,5 @@
+<div class="list-group">
+  <% @periods.each do |period| %>
+    <%= link_to period.name, period, class: 'list-group-item list-group-item-action' %>
+  <% end %>
+</div>

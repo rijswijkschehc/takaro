@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get 'profile' => 'profile#show'
   patch 'profile' => 'profile#update'
 
-  resources :periods, only: %i[show]
+  resources :periods, only: %i[index show]
   resources :principles, only: %i[index show]
   resources :trainings
   resources :exercises
