@@ -2,13 +2,17 @@
 
 class ExercisesController < PrivateController
   def index
-    @exercises = Exercise.all
+    @exercises = authorize(Exercise.all)
   end
 
-  def new; end
+  def new
+    @exercise = authorize(Exercise.new)
+  end
 
   def create
-    if @exercise.update(safe_params)
+    @exercise = authorize(Exercise.new(safe_params))
+
+    if @exercise.save
       redirect_to exercises_path
     else
       render :new
@@ -16,10 +20,12 @@ class ExercisesController < PrivateController
   end
 
   def show
-    @exercise = @exercise.decorate
+    @exercise = authorize(Exercise.find(params[:id])).decorate
   end
 
   def update
+    @exercise = authorize(Exercise.find(params[:id]))
+
     if @exercise.update(safe_params)
       redirect_to exercises_path
     else
@@ -32,15 +38,5 @@ class ExercisesController < PrivateController
   def safe_params
     params.require(:exercise).permit(:description, :objective, :step_id, :tips, :title, :variation, :video,
                                      principle_ids: [], technique_ids: [])
-  end
-
-  def authorize_action
-    @exercise =
-      case action_name
-      when 'index', 'new', 'create' then authorize(Exercise.new)
-      when 'show', 'edit', 'update', 'destroy' then authorize(Exercise.find(params[:id]))
-      else
-        raise NotAuthorizedError
-      end
   end
 end

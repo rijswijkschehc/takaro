@@ -2,10 +2,14 @@
 
 class ProfileController < PrivateController
   def show
+    authorize(current_user)
+
     current_user.build_person if current_user.person.nil?
   end
 
   def update
+    authorize(current_user)
+
     if successful_update?
       bypass_sign_in(current_user) if safe_params.fetch(:password).present?
 
@@ -32,9 +36,5 @@ class ProfileController < PrivateController
   def safe_params
     params.require(:user).permit(:email, :current_password, :password, :password_confirmation,
                                  person_attributes: %i[id screen_name])
-  end
-
-  def authorize_action
-    authorize(:profile, :show?)
   end
 end

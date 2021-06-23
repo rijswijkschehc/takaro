@@ -3,22 +3,30 @@
 module Admin
   class StaticPagesController < AdminController
     def index
-      @static_pages = StaticPage.all
+      @static_pages = authorize(StaticPage.all)
     end
 
-    def new; end
+    def new
+      @static_page = authorize(StaticPage.new)
+    end
 
     def create
-      if @static_page.update(safe_params)
+      @static_page = authorize(StaticPage.new(safe_params))
+
+      if @static_page.save
         redirect_to admin_static_pages_path
       else
         render :new
       end
     end
 
-    def show; end
+    def show
+      @static_page = authorize(StaticPage.find(params[:id]))
+    end
 
     def update
+      @static_page = authorize(StaticPage.find(params[:id]))
+
       if @static_page.update(safe_params)
         redirect_to admin_static_pages_path
       else
@@ -30,17 +38,6 @@ module Admin
 
     def safe_params
       params.require(:static_page).permit(:content, :path, :title)
-    end
-
-    def authorize_action
-      @static_page =
-        case action_name
-        when 'index' then authorize(StaticPage)
-        when 'new', 'create' then authorize(StaticPage.new)
-        when 'show', 'update' then authorize(StaticPage.find(params[:id]))
-        else
-          raise NotAuthorizedError
-        end
     end
   end
 end

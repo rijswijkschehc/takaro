@@ -3,13 +3,7 @@
 module Admin
   class UsersController < AdminController
     def index
-      @users = User.all.decorate
-    end
-
-    private
-
-    def authorize_action
-      authorize(User)
+      @users = authorize(User.all).decorate
     end
   end
 end

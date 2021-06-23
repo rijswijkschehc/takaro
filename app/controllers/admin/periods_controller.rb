@@ -3,22 +3,30 @@
 module Admin
   class PeriodsController < AdminController
     def index
-      @periods = Period.all
+      @periods = authorize(Period.all)
     end
 
-    def new; end
+    def new
+      @period = authorize(Period.new)
+    end
 
     def create
-      if @period.update(safe_params)
+      @period = authorize(Period.new(safe_params))
+
+      if @period.save
         redirect_to admin_periods_path
       else
         render :new
       end
     end
 
-    def show; end
+    def show
+      @period = authorize(Period.find(params[:id]))
+    end
 
     def update
+      @period = authorize(Period.find(params[:id]))
+
       if @period.update(safe_params)
         redirect_to admin_periods_path
       else
@@ -32,19 +40,6 @@ module Admin
       params.require(:period).permit(:description, :ends_on, :name, :starts_on,
                                      period_principles_attributes: %i[_destroy id description match_tips principle_id
                                                                       tagline training_tips])
-    end
-
-    def authorize_action
-      @period =
-        case action_name
-        when 'index' then authorize(Period)
-        when 'new', 'create' then authorize(Period.new)
-        when 'show', 'update' then authorize(Period.includes(
-          period_principles: %i[rich_text_description rich_text_match_tips rich_text_training_tips]
-        ).find(params[:id]))
-        else
-          raise NotAuthorizedError
-        end
     end
   end
 end

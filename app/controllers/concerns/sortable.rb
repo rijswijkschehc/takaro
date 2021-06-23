@@ -4,6 +4,8 @@ module Sortable
   extend ActiveSupport::Concern
 
   def reposition
+    authorize(record)
+
     record.set_list_position(params[:position])
   end
 

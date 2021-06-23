@@ -2,12 +2,16 @@
 
 class TrainingsController < PrivateController
   def index
-    @trainings = Training.all.decorate
+    @trainings = authorize(Training.all).decorate
   end
 
-  def new; end
+  def new
+    @training = authorize(Training.new)
+  end
 
   def create
+    @training = authorize(Training.new(safe_params))
+
     if @training.update(safe_params)
       redirect_to trainings_path
     else
@@ -15,9 +19,13 @@ class TrainingsController < PrivateController
     end
   end
 
-  def show; end
+  def show
+    @training = authorize(Training.find(params[:id]))
+  end
 
   def update
+    @training = authorize(Training.find(params[:id]))
+
     if @training.update(safe_params)
       redirect_to trainings_path
     else
@@ -29,15 +37,5 @@ class TrainingsController < PrivateController
 
   def safe_params
     params.require(:training).permit(:objective, :step_id, :title, principle_ids: [])
-  end
-
-  def authorize_action
-    @training =
-      case action_name
-      when 'index', 'new', 'create' then authorize(Training.new)
-      when 'show', 'update', 'destroy' then authorize(Training.find(params[:id]))
-      else
-        raise NotAuthorizedError
-      end
   end
 end

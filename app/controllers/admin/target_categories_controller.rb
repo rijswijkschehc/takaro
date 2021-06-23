@@ -3,22 +3,30 @@
 module Admin
   class TargetCategoriesController < AdminController
     def index
-      @target_categories = TargetCategory.all
+      @target_categories = authorize(TargetCategory.all)
     end
 
-    def new; end
+    def new
+      @target_category = authorize(TargetCategory.new)
+    end
 
     def create
-      if @target_category.update(safe_params)
+      @target_category = authorize(TargetCategory.new(safe_params))
+
+      if @target_category.save
         redirect_to admin_target_categories_path
       else
         render :new
       end
     end
 
-    def show; end
+    def show
+      @target_category = authorize(TargetCategory.find(params[:id]))
+    end
 
     def update
+      @target_category = authorize(TargetCategory.find(params[:id]))
+
       if @target_category.update(safe_params)
         redirect_to admin_target_categories_path
       else
@@ -30,17 +38,6 @@ module Admin
 
     def safe_params
       params.require(:target_category).permit(:name)
-    end
-
-    def authorize_action
-      @target_category =
-        case action_name
-        when 'index' then authorize(TargetCategory)
-        when 'new', 'create' then authorize(TargetCategory.new)
-        when 'show', 'update' then authorize(TargetCategory.find(params[:id]))
-        else
-          raise NotAuthorizedError
-        end
     end
   end
 end
