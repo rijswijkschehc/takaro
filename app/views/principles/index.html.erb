@@ -22,7 +22,7 @@
       <tbody>
       <% @principles.each do |principle| %>
         <tr>
-          <th><%= image_pack_tag("#{principle.name.downcase}.svg", class: 'principle-logo-sm') %></th>
+          <th><%= link_to image_pack_tag("#{principle.name.downcase}.svg", class: 'principle-logo-sm'), principle %></th>
           <% @steps.each do |step| %>
             <%= tag.td(principle.principle_steps.find_by(step: step)&.tagline, style: { 'background:': "##{principle.hex_color}" }) %>
           <% end %>
