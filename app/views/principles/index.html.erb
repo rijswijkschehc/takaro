@@ -1,5 +1,31 @@
-<div class="list-group">
-  <% @principles.each do |principle| %>
-    <%= link_to principle.name, principle, class: 'list-group-item list-group-item-action' %>
-  <% end %>
+<div class="row">
+  <div class="col">
+    <div class="page-header">
+      <h1><%= _('8 tactical principles') %></h1>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <table class="table table-bordered bg-dark text-white">
+      <thead>
+      <tr>
+        <th><%= image_pack_tag('speelwijze.svg', class: 'principle-logo-sm') %></th>
+        <% @steps.each do |step| %>
+          <th><%= step.name %></th>
+        <% end %>
+      </tr>
+      </thead>
+      <tbody>
+      <% @principles.each do |principle| %>
+        <tr>
+          <th><%= image_pack_tag("#{principle.name.downcase}.svg", class: 'principle-logo-sm') %></th>
+          <% @steps.each do |step| %>
+            <%= tag.td(principle.principle_steps.find_by(step: step)&.tagline, style: { 'background:': "##{principle.hex_color}" }) %>
+          <% end %>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>

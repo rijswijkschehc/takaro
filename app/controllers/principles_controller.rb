@@ -3,6 +3,7 @@
 class PrinciplesController < PrivateController
   def index
     @principles = Principle.order(:position)
+    @steps = Step.order(:position)
   end
 
   def show
