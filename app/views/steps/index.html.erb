@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col">
+    <div class="page-header">
+      <h1><%= _('3 methodical steps') %></h1>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col"><%= render_static_section(identifier: '3_methodische_stappen_intro') %></div>
+</div>
+<% @steps.each do |step| %>
+  <div class="row mb-3">
+    <div class="col">
+      <div class="card">
+        <h5 class="card-header">
+          <%= icon(id: step.icon) %>
+          <%= step.name %>
+        </h5>
+        <div class="card-body">
+          <%= step.description %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
