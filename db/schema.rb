@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_18_160830) do
+ActiveRecord::Schema.define(version: 2021_06_22_161647) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -155,6 +155,14 @@ ActiveRecord::Schema.define(version: 2021_06_18_160830) do
     t.string "aasm_state"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "static_sections", force: :cascade do |t|
+    t.string "name"
+    t.string "identifier"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["identifier"], name: "index_static_sections_on_identifier", unique: true
   end
 
   create_table "steps", force: :cascade do |t|

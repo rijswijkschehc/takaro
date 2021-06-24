@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col">
+    <h1><%= _('Static sections') %></h1>
+    <%= link_to _('New static section'), new_admin_static_section_path, class: 'btn btn-outline-primary' %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <table class="table">
+      <thead>
+      <tr>
+        <th><%= _('Name') %></th>
+        <th><%= _('Identifier') %></th>
+      </tr>
+      </thead>
+      <tbody>
+      <%= render @static_sections %>
+      </tbody>
+    </table>
+  </div>
+</div>

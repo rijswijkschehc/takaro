@@ -1,0 +1,6 @@
+<%= simple_form_for([:admin, @static_section]) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :identifier, disabled: @static_section.persisted?, hint: _('The identifier can not be changed') %>
+  <%= f.input :content, as: :rich_text_area %>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>

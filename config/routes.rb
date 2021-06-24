@@ -34,6 +34,7 @@ Rails.application.routes.draw do
     resources :principles, concerns: %i[sortable]
     resources :techniques
     resources :static_pages
+    resources :static_sections
     resources :steps, concerns: %i[sortable]
     resources :target_categories
     resources :users
