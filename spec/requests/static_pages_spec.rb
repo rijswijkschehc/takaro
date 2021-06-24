@@ -2,7 +2,7 @@
 
 RSpec.describe 'Static pages' do
   describe 'GET show' do
-    let(:test_page) { instance_double(StaticPage, content: 'Static test content') }
+    let(:test_page) { instance_double(StaticPage, title: 'Static Page', content: 'Static test content') }
 
     before do
       allow(StaticPage).to receive(:find_by!).with(path: 'test-page').and_return(test_page)
