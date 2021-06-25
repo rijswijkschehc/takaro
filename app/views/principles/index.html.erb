@@ -13,7 +13,7 @@
     <table class="table table-bordered bg-dark text-white">
       <thead>
       <tr>
-        <th><%= image_pack_tag('speelwijze.svg', class: 'principle-logo-sm') %></th>
+        <th><%= image_pack_tag('speelwijze.svg', class: 'principle-logo-sm', alt: _('RHC playing style')) %></th>
         <% @steps.each do |step| %>
           <th><%= step.name %></th>
         <% end %>
@@ -22,7 +22,7 @@
       <tbody>
       <% @principles.each do |principle| %>
         <tr>
-          <th><%= link_to image_pack_tag("#{principle.name.downcase}.svg", class: 'principle-logo-sm'), principle %></th>
+          <th><%= link_to image_pack_tag("#{principle.name.downcase}.svg", class: 'principle-logo-sm', alt: principle.name), principle %></th>
           <% @steps.each do |step| %>
             <%= tag.td(principle.principle_steps.find_by(step: step)&.tagline, style: { 'background:': "##{principle.hex_color}" }) %>
           <% end %>
