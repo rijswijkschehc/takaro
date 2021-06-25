@@ -41,7 +41,6 @@ group :development do
   gem 'guard-rubocop', '~> 1.4', require: false
   gem 'listen', '~> 3.3'
   gem 'pry-rescue', '~> 1.5'
-  gem 'rack-mini-profiler', '~> 2.0'
   gem 'rails-erd', '~> 1.6.1'
   gem 'rubocop', '~> 1.8', require: false
   gem 'rubocop-performance', '~> 1.9', require: false
