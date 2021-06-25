@@ -17,6 +17,10 @@
     @extend .d-flex;
     @extend .justify-content-around;
     @extend .my-3;
+
+    img {
+      width: 120px;
+    }
   }
 
   a {
