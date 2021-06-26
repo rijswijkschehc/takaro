@@ -3,7 +3,7 @@
     <h1>
       <%= icon(id: 'dumbbell') %>
       <%= @exercise.title %>
-      <% if policy(@exercise).update? %>
+      <% if policy(@exercise.model).update? %>
         <%= link_to icon(id: 'edit'), edit_exercise_path(@exercise) %>
       <% end %>
     </h1>
