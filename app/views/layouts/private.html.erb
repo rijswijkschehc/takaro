@@ -56,19 +56,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbar">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-              <%= link_to _('Admin'), '#', class: 'nav-link dropdown-toggle', data: { bs_toggle: 'dropdown' } %>
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li><%= link_to _('Users'), admin_users_path, class: 'dropdown-item' %></li>
-                <li><%= link_to _('Static pages'), admin_static_pages_path, class: 'dropdown-item' %></li>
-                <li><%= link_to _('Static sections'), admin_static_sections_path, class: 'dropdown-item' %></li>
-                <li><%= link_to _('Target categories'), admin_target_categories_path, class: 'dropdown-item' %></li>
-                <li><%= link_to _('Principles'), admin_principles_path, class: 'dropdown-item' %></li>
-                <li><%= link_to _('Periods'), admin_periods_path, class: 'dropdown-item' %></li>
-                <li><%= link_to _('Techniques'), admin_techniques_path, class: 'dropdown-item' %></li>
-                <li><%= link_to _('Steps'), admin_steps_path, class: 'dropdown-item' %></li>
-              </ul>
-            </li>
+            <% if current_user.admin? %>
+              <li class="nav-item dropdown">
+                <%= link_to _('Admin'), '#', class: 'nav-link dropdown-toggle', data: { bs_toggle: 'dropdown' } %>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><%= link_to _('Users'), admin_users_path, class: 'dropdown-item' %></li>
+                  <li><%= link_to _('Static pages'), admin_static_pages_path, class: 'dropdown-item' %></li>
+                  <li><%= link_to _('Static sections'), admin_static_sections_path, class: 'dropdown-item' %></li>
+                  <li><%= link_to _('Target categories'), admin_target_categories_path, class: 'dropdown-item' %></li>
+                  <li><%= link_to _('Principles'), admin_principles_path, class: 'dropdown-item' %></li>
+                  <li><%= link_to _('Periods'), admin_periods_path, class: 'dropdown-item' %></li>
+                  <li><%= link_to _('Techniques'), admin_techniques_path, class: 'dropdown-item' %></li>
+                  <li><%= link_to _('Steps'), admin_steps_path, class: 'dropdown-item' %></li>
+                </ul>
+              </li>
+            <% end %>
             <li class="nav-item dropdown">
               <%= link_to current_user.screen_name, '#', class: 'nav-link dropdown-toggle', data: { bs_toggle: 'dropdown' } %>
               <ul class="dropdown-menu dropdown-menu-end">
