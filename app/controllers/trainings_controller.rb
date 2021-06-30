@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class TrainingsController < PrivateController
+  before_action { add_breadcrumb(_('Trainings'), trainings_path) }
+
   def index
     @trainings = Training.all.decorate
   end
@@ -21,10 +23,14 @@ class TrainingsController < PrivateController
 
   def show
     @training = Training.find(params[:id])
+
+    add_breadcrumb(@training.title)
   end
 
   def update
     @training = Training.find(params[:id])
+
+    add_breadcrumb(@training.title)
 
     if @training.update(safe_params)
       redirect_to trainings_path
