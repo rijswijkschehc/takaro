@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: takaro 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2021-06-30 18:14+0200\n"
-"PO-Revision-Date: 2021-06-30 18:14+0200\n"
+"POT-Creation-Date: 2021-06-30 18:42+0200\n"
+"PO-Revision-Date: 2021-06-30 18:42+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -60,6 +60,10 @@ msgstr ""
 msgid "Trainings"
 msgstr ""
 
+#: ../../../app/decorators/period_decorator.rb:7
+msgid "From %<start>s to %<end>s"
+msgstr ""
+
 #: ../../../app/views/admin/periods/_form.html.erb:10
 msgid "Add principle"
 msgstr ""
@@ -76,7 +80,7 @@ msgstr ""
 
 #: ../../../app/views/admin/periods/index.html.erb:15
 #: ../../../app/views/admin/principles/index.html.erb:16
-#: ../../../app/views/admin/static_sections/index.html.erb:13
+#: ../../../app/views/admin/static_sections/index.html.erb:12
 #: ../../../app/views/admin/steps/index.html.erb:16
 #: ../../../app/views/admin/target_categories/index.html.erb:15
 #: ../../../app/views/admin/techniques/index.html.erb:15
@@ -120,12 +124,7 @@ msgstr ""
 msgid "Static sections"
 msgstr ""
 
-#: ../../../app/views/admin/static_sections/index.html.erb:4
-#: ../../../app/views/admin/static_sections/new.html.erb:3
-msgid "New static section"
-msgstr ""
-
-#: ../../../app/views/admin/static_sections/index.html.erb:14
+#: ../../../app/views/admin/static_sections/index.html.erb:13
 msgid "Identifier"
 msgstr ""
 
@@ -279,11 +278,11 @@ msgstr ""
 msgid "Sign out"
 msgstr ""
 
-#: ../../../app/views/periods/show.html.erb:19
+#: ../../../app/views/periods/show.html.erb:20
 msgid "Tips for the training"
 msgstr ""
 
-#: ../../../app/views/periods/show.html.erb:23
+#: ../../../app/views/periods/show.html.erb:24
 msgid "Tips for matches"
 msgstr ""
 

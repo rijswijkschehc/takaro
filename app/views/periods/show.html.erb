@@ -3,13 +3,14 @@
     <h1 class="display-6">
       <%= @period.name %>
     </h1>
-    <%= @period.description %>
+    <p class="lead"><%= @period.interval %></p>
   </div>
 </div>
 <div class="row bg-light py-3">
   <div class="col">
     <div class="card">
       <div class="card-body">
+        <%= @period.description %>
         <% @period.period_principles.each do |period_principle| %>
           <h5><%= link_to safe_join([icon(id: 'plus-square', margin: 'e-2'), period_principle.principle.name]), dom_id(period_principle, '#tab'), data: { bs_toggle: 'collapse' } %></h5>
           <p class="small"><%= period_principle.tagline %></p>
