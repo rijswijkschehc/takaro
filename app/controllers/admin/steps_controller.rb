@@ -2,6 +2,8 @@
 
 module Admin
   class StepsController < AdminController
+    before_action { add_breadcrumb(_('Steps'), admin_steps_path) }
+
     include Sortable
 
     def index

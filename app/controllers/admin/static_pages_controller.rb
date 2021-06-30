@@ -2,6 +2,8 @@
 
 module Admin
   class StaticPagesController < AdminController
+    before_action { add_breadcrumb(_('Static pages'), admin_static_pages_path) }
+
     def index
       @static_pages = StaticPage.all
     end

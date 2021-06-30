@@ -2,6 +2,8 @@
 
 module Admin
   class TechniquesController < AdminController
+    before_action { add_breadcrumb(_('Techniques'), admin_techniques_path) }
+
     def index
       @techniques = Technique.all
     end

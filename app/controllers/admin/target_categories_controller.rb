@@ -2,6 +2,8 @@
 
 module Admin
   class TargetCategoriesController < AdminController
+    before_action { add_breadcrumb(_('Target categories'), admin_target_categories_path) }
+
     def index
       @target_categories = TargetCategory.all
     end

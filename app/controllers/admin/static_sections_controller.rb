@@ -2,6 +2,8 @@
 
 module Admin
   class StaticSectionsController < AdminController
+    before_action { add_breadcrumb(_('Static sections'), admin_static_sections_path) }
+
     def index
       @static_sections = StaticSection.order(name: :asc)
     end

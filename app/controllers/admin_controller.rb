@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class AdminController < PrivateController
+  before_action { add_breadcrumb(_('Admin')) }
+
   private
 
   def authorize_user

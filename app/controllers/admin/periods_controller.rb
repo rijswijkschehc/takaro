@@ -2,6 +2,8 @@
 
 module Admin
   class PeriodsController < AdminController
+    before_action { add_breadcrumb(_('Periods'), admin_periods_path) }
+
     def index
       @periods = Period.all
     end
