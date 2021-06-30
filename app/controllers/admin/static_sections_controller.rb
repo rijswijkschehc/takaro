@@ -6,20 +6,6 @@ module Admin
       @static_sections = StaticSection.order(name: :asc)
     end
 
-    def new
-      @static_section = StaticSection.new
-    end
-
-    def create
-      @static_section = StaticSection.new(safe_params)
-
-      if @static_section.save
-        redirect_to admin_static_sections_path
-      else
-        render :new
-      end
-    end
-
     def show
       @static_section = StaticSection.find(params[:id])
     end
