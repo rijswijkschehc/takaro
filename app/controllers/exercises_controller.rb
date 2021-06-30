@@ -41,7 +41,7 @@ class ExercisesController < PrivateController
     if @exercise.update(safe_params)
       redirect_to exercises_path
     else
-      render :show
+      render :edit
     end
   end
 
