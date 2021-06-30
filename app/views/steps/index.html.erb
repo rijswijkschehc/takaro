@@ -1,13 +1,12 @@
-<div class="row">
+<div class="row page-header">
   <div class="col">
-    <div class="page-header">
-      <h1><%= _('3 methodical steps') %></h1>
-    </div>
+    <h1><%= _('3 methodical steps') %></h1>
+  </div>
+  <div class="col-12">
+    <%= render_static_section(identifier: '3_methodische_stappen_intro') %>
   </div>
 </div>
-<div class="row">
-  <div class="col"><%= render_static_section(identifier: '3_methodische_stappen_intro') %></div>
-</div>
+
 <% @steps.each do |step| %>
   <div class="row mb-3">
     <div class="col">

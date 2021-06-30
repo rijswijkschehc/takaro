@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row page-header">
   <div class="col">
     <h1><%= _('Your profile') %></h1>
   </div>
@@ -6,15 +6,19 @@
 
 <div class="row">
   <div class="col">
-    <%= simple_form_for(current_user, url: profile_path, method: :patch, html: { class: nil }) do |f| %>
-      <%= f.simple_fields_for(:person) do |pf| %>
-        <%= pf.input :screen_name %>
-      <% end %>
-      <%= f.input :email %>
-      <%= f.input :password %>
-      <%= f.input :password_confirmation %>
-      <%= f.input :current_password, hint: _('Required when you change your email address or password') %>
-      <%= f.submit class: 'btn btn-primary' %>
-    <% end %>
+    <div class="card">
+      <div class="card-body">
+        <%= simple_form_for(current_user, url: profile_path, method: :patch, html: { class: nil }) do |f| %>
+          <%= f.simple_fields_for(:person) do |pf| %>
+            <%= pf.input :screen_name %>
+          <% end %>
+          <%= f.input :email %>
+          <%= f.input :password %>
+          <%= f.input :password_confirmation %>
+          <%= f.input :current_password, hint: _('Required when you change your email address or password') %>
+          <%= f.submit class: 'btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row page-header">
   <div class="col">
     <h1>
       <%= icon(id: 'dumbbell') %>
@@ -8,15 +8,14 @@
       <% end %>
     </h1>
   </div>
-</div>
-<div class="row border-bottom">
-  <div class="col">
+  <div class="col-12">
     <%= @exercise.step.badge %>
     <%= safe_join(@exercise.principles.map(&:badge)) %>
     <p class="lead"><%= @exercise.objective %></p>
   </div>
 </div>
-<div class="row bg-light py-3">
+
+<div class="row">
   <div class="col-md-4"></div>
   <div class="col">
     <div class="card">

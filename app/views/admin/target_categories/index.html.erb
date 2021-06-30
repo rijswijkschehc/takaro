@@ -1,23 +1,25 @@
-<div class="row">
+<div class="row page-header">
   <div class="col">
-    <div class="page-header">
-      <h1><%= _('Target categories') %></h1>
-      <%= link_to _('New target category'), new_admin_target_category_path, class: 'btn btn-outline-primary' %>
-    </div>
+    <h1><%= _('Target categories') %></h1>
+    <%= link_to _('New target category'), new_admin_target_category_path, class: 'btn btn-outline-primary' %>
   </div>
 </div>
 
 <div class="row">
   <div class="col">
-    <table class="table">
-      <thead>
-      <tr>
-        <th><%= _('Name') %></th>
-      </tr>
-      </thead>
-      <tbody>
-      <%= render @target_categories %>
-      </tbody>
-    </table>
+    <div class="card">
+      <div class="card-body">
+        <table class="table">
+          <thead>
+          <tr>
+            <th><%= _('Name') %></th>
+          </tr>
+          </thead>
+          <tbody>
+          <%= render @target_categories %>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>

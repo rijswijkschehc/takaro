@@ -1,5 +1,19 @@
-<div class="list-group">
-  <% @periods.each do |period| %>
-    <%= link_to period.name, period, class: 'list-group-item list-group-item-action' %>
-  <% end %>
+<div class="row page-header">
+  <div class="col">
+    <h1><%= _('Periodization') %></h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <div class="list-group">
+          <% @periods.each do |period| %>
+            <%= link_to period.name, period, class: 'list-group-item list-group-item-action' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

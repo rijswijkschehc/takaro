@@ -1,24 +1,26 @@
-<div class="row">
+<div class="row page-header">
   <div class="col">
-    <div class="page-header">
-      <h1><%= _('Principles') %></h1>
-      <%= link_to _('New principle'), new_admin_principle_path, class: 'btn btn-outline-primary' %>
-    </div>
+    <h1><%= _('Principles') %></h1>
+    <%= link_to _('New principle'), new_admin_principle_path, class: 'btn btn-outline-primary' %>
   </div>
 </div>
 
 <div class="row">
   <div class="col">
-    <table class="table">
-      <thead>
-      <tr>
-        <th></th>
-        <th><%= _('Name') %></th>
-      </tr>
-      </thead>
-      <%= tag.tbody(render(@principles),
-                    data: { controller: 'sortable',
-                            reposition_path: reposition_admin_principles_path }) %>
-    </table>
+    <div class="card">
+      <div class="card-body">
+        <table class="table">
+          <thead>
+          <tr>
+            <th></th>
+            <th><%= _('Name') %></th>
+          </tr>
+          </thead>
+          <%= tag.tbody(render(@principles),
+                        data: { controller: 'sortable',
+                                reposition_path: reposition_admin_principles_path }) %>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
