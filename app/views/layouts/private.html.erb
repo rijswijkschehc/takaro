@@ -52,6 +52,7 @@
         <%= render partial: 'application/breadcrumbs' %>
         <button class="navbar-toggler py-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
           <%= current_user.screen_name %>
+          <%= icon(id: 'caret-down') %>
         </button>
         <div class="collapse navbar-collapse" id="navbar">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
