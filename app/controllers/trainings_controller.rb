@@ -22,6 +22,12 @@ class TrainingsController < PrivateController
   end
 
   def show
+    @training = Training.find(params[:id]).decorate
+
+    add_breadcrumb(@training.title)
+  end
+
+  def edit
     @training = Training.find(params[:id])
 
     add_breadcrumb(@training.title)
@@ -35,7 +41,7 @@ class TrainingsController < PrivateController
     if @training.update(safe_params)
       redirect_to trainings_path
     else
-      render :show
+      render :edit
     end
   end
 
