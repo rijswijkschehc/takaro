@@ -6,7 +6,10 @@
     <%= static_section(identifier: '8_tactische_principes_intro') %>
   </div>
   <div class="col-12">
-    <%= educate_navigation(active: :principles) %>
+    <div class="d-flex justify-content-between align-items-center">
+      <%= educate_navigation(active: :principles) %>
+      <%= render partial: 'dropdown' %>
+    </div>
   </div>
 </div>
 

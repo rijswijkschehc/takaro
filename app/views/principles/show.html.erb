@@ -6,18 +6,9 @@
     </h1>
   </div>
   <div class="col-12">
-    <p class="lead"><%= @principle.tagline %></p>
-    <div class="d-flex justify-content-end">
-      <div class="dropdown">
-        <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <%= _('Principles') %>
-        </button>
-        <ul class="dropdown-menu">
-          <% @principles.each do |principle| %>
-            <li><%= link_to principle.name, principle, class: 'dropdown-item' %></li>
-          <% end %>
-        </ul>
-      </div>
+    <div class="d-flex justify-content-between align-items-center">
+      <p class="lead"><%= @principle.tagline %></p>
+      <%= render partial: 'dropdown' %>
     </div>
   </div>
 </div>
