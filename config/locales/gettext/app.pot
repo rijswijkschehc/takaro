@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: takaro 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2021-06-30 16:09+0200\n"
-"PO-Revision-Date: 2021-06-30 16:09+0200\n"
+"POT-Creation-Date: 2021-06-30 18:14+0200\n"
+"PO-Revision-Date: 2021-06-30 18:14+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -18,8 +18,46 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
+#: ../../../app/controllers/application_controller.rb:9
+#: ../../../app/views/layouts/private.html.erb:4
+#: ../../../app/views/layouts/private.html.erb:19
+#: ../../../app/views/layouts/private.html.erb:24
+#: ../../../app/views/layouts/public.html.erb:4
+#: ../../../app/views/principles/index.html.erb:16
+msgid "RHC playing style"
+msgstr ""
+
+#: ../../../app/controllers/exercises_controller.rb:4
+#: ../../../app/views/exercises/index.html.erb:4
+#: ../../../app/views/layouts/private.html.erb:40
+msgid "Exercises"
+msgstr ""
+
+#: ../../../app/controllers/periods_controller.rb:4
+#: ../../../app/views/layouts/private.html.erb:32
+msgid "Seasonal buildup"
+msgstr ""
+
+#: ../../../app/controllers/principles_controller.rb:4
+#: ../../../app/views/layouts/private.html.erb:28
+#: ../../../app/views/principles/index.html.erb:4
+msgid "8 tactical principles"
+msgstr ""
+
 #: ../../../app/controllers/profile_controller.rb:16
 msgid "Profile updated successfully"
+msgstr ""
+
+#: ../../../app/controllers/steps_controller.rb:4
+#: ../../../app/views/layouts/private.html.erb:27
+#: ../../../app/views/steps/index.html.erb:4
+msgid "3 methodical steps"
+msgstr ""
+
+#: ../../../app/controllers/trainings_controller.rb:4
+#: ../../../app/views/layouts/private.html.erb:39
+#: ../../../app/views/trainings/index.html.erb:6
+msgid "Trainings"
 msgstr ""
 
 #: ../../../app/views/admin/periods/_form.html.erb:10
@@ -27,7 +65,7 @@ msgid "Add principle"
 msgstr ""
 
 #: ../../../app/views/admin/periods/index.html.erb:4
-#: ../../../app/views/layouts/private.html.erb:62
+#: ../../../app/views/layouts/private.html.erb:63
 msgid "Periods"
 msgstr ""
 
@@ -46,7 +84,7 @@ msgid "Name"
 msgstr ""
 
 #: ../../../app/views/admin/principles/index.html.erb:4
-#: ../../../app/views/layouts/private.html.erb:61
+#: ../../../app/views/layouts/private.html.erb:62
 #: ../../../app/views/principles/show.html.erb:11
 #: ../../../app/views/trainings/index.html.erb:19
 msgid "Principles"
@@ -58,7 +96,7 @@ msgid "New principle"
 msgstr ""
 
 #: ../../../app/views/admin/static_pages/index.html.erb:4
-#: ../../../app/views/layouts/private.html.erb:58
+#: ../../../app/views/layouts/private.html.erb:59
 msgid "Static pages"
 msgstr ""
 
@@ -78,7 +116,7 @@ msgid "The identifier can not be changed"
 msgstr ""
 
 #: ../../../app/views/admin/static_sections/index.html.erb:3
-#: ../../../app/views/layouts/private.html.erb:59
+#: ../../../app/views/layouts/private.html.erb:60
 msgid "Static sections"
 msgstr ""
 
@@ -92,7 +130,7 @@ msgid "Identifier"
 msgstr ""
 
 #: ../../../app/views/admin/steps/index.html.erb:4
-#: ../../../app/views/layouts/private.html.erb:64
+#: ../../../app/views/layouts/private.html.erb:65
 msgid "Steps"
 msgstr ""
 
@@ -102,7 +140,7 @@ msgid "New step"
 msgstr ""
 
 #: ../../../app/views/admin/target_categories/index.html.erb:4
-#: ../../../app/views/layouts/private.html.erb:60
+#: ../../../app/views/layouts/private.html.erb:61
 msgid "Target categories"
 msgstr ""
 
@@ -112,7 +150,7 @@ msgid "New target category"
 msgstr ""
 
 #: ../../../app/views/admin/techniques/index.html.erb:4
-#: ../../../app/views/layouts/private.html.erb:63
+#: ../../../app/views/layouts/private.html.erb:64
 msgid "Techniques"
 msgstr ""
 
@@ -122,7 +160,7 @@ msgid "New technique"
 msgstr ""
 
 #: ../../../app/views/admin/users/index.html.erb:3
-#: ../../../app/views/layouts/private.html.erb:57
+#: ../../../app/views/layouts/private.html.erb:58
 msgid "Users"
 msgstr ""
 
@@ -203,11 +241,6 @@ msgstr ""
 msgid "Resend unlock instructions"
 msgstr ""
 
-#: ../../../app/views/exercises/index.html.erb:4
-#: ../../../app/views/layouts/private.html.erb:40
-msgid "Exercises"
-msgstr ""
-
 #: ../../../app/views/exercises/index.html.erb:5
 #: ../../../app/views/exercises/new.html.erb:3
 msgid "New exercise"
@@ -225,28 +258,6 @@ msgstr ""
 msgid "Variations"
 msgstr ""
 
-#: ../../../app/views/layouts/private.html.erb:4
-#: ../../../app/views/layouts/private.html.erb:19
-#: ../../../app/views/layouts/private.html.erb:24
-#: ../../../app/views/layouts/public.html.erb:4
-#: ../../../app/views/principles/index.html.erb:16
-msgid "RHC playing style"
-msgstr ""
-
-#: ../../../app/views/layouts/private.html.erb:27
-#: ../../../app/views/steps/index.html.erb:4
-msgid "3 methodical steps"
-msgstr ""
-
-#: ../../../app/views/layouts/private.html.erb:28
-#: ../../../app/views/principles/index.html.erb:4
-msgid "8 tactical principles"
-msgstr ""
-
-#: ../../../app/views/layouts/private.html.erb:32
-msgid "Season %<start>d - %<end>d"
-msgstr ""
-
 #: ../../../app/views/layouts/private.html.erb:36
 msgid "Exercise material"
 msgstr ""
@@ -255,21 +266,16 @@ msgstr ""
 msgid "Periodization"
 msgstr ""
 
-#: ../../../app/views/layouts/private.html.erb:39
-#: ../../../app/views/trainings/index.html.erb:6
-msgid "Trainings"
-msgstr ""
-
-#: ../../../app/views/layouts/private.html.erb:55
+#: ../../../app/views/layouts/private.html.erb:56
 msgid "Admin"
 msgstr ""
 
-#: ../../../app/views/layouts/private.html.erb:72
+#: ../../../app/views/layouts/private.html.erb:73
 #: ../../../app/views/profile/show.html.erb:3
 msgid "Your profile"
 msgstr ""
 
-#: ../../../app/views/layouts/private.html.erb:74
+#: ../../../app/views/layouts/private.html.erb:75
 msgid "Sign out"
 msgstr ""
 
