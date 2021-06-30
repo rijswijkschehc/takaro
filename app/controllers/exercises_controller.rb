@@ -23,6 +23,10 @@ class ExercisesController < PrivateController
     @exercise = Exercise.find(params[:id]).decorate
   end
 
+  def edit
+    @exercise = Exercise.find(params[:id])
+  end
+
   def update
     @exercise = Exercise.find(params[:id])
 
