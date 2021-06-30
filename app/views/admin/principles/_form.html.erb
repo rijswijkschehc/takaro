@@ -7,9 +7,9 @@
   <%= f.input :description, as: :rich_text_area %>
   <%= f.simple_fields_for :principle_steps do |psf| %>
     <div class="card mb-3">
-      <div class="card-header">
+      <h5 class="card-header">
         <%= psf.object.step.name %>
-      </div>
+      </h5>
       <div class="card-body">
         <%= psf.input :id, as: :hidden %>
         <%= psf.association :step, as: :hidden %>

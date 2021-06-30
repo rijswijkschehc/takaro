@@ -1,7 +1,7 @@
 <div class="nested-fields card mb-3">
-  <div class="card-header d-flex justify-content-end">
+  <h5 class="card-header d-flex justify-content-end">
     <%= link_to icon(id: 'trash-alt'), '#', class: 'text-danger', data: { action: 'nested-form#removeAssociation' } %>
-  </div>
+  </h5>
   <div class="card-body">
     <%= f.input :id, as: :hidden %>
     <%= f.input :_destroy, as: :hidden %>
