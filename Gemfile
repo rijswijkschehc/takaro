@@ -28,6 +28,7 @@ gem 'sentry-ruby', '~> 4.5.1'
 gem 'sidekiq', '~> 6.2.1'
 gem 'simple_form', '~> 5.1.0'
 gem 'translation', '~> 1.23'
+gem 'turbo-rails', '~> 0.5.12'
 gem 'webpacker', '~> 5.0'
 
 group :development do

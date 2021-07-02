@@ -481,6 +481,8 @@ GEM
     thread_safe (0.3.6)
     translation (1.23)
       gettext (~> 3.2, >= 3.2.5)
+    turbo-rails (0.5.12)
+      rails (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unf (0.1.4)
@@ -558,6 +560,7 @@ DEPENDENCIES
   simplecov
   spring
   translation (~> 1.23)
+  turbo-rails (~> 0.5.12)
   webpacker (~> 5.0)
 
 RUBY VERSION
