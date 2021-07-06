@@ -241,6 +241,10 @@ GEM
     guard-rubocop (1.4.0)
       guard (~> 2.0)
       rubocop (< 2.0)
+    hotwire-rails (0.1.3)
+      rails (>= 6.0.0)
+      stimulus-rails
+      turbo-rails
     html_tokenizer (0.0.7)
     http-accept (1.7.0)
     http-cookie (1.0.4)
@@ -474,6 +478,8 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    stimulus-rails (0.2.4)
+      rails (>= 6.0.0)
     sys-uname (1.2.2)
       ffi (~> 1.1)
     text (1.3.1)
@@ -530,6 +536,7 @@ DEPENDENCIES
   guard (~> 2.16)
   guard-rspec (~> 4.7)
   guard-rubocop (~> 1.4)
+  hotwire-rails (~> 0.1.3)
   image_processing (~> 1.12.1)
   listen (~> 3.3)
   lograge (~> 0.11)
@@ -560,7 +567,6 @@ DEPENDENCIES
   simplecov
   spring
   translation (~> 1.23)
-  turbo-rails (~> 0.5.12)
   webpacker (~> 5.0)
 
 RUBY VERSION

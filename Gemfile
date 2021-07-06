@@ -12,6 +12,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise', '~> 4.7.3'
 gem 'devise-i18n', '~> 1.9.4'
 gem 'draper', '~> 4.0'
+gem 'hotwire-rails', '~> 0.1.3'
 gem 'image_processing', '~> 1.12.1'
 gem 'lograge', '~> 0.11'
 gem 'memoist', '~> 0.16'
@@ -28,7 +29,6 @@ gem 'sentry-ruby', '~> 4.5.1'
 gem 'sidekiq', '~> 6.2.1'
 gem 'simple_form', '~> 5.1.0'
 gem 'translation', '~> 1.23'
-gem 'turbo-rails', '~> 0.5.12'
 gem 'webpacker', '~> 5.0'
 
 group :development do
