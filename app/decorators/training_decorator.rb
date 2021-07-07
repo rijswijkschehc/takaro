@@ -5,8 +5,4 @@ class TrainingDecorator < ApplicationDecorator
 
   decorates_association :principles
   decorates_association :step
-
-  def creator
-    GlobalID::Locator.locate(model.versions.first.whodunnit).screen_name
-  end
 end
