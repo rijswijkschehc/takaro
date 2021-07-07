@@ -24,11 +24,14 @@ Rails.application.routes.draw do
   get 'profile' => 'profile#show'
   patch 'profile' => 'profile#update'
 
+  resources :comments
   resources :periods, only: %i[index show]
   resources :principles, only: %i[index show]
   resources :steps, only: %i[index]
   resources :trainings
-  resources :exercises
+  resources :exercises do
+    resources :comments, module: :exercises
+  end
 
   namespace :admin do
     resources :periods

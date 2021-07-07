@@ -9,6 +9,7 @@ class Exercise < ApplicationRecord
   has_rich_text :variation
 
   belongs_to :step
+  has_many :comments, as: :commentable, dependent: :destroy
   has_many :exercise_principles, dependent: :destroy
   has_many :exercise_techniques, dependent: :destroy
   has_many :principles, through: :exercise_principles

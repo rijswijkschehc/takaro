@@ -1,0 +1,7 @@
+<%= turbo_stream.replace(
+      combined_dom_id(@commentable, @comment),
+      partial: 'comments/form',
+      locals: {
+        comment: @comment,
+        commentable: @commentable }
+    ) %>

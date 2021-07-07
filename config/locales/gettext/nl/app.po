@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: takaro 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2021-06-30 18:42+0200\n"
-"PO-Revision-Date: 2021-06-30 18:42+0200\n"
+"POT-Creation-Date: 2021-07-08 01:19+0200\n"
+"PO-Revision-Date: 2021-07-08 01:19+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Dutch\n"
 "Language: nl\n"
@@ -18,17 +18,72 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
 "\n"
 
+#: ../../../app/controllers/admin/periods_controller.rb:5
+#: ../../../app/views/admin/periods/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:68
+msgid "Periods"
+msgstr "Periodes"
+
+#: ../../../app/controllers/admin/principles_controller.rb:5
+#: ../../../app/views/admin/principles/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:67
+#: ../../../app/views/principles/_dropdown.html.erb:3
+#: ../../../app/views/trainings/index.html.erb:19
+msgid "Principles"
+msgstr "Principes"
+
+#: ../../../app/controllers/admin/static_pages_controller.rb:5
+#: ../../../app/views/admin/static_pages/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:64
+msgid "Static pages"
+msgstr "Statische pagina's"
+
+#: ../../../app/controllers/admin/static_sections_controller.rb:5
+#: ../../../app/views/admin/static_sections/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:65
+msgid "Static sections"
+msgstr "Statische secties"
+
+#: ../../../app/controllers/admin/steps_controller.rb:5
+#: ../../../app/views/admin/steps/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:70
+msgid "Steps"
+msgstr "Stappen"
+
+#: ../../../app/controllers/admin/target_categories_controller.rb:5
+#: ../../../app/views/admin/target_categories/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:66
+msgid "Target categories"
+msgstr "Doelgroepen"
+
+#: ../../../app/controllers/admin/techniques_controller.rb:5
+#: ../../../app/views/admin/techniques/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:69
+msgid "Techniques"
+msgstr "Technieken"
+
+#: ../../../app/controllers/admin/users_controller.rb:5
+#: ../../../app/views/admin/users/index.html.erb:3
+#: ../../../app/views/layouts/private.html.erb:63
+msgid "Users"
+msgstr "Gebruikers"
+
+#: ../../../app/controllers/admin_controller.rb:4
+#: ../../../app/views/layouts/private.html.erb:61
+msgid "Admin"
+msgstr "Beheer"
+
 #: ../../../app/controllers/application_controller.rb:9
 #: ../../../app/views/layouts/private.html.erb:4
 #: ../../../app/views/layouts/private.html.erb:19
 #: ../../../app/views/layouts/private.html.erb:24
 #: ../../../app/views/layouts/public.html.erb:4
-#: ../../../app/views/principles/index.html.erb:16
+#: ../../../app/views/principles/index.html.erb:23
 msgid "RHC playing style"
 msgstr "RHC speelwijze"
 
 #: ../../../app/controllers/exercises_controller.rb:4
-#: ../../../app/views/exercises/index.html.erb:4
+#: ../../../app/views/exercises/index.html.erb:3
 #: ../../../app/views/layouts/private.html.erb:40
 msgid "Exercises"
 msgstr "Oefeningen"
@@ -39,8 +94,9 @@ msgid "Seasonal buildup"
 msgstr "Seizoensopbouw"
 
 #: ../../../app/controllers/principles_controller.rb:4
+#: ../../../app/helpers/educate_navigation_helper.rb:23
 #: ../../../app/views/layouts/private.html.erb:28
-#: ../../../app/views/principles/index.html.erb:4
+#: ../../../app/views/principles/index.html.erb:3
 msgid "8 tactical principles"
 msgstr "8 tactische principes"
 
@@ -49,14 +105,15 @@ msgid "Profile updated successfully"
 msgstr "Profiel succesvol bijgewerkt"
 
 #: ../../../app/controllers/steps_controller.rb:4
+#: ../../../app/helpers/educate_navigation_helper.rb:22
 #: ../../../app/views/layouts/private.html.erb:27
-#: ../../../app/views/steps/index.html.erb:4
+#: ../../../app/views/steps/index.html.erb:3
 msgid "3 methodical steps"
 msgstr "3 methodische stappen"
 
 #: ../../../app/controllers/trainings_controller.rb:4
 #: ../../../app/views/layouts/private.html.erb:39
-#: ../../../app/views/trainings/index.html.erb:6
+#: ../../../app/views/trainings/index.html.erb:5
 msgid "Trainings"
 msgstr "Trainingen"
 
@@ -69,18 +126,13 @@ msgid "Add principle"
 msgstr "Principe toevoegen"
 
 #: ../../../app/views/admin/periods/index.html.erb:4
-#: ../../../app/views/layouts/private.html.erb:63
-msgid "Periods"
-msgstr "Periodes"
-
-#: ../../../app/views/admin/periods/index.html.erb:5
 #: ../../../app/views/admin/periods/new.html.erb:3
 msgid "New period"
 msgstr "Nieuwe periode"
 
 #: ../../../app/views/admin/periods/index.html.erb:15
 #: ../../../app/views/admin/principles/index.html.erb:16
-#: ../../../app/views/admin/static_sections/index.html.erb:12
+#: ../../../app/views/admin/static_sections/index.html.erb:14
 #: ../../../app/views/admin/steps/index.html.erb:16
 #: ../../../app/views/admin/target_categories/index.html.erb:15
 #: ../../../app/views/admin/techniques/index.html.erb:15
@@ -88,23 +140,11 @@ msgid "Name"
 msgstr "Naam"
 
 #: ../../../app/views/admin/principles/index.html.erb:4
-#: ../../../app/views/layouts/private.html.erb:62
-#: ../../../app/views/principles/show.html.erb:11
-#: ../../../app/views/trainings/index.html.erb:19
-msgid "Principles"
-msgstr "Principes"
-
-#: ../../../app/views/admin/principles/index.html.erb:5
 #: ../../../app/views/admin/principles/new.html.erb:3
 msgid "New principle"
 msgstr "Principe toevoegen"
 
 #: ../../../app/views/admin/static_pages/index.html.erb:4
-#: ../../../app/views/layouts/private.html.erb:59
-msgid "Static pages"
-msgstr "Statische pagina's"
-
-#: ../../../app/views/admin/static_pages/index.html.erb:5
 #: ../../../app/views/admin/static_pages/new.html.erb:3
 msgid "New static page"
 msgstr "Statische pagina toevoegen"
@@ -119,61 +159,52 @@ msgstr "Titel"
 msgid "The identifier can not be changed"
 msgstr "De identifier kan niet worden gewijzigd"
 
-#: ../../../app/views/admin/static_sections/index.html.erb:3
-#: ../../../app/views/layouts/private.html.erb:60
-msgid "Static sections"
-msgstr "Statische secties"
-
-#: ../../../app/views/admin/static_sections/index.html.erb:13
+#: ../../../app/views/admin/static_sections/index.html.erb:15
 msgid "Identifier"
 msgstr "Identifier"
 
 #: ../../../app/views/admin/steps/index.html.erb:4
-#: ../../../app/views/layouts/private.html.erb:65
-msgid "Steps"
-msgstr "Stappen"
-
-#: ../../../app/views/admin/steps/index.html.erb:5
 #: ../../../app/views/admin/steps/new.html.erb:3
 msgid "New step"
 msgstr "Stap toevoegen"
 
 #: ../../../app/views/admin/target_categories/index.html.erb:4
-#: ../../../app/views/layouts/private.html.erb:61
-msgid "Target categories"
-msgstr "Doelgroepen"
-
-#: ../../../app/views/admin/target_categories/index.html.erb:5
 #: ../../../app/views/admin/target_categories/new.html.erb:3
 msgid "New target category"
 msgstr "Nieuwe doelgroep"
 
 #: ../../../app/views/admin/techniques/index.html.erb:4
-#: ../../../app/views/layouts/private.html.erb:64
-msgid "Techniques"
-msgstr "Technieken"
-
-#: ../../../app/views/admin/techniques/index.html.erb:5
 #: ../../../app/views/admin/techniques/new.html.erb:3
 msgid "New technique"
 msgstr "Nieuwe techniek"
 
-#: ../../../app/views/admin/users/index.html.erb:3
-#: ../../../app/views/layouts/private.html.erb:58
-msgid "Users"
-msgstr "Gebruikers"
-
-#: ../../../app/views/admin/users/index.html.erb:12
+#: ../../../app/views/admin/users/index.html.erb:14
 msgid "Email address"
 msgstr "E-mailadres"
 
-#: ../../../app/views/admin/users/index.html.erb:13
+#: ../../../app/views/admin/users/index.html.erb:15
 msgid "Created at"
 msgstr "Aangemaakt op"
 
-#: ../../../app/views/admin/users/index.html.erb:14
+#: ../../../app/views/admin/users/index.html.erb:16
 msgid "Roles"
 msgstr "Rollen"
+
+#: ../../../app/views/comments/_comment.html.erb:8
+msgid "Edit"
+msgstr "Bewerken"
+
+#: ../../../app/views/comments/_comment.html.erb:10
+msgid "Delete"
+msgstr "Verwijder"
+
+#: ../../../app/views/comments/_comment.html.erb:10
+msgid "Are you sure?"
+msgstr "Weet je het zeker?"
+
+#: ../../../app/views/comments/_form.html.erb:8
+msgid "cancel"
+msgstr "annuleer"
 
 #: ../../../app/views/dashboard/show.html.erb:3
 msgid "Dashboard"
@@ -240,57 +271,58 @@ msgstr "Geen ontgrendel-instructies ontvangen?"
 msgid "Resend unlock instructions"
 msgstr "Verstuur ontgrendel-instructies opnieuw"
 
-#: ../../../app/views/exercises/index.html.erb:5
+#: ../../../app/views/exercises/index.html.erb:4
 #: ../../../app/views/exercises/new.html.erb:3
 msgid "New exercise"
 msgstr "Nieuwe oefening"
 
-#: ../../../app/views/exercises/show.html.erb:26
+#: ../../../app/views/exercises/show.html.erb:25
 msgid "Description"
 msgstr "Beschrijving"
 
-#: ../../../app/views/exercises/show.html.erb:33
+#: ../../../app/views/exercises/show.html.erb:32
 msgid "Tips and techniques"
 msgstr "Tips en technieken"
 
-#: ../../../app/views/exercises/show.html.erb:41
+#: ../../../app/views/exercises/show.html.erb:40
 msgid "Variations"
 msgstr "Variaties"
+
+#: ../../../app/views/exercises/show.html.erb:53
+msgid "Comments"
+msgstr "Reacties"
 
 #: ../../../app/views/layouts/private.html.erb:36
 msgid "Exercise material"
 msgstr "Oefenmateriaal"
 
 #: ../../../app/views/layouts/private.html.erb:38
+#: ../../../app/views/periods/index.html.erb:3
 msgid "Periodization"
 msgstr "Periodisering"
 
-#: ../../../app/views/layouts/private.html.erb:56
-msgid "Admin"
-msgstr "Beheer"
-
-#: ../../../app/views/layouts/private.html.erb:73
+#: ../../../app/views/layouts/private.html.erb:77
 #: ../../../app/views/profile/show.html.erb:3
 msgid "Your profile"
 msgstr "Je profiel"
 
-#: ../../../app/views/layouts/private.html.erb:75
+#: ../../../app/views/layouts/private.html.erb:79
 msgid "Sign out"
 msgstr "Uitloggen"
 
-#: ../../../app/views/periods/show.html.erb:20
+#: ../../../app/views/periods/show.html.erb:21
 msgid "Tips for the training"
 msgstr "Tips voor de training"
 
-#: ../../../app/views/periods/show.html.erb:24
+#: ../../../app/views/periods/show.html.erb:25
 msgid "Tips for matches"
 msgstr "Tips voor wedstrijden"
 
-#: ../../../app/views/profile/show.html.erb:16
+#: ../../../app/views/profile/show.html.erb:18
 msgid "Required when you change your email address or password"
 msgstr "Vereist wanneer je je e-mailadres of wachtwoord wijzigt"
 
-#: ../../../app/views/trainings/index.html.erb:8
+#: ../../../app/views/trainings/index.html.erb:7
 #: ../../../app/views/trainings/new.html.erb:3
 msgid "New training"
 msgstr "Nieuwe training"

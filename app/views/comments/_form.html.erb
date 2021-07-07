@@ -1,0 +1,11 @@
+<% model = [local_assigns[:commentable], comment].compact %>
+
+<%= simple_form_for(model, html: { id: combined_dom_id(*model) }) do |f| %>
+  <%= f.input :content, as: :rich_text_area, label: false %>
+  <div class="d-flex justify-content-end">
+    <%= f.submit class: 'btn btn-primary' %>
+    <% if f.object.persisted? %>
+      <%= link_to _('cancel'), comment, class: 'btn btn-link' %>
+    <% end %>
+  </div>
+<% end %>
