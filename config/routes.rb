@@ -24,7 +24,9 @@ Rails.application.routes.draw do
   get 'profile' => 'profile#show'
   patch 'profile' => 'profile#update'
 
-  resources :comments
+  resources :comments do
+    resources :comments, module: :comments
+  end
   resources :periods, only: %i[index show]
   resources :principles, only: %i[index show]
   resources :steps, only: %i[index]

@@ -52,11 +52,11 @@
     <div class="card">
       <h5 class="card-header"><%= _('Comments') %></h5>
       <div class="card-body">
-        <%= render partial: 'comments/form', locals: { comment: Comment.new, commentable: @exercise } %>
-        <hr>
+        <%= render partial: 'comments/form', locals: { commentable: @exercise, comment: Comment.new } %>
+
         <%= turbo_stream_from @exercise, :comments %>
         <%= tag.div(id: "#{dom_id(@exercise)}_comments") do %>
-          <%= render @exercise.comments %>
+          <%= render partial: 'comments/comment_with_replies', collection: @exercise.comments.where(parent_id: nil), as: :comment %>
         <% end %>
       </div>
     </div>
