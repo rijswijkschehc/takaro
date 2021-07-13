@@ -2,6 +2,7 @@
 <%= turbo_frame_tag comment do %>
   <div class="d-flex justify-content-between">
     <div><%= comment.creator.screen_name %></div>
+    <%= tag.time(datetime: comment.created_at, data: { controller: 'time-ago' }) %>
     <div class="dropdown">
       <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"></button>
       <ul class="dropdown-menu">

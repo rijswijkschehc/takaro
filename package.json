@@ -13,6 +13,7 @@
     "bootstrap": "^5.0.0",
     "sortablejs": "^1.13.0",
     "stimulus": "^2.0.0",
+    "timeago.js": "^4.0.2",
     "trix": "^1.2.0"
   },
   "version": "0.1.0",
