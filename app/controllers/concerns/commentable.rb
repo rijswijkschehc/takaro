@@ -5,7 +5,7 @@ module Commentable
 
   def create
     @comment = @commentable.comments.new(safe_comment_params)
-    @comment.parent_id = @parent&.id
+    @comment.parent = @parent
     comment = @comment.save ? Comment.new : @comment
 
     respond_to do |format|

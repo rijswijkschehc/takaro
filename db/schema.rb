@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_06_170847) do
+ActiveRecord::Schema.define(version: 2021_07_13_155803) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,11 +56,11 @@ ActiveRecord::Schema.define(version: 2021_07_06_170847) do
   create_table "comments", force: :cascade do |t|
     t.string "commentable_type"
     t.bigint "commentable_id"
-    t.bigint "parent_id"
+    t.string "ancestry"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["ancestry"], name: "index_comments_on_ancestry"
     t.index ["commentable_type", "commentable_id"], name: "index_comments_on_commentable"
-    t.index ["parent_id"], name: "index_comments_on_parent_id"
   end
 
   create_table "exercise_principles", force: :cascade do |t|

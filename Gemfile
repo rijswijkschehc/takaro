@@ -7,6 +7,7 @@ ruby '3.0.1'
 
 gem 'aasm', '~> 5.2.0'
 gem 'acts_as_list', '~> 1.0.4'
+gem 'ancestry', '~> 4.1.0'
 gem 'aws-sdk-s3', '~> 1.94'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise', '~> 4.7.3'

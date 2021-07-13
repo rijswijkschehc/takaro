@@ -3,12 +3,11 @@
 class Comment < ApplicationRecord
   include ActionView::RecordIdentifier
 
+  has_ancestry
   has_paper_trail only: %i[content]
   has_rich_text :content
 
   belongs_to :commentable, polymorphic: true
-  belongs_to :parent, optional: true, class_name: 'Comment'
-  has_many :comments, foreign_key: :parent_id, dependent: :destroy, inverse_of: :parent
 
   validates :content, presence: true
 

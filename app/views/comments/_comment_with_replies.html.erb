@@ -10,6 +10,6 @@
                          comment: Comment.new,
                          class: 'd-none',
                          data: { comment_reply_target: 'form' } } %>
-    <%= render partial: 'comments/comment_with_replies', collection: comment.comments, as: :comment %>
+    <%= render partial: 'comments/comment_with_replies', collection: comment.children, as: :comment %>
   <% end %>
 <% end %>
