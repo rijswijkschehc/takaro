@@ -1,16 +1,20 @@
 <%= turbo_stream_from comment %>
 <%= turbo_frame_tag comment do %>
-  <div class="d-flex justify-content-between">
-    <div><%= comment.creator.screen_name %></div>
-    <%= tag.time(datetime: comment.created_at, data: { controller: 'time-ago' }) %>
-    <div class="dropdown">
-      <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"></button>
-      <ul class="dropdown-menu">
-        <li><%= link_to _('Edit'), edit_comment_path(comment), class: 'dropdown-item' %></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><%= link_to _('Delete'), comment_path(comment), method: :delete, class: 'dropdown-item text-danger', data: { confirm: _('Are you sure?') } %></li>
-      </ul>
+  <div class="d-flex justify-content-between align-items-center">
+    <div>
+      <%= link_to comment.creator.screen_name, '#' %>
+      <small><%= tag.time(datetime: comment.created_at, data: { controller: 'time-ago' }) %></small>
     </div>
+    <% if policy(comment).edit? %>
+      <div class="dropdown">
+        <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"></button>
+        <ul class="dropdown-menu">
+          <li><%= link_to _('Edit'), edit_comment_path(comment), class: 'dropdown-item' %></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><%= link_to _('Delete'), comment_path(comment), method: :delete, class: 'dropdown-item text-danger', data: { confirm: _('Are you sure?') } %></li>
+        </ul>
+      </div>
+    <% end %>
   </div>
   <%= comment.content %>
 <% end %>
