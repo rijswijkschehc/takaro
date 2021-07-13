@@ -7,7 +7,6 @@ Rails.application.configure do
     Bullet.enable        = true
     Bullet.rails_logger  = true
     Bullet.console       = true
-    Bullet.add_footer    = true
   end
 
   # Settings specified here will take precedence over those in config/application.rb.
