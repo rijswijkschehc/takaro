@@ -2,6 +2,7 @@
 
 class ApplicationController < ActionController::Base
   include Breadcrumbs
+  include Pundit
   include SetSentryContext
 
   layout -> { user_signed_in? ? 'private' : 'public' }
