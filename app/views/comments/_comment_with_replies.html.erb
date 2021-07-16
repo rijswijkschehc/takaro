@@ -1,15 +1,15 @@
 <%= turbo_stream_from comment, :comments %>
 
-<%= tag.div(class: 'ps-3 border-start', id: "#{dom_id(comment)}_with_comments", data: { controller: 'comment-reply' }) do %>
+<%= tag.div(class: 'ps-3 border-start', id: "#{dom_id(comment)}_with_comments", data: { controller: 'comment' }) do %>
   <%= render comment %>
 
-  <%= link_to _('Reply'), '#', data: { action: 'comment-reply#toggle' } %>
+  <%= link_to _('Reply'), '#', data: { action: 'comment#toggleReplyForm' } %>
   <%= tag.div(id: "#{dom_id(comment)}_comments") do %>
     <%= render partial: 'comments/form',
                locals: { commentable: comment,
                          comment: Comment.new,
                          class: 'd-none',
-                         data: { comment_reply_target: 'form' } } %>
+                         data: { comment_target: 'replyForm' } } %>
     <%= render partial: 'comments/comment_with_replies', collection: comment.children, as: :comment %>
   <% end %>
 <% end %>

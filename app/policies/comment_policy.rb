@@ -9,6 +9,10 @@ class CommentPolicy < PrivatePolicy
     edit?
   end
 
+  def reload?
+    true
+  end
+
   def destroy?
     edit?
   end

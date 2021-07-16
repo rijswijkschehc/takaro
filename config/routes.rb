@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   patch 'profile' => 'profile#update'
 
   resources :comments do
+    post :reload, on: :member
     resources :comments, module: :comments
   end
   resources :periods, only: %i[index show]

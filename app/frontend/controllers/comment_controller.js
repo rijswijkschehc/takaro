@@ -1,10 +1,10 @@
 import { Controller } from 'stimulus';
 
 export default class extends Controller {
-  static targets = ['form']
+  static targets = ['replyForm']
 
-  toggle(event) {
+  toggleReplyForm(event) {
     event.preventDefault();
-    this.formTarget.classList.toggle('d-none');
+    this.replyFormTarget.classList.toggle('d-none');
   }
 }

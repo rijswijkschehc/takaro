@@ -7,6 +7,12 @@ class CommentsController < PrivateController
 
   def edit; end
 
+  def reload
+    respond_to do |format|
+      format.turbo_stream
+    end
+  end
+
   def update
     if @comment.update(safe_params)
       redirect_to @comment

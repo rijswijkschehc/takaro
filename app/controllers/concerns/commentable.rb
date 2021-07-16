@@ -30,7 +30,7 @@ module Commentable
       h[:commentable] = @parent || @commentable
       h[:comment] = comment
       if @parent
-        h[:data] = { comment_reply_target: :form }
+        h[:data] = { comment_target: 'replyForm' }
         h[:class] = 'd-none' if @comment.persisted?
       end
     end
