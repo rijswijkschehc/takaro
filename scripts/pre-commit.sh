@@ -16,7 +16,7 @@ echo Run gherkin-lint
 yarn run gherkin-lint features
 
 echo Run Brakeman
-bin/brakeman
+bin/brakeman -q
 
 echo Run specs
 bin/rspec spec
