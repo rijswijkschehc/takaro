@@ -47,18 +47,18 @@
   </div>
 </div>
 
-<div class="row mb-3">
+<div class="row mb-1">
   <div class="col">
     <div class="card">
-      <h5 class="card-header"><%= _('Comments') %></h5>
+      <h5 class="card-header"><%= _('What do you think?') %></h5>
       <div class="card-body">
         <%= render partial: 'comments/form', locals: { commentable: @exercise, comment: Comment.new } %>
-
-        <%= turbo_stream_from @exercise, :comments %>
-        <%= tag.div(id: "#{dom_id(@exercise)}_comments") do %>
-          <%= render partial: 'comments/comment_with_replies', collection: @exercise.comments.roots, as: :comment %>
-        <% end %>
       </div>
     </div>
   </div>
 </div>
+
+<%= turbo_stream_from @exercise, :comments %>
+<%= tag.div(id: "#{dom_id(@exercise)}_comments") do %>
+  <%= render partial: 'comments/comment_with_replies', collection: @exercise.comments.roots, as: :comment %>
+<% end %>

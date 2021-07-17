@@ -1,9 +1,9 @@
 <%= turbo_stream_from comment, :comments %>
 
-<%= tag.div(class: 'ps-3 border-start', id: "#{dom_id(comment)}_with_comments", data: { controller: 'comment' }) do %>
+<%= comment_wrapper(comment: comment) do %>
   <%= render comment %>
 
-  <%= link_to _('Reply'), '#', data: { action: 'comment#toggleReplyForm' } %>
+  <%= link_to icon(id: 'reply'), '#', data: { action: 'comment#toggleReplyForm' } %>
   <%= tag.div(id: "#{dom_id(comment)}_comments") do %>
     <%= render partial: 'comments/form',
                locals: { commentable: comment,
