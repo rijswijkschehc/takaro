@@ -14,3 +14,5 @@
     <p class="lead"><%= @training.objective %></p>
   </div>
 </div>
+
+<%= render partial: 'comments', locals: { commentable: @training } %>

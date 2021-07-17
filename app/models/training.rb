@@ -2,6 +2,7 @@
 
 class Training < ApplicationRecord
   include AASM
+  include Commentable
 
   has_paper_trail only: %i[title objective step_id aasm_state]
 

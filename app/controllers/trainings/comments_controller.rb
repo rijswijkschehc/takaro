@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Exercises
+module Trainings
   class CommentsController < PrivateController
     include CommentableController
 
@@ -9,7 +9,7 @@ module Exercises
     private
 
     def set_commentable
-      @commentable = Exercise.find(params[:exercise_id])
+      @commentable = Training.find(params[:training_id])
     end
   end
 end

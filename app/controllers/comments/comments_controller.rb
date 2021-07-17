@@ -2,7 +2,7 @@
 
 module Comments
   class CommentsController < PrivateController
-    include Commentable
+    include CommentableController
 
     before_action :set_commentable
 

@@ -2,6 +2,7 @@
 
 class Exercise < ApplicationRecord
   include AASM
+  include Commentable
 
   has_paper_trail only: %i[aasm_state objective step_id title video]
   has_rich_text :description
@@ -9,7 +10,6 @@ class Exercise < ApplicationRecord
   has_rich_text :variation
 
   belongs_to :step
-  has_many :comments, as: :commentable, dependent: :destroy
   has_many :exercise_principles, dependent: :destroy
   has_many :exercise_techniques, dependent: :destroy
   has_many :principles, through: :exercise_principles

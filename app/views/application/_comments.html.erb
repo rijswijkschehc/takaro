@@ -1,0 +1,15 @@
+<div class="row mb-1">
+  <div class="col">
+    <div class="card">
+      <h5 class="card-header"><%= _('What do you think?') %></h5>
+      <div class="card-body">
+        <%= render partial: 'comments/form', locals: { commentable: commentable, comment: Comment.new } %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= turbo_stream_from commentable, :comments %>
+<%= tag.div(id: "#{dom_id(commentable)}_comments") do %>
+  <%= render partial: 'comments/comment_with_replies', collection: commentable.comments.roots, as: :comment %>
+<% end %>
