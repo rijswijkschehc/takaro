@@ -11,12 +11,19 @@
         <%= simple_form_for(current_user, url: profile_path, method: :patch, html: { class: nil }) do |f| %>
           <%= f.simple_fields_for(:profile) do |pf| %>
             <%= pf.input :screen_name %>
+            <div class="row">
+              <div class="col-4">
+                <%= pf.label :image, class: 'd-block' %>
+                <%= profile_image(user: current_user, size: 100, style: :circle) %>
+              </div>
+              <%= pf.input :image, label: false, wrapper_class: 'col-8 d-flex align-items-center' %>
+            </div>
           <% end %>
           <%= f.input :email %>
           <%= f.input :password %>
           <%= f.input :password_confirmation %>
           <%= f.input :current_password, hint: _('Required when you change your email address or password') %>
-          <%= f.submit class: 'btn btn-primary' %>
+          <%= f.submit _('Update profile'), class: 'btn btn-primary' %>
         <% end %>
       </div>
     </div>

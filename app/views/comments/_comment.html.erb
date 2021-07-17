@@ -1,30 +1,37 @@
 <%= turbo_stream_from comment %>
 <%= turbo_frame_tag comment do %>
-  <%= tag.div(class: 'd-flex justify-content-between align-items-center', data: { controller: 'comment' }) do %>
-    <div>
-      <%= link_to comment.creator.screen_name, '#' %>
-      <small>
-        <%= link_to "##{dom_id(comment)}" do %>
-          <%= tag.time(datetime: comment.created_at, data: { controller: 'time-ago' }) %>
-        <% end %>
-      </small>
+  <div class="row">
+    <div class="col-auto">
+      <%= profile_image(user: comment.creator, size: 50, style: :circle) %>
     </div>
-    <% if session? %>
-      <% if policy(comment).edit? %>
-        <div class="dropdown">
-          <button class="btn btn-sm btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"></button>
-          <ul class="dropdown-menu">
-            <li><%= link_to _('Edit'), edit_comment_path(comment), class: 'dropdown-item' %></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><%= link_to _('Delete'), comment_path(comment), method: :delete, class: 'dropdown-item text-danger', data: { confirm: _('Are you sure?') } %></li>
-          </ul>
+    <div class="col">
+      <%= tag.div(class: 'd-flex justify-content-between align-items-center', data: { controller: 'comment' }) do %>
+        <div>
+          <%= link_to comment.creator.screen_name, '#', class: 'link-unstyled fw-bold' %>
+          <small>
+            <%= link_to "##{dom_id(comment)}", class: 'link-unstyled' do %>
+              <%= tag.time(datetime: comment.created_at, data: { controller: 'time-ago' }) %>
+            <% end %>
+          </small>
         </div>
+        <% if session? %>
+          <% if policy(comment).edit? %>
+            <div class="dropdown">
+              <button class="btn btn-sm btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"></button>
+              <ul class="dropdown-menu">
+                <li><%= link_to _('Edit'), edit_comment_path(comment), class: 'dropdown-item' %></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><%= link_to _('Delete'), comment_path(comment), method: :delete, class: 'dropdown-item text-danger', data: { confirm: _('Are you sure?') } %></li>
+              </ul>
+            </div>
+          <% end %>
+        <% else %>
+          <%= button_to reload_comment_path(comment), class: 'btn btn-light' do %>
+            <%= icon(id: 'sync') %>
+          <% end %>
+        <% end %>
       <% end %>
-    <% else %>
-      <%= button_to reload_comment_path(comment), class: 'btn btn-light' do %>
-        <%= icon(id: 'sync') %>
-      <% end %>
-    <% end %>
-  <% end %>
-  <%= comment.content %>
+      <%= comment.content %>
+    </div>
+  </div>
 <% end %>

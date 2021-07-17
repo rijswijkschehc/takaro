@@ -72,7 +72,9 @@
               </li>
             <% end %>
             <li class="nav-item dropdown">
-              <%= link_to current_user.screen_name, '#', class: 'nav-link dropdown-toggle', data: { bs_toggle: 'dropdown' } %>
+              <%= link_to '#', class: 'nav-link dropdown-toggle', data: { bs_toggle: 'dropdown' } do %>
+                <%= profile_image(user: current_user, size: 23, style: :rounded) %>
+              <% end %>
               <ul class="dropdown-menu dropdown-menu-end">
                 <li><%= link_to _('Your profile'), profile_path, class: 'dropdown-item' %></li>
                 <li class="dropdown-divider"></li>
