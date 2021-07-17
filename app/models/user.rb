@@ -13,7 +13,7 @@ class User < ApplicationRecord
 
   accepts_nested_attributes_for :profile
 
-  delegate :image, to: :profile, prefix: true
+  delegate :image, to: :profile, prefix: true, allow_nil: true
 
   def screen_name
     profile&.screen_name || email.split('@').first

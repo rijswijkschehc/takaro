@@ -2,7 +2,7 @@
 
 module ProfileHelper
   def profile_image(user:, size:, style:)
-    if user.profile_image.attached?
+    if user.profile_image&.attached?
       uploaded_image(user: user, size: size, style: style)
     else
       default_image(size: size, style: style)
