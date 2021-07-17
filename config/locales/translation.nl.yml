@@ -342,3 +342,16 @@ nl:
         zal je binnen enkele ogenblikken een e-mail ontvangen met instructies hoe
         je je account kan ontgrendelen.
       unlocked: Je account is ontgrendeld. Je kan nu weer inloggen.
+  ancestry:
+    unknown_depth_option:
+    invalid_orphan_strategy:
+    invalid_ancestry_column:
+    reference_nonexistent_node:
+    conflicting_parent_id:
+    cannot_rebuild_depth_cache:
+    option_must_be_hash:
+    unknown_option:
+    named_scope_depth_cache:
+    exclude_self:
+    cannot_delete_descendants:
+    no_child_for_new_record:

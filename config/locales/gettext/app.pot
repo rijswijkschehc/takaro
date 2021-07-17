@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: takaro 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2021-07-08 01:19+0200\n"
-"PO-Revision-Date: 2021-07-08 01:19+0200\n"
+"POT-Creation-Date: 2021-07-17 16:11+0200\n"
+"PO-Revision-Date: 2021-07-17 16:11+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -73,7 +73,7 @@ msgstr ""
 msgid "Admin"
 msgstr ""
 
-#: ../../../app/controllers/application_controller.rb:9
+#: ../../../app/controllers/application_controller.rb:10
 #: ../../../app/views/layouts/private.html.erb:4
 #: ../../../app/views/layouts/private.html.erb:19
 #: ../../../app/views/layouts/private.html.erb:24
@@ -190,19 +190,23 @@ msgstr ""
 msgid "Roles"
 msgstr ""
 
-#: ../../../app/views/comments/_comment.html.erb:8
+#: ../../../app/views/application/_comments.html.erb:4
+msgid "What do you think?"
+msgstr ""
+
+#: ../../../app/views/comments/_comment.html.erb:17
 msgid "Edit"
 msgstr ""
 
-#: ../../../app/views/comments/_comment.html.erb:10
+#: ../../../app/views/comments/_comment.html.erb:19
 msgid "Delete"
 msgstr ""
 
-#: ../../../app/views/comments/_comment.html.erb:10
+#: ../../../app/views/comments/_comment.html.erb:19
 msgid "Are you sure?"
 msgstr ""
 
-#: ../../../app/views/comments/_form.html.erb:8
+#: ../../../app/views/comments/_form.html.erb:13
 msgid "cancel"
 msgstr ""
 
@@ -286,10 +290,6 @@ msgstr ""
 
 #: ../../../app/views/exercises/show.html.erb:40
 msgid "Variations"
-msgstr ""
-
-#: ../../../app/views/exercises/show.html.erb:53
-msgid "Comments"
 msgstr ""
 
 #: ../../../app/views/layouts/private.html.erb:36
