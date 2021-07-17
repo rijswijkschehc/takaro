@@ -9,7 +9,7 @@
     <div class="card">
       <div class="card-body">
         <%= simple_form_for(current_user, url: profile_path, method: :patch, html: { class: nil }) do |f| %>
-          <%= f.simple_fields_for(:person) do |pf| %>
+          <%= f.simple_fields_for(:profile) do |pf| %>
             <%= pf.input :screen_name %>
           <% end %>
           <%= f.input :email %>

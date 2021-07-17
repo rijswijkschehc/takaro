@@ -4,7 +4,7 @@ class ProfileController < PrivateController
   def show
     authorize(current_user)
 
-    current_user.build_person if current_user.person.nil?
+    current_user.build_profile if current_user.profile.nil?
   end
 
   def update
@@ -35,7 +35,7 @@ class ProfileController < PrivateController
 
   def safe_params
     params.require(:user).permit(:email, :current_password, :password, :password_confirmation,
-                                 person_attributes: %i[id screen_name])
+                                 profile_attributes: %i[id image screen_name])
   end
 
   def authorize_user

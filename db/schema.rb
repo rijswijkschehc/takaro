@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_13_155803) do
+ActiveRecord::Schema.define(version: 2021_07_17_212257) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -92,14 +92,6 @@ ActiveRecord::Schema.define(version: 2021_07_13_155803) do
     t.index ["step_id"], name: "index_exercises_on_step_id"
   end
 
-  create_table "people", force: :cascade do |t|
-    t.string "screen_name"
-    t.bigint "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_people_on_user_id"
-  end
-
   create_table "period_principles", force: :cascade do |t|
     t.bigint "period_id", null: false
     t.bigint "principle_id", null: false
@@ -147,6 +139,14 @@ ActiveRecord::Schema.define(version: 2021_07_13_155803) do
     t.bigint "possession_phase_id"
     t.integer "position"
     t.index ["possession_phase_id"], name: "index_principles_on_possession_phase_id"
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string "screen_name"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "roles", force: :cascade do |t|

@@ -4,7 +4,7 @@ Given 'a user named {string}' do |name|
   User.create(email: "#{name.downcase}@takaro.test",
               password: 'super-secret',
               confirmed_at: Time.current,
-              person_attributes: { screen_name: name })
+              profile_attributes: { screen_name: name })
 end
 
 Given 'an admin named {string}' do |name|

@@ -9,12 +9,14 @@ class User < ApplicationRecord
   has_paper_trail only: %i[email encrypted_password]
   rolify role_join_table_name: :user_roles
 
-  has_one :person, dependent: :destroy
+  has_one :profile, dependent: :destroy
 
-  accepts_nested_attributes_for :person
+  accepts_nested_attributes_for :profile
+
+  delegate :image, to: :profile, prefix: true
 
   def screen_name
-    person&.screen_name || email.split('@').first
+    profile&.screen_name || email.split('@').first
   end
 
   def role?(*roles)
