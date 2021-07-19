@@ -13,6 +13,9 @@
 
 <body>
 <div class="d-flex overflow-hidden">
+  <div aria-live="polite" aria-atomic="true" class="position-relative">
+    <div id="toasts" class="toast-container position-fixed top-0 end-0 p-3"></div>
+  </div>
   <div id="sidenav">
     <div id="sidenav-logo">
       <%= link_to authenticated_root_path do %>
