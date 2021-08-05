@@ -1,5 +1,4 @@
 import { Controller } from 'stimulus';
-import Rails from '@rails/ujs';
 import Sortable from 'sortablejs';
 
 export default class extends Controller {
@@ -18,11 +17,18 @@ export default class extends Controller {
 
   reposition(event) {
     const url = event.target.dataset.repositionPath;
-    const data = new FormData();
+    const data = {
+      id: event.item.dataset.id,
+      position: event.newIndex + 1,
+    };
 
-    data.set('id', event.item.dataset.id);
-    data.set('position', event.newIndex + 1);
-
-    Rails.ajax({ url, data, type: 'PATCH' });
+    fetch(url, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': document.querySelector('meta[name=csrf-token]').content,
+      },
+      body: JSON.stringify(data),
+    });
   }
 }
