@@ -41,5 +41,9 @@
 @include media-breakpoint-up(lg) {
   #sidenav {
     margin-left: 0;
+
+    &.collapse {
+      display: unset;
+    }
   }
 }
