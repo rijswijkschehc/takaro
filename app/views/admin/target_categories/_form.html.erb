@@ -1,4 +1,4 @@
-<%= simple_form_for([:admin, @target_category]) do |f| %>
+<%= simple_form_for([:admin, @target_category], data: { turbo: false }) do |f| %>
   <%= f.input :name %>
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>

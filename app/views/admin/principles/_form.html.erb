@@ -1,4 +1,4 @@
-<%= simple_form_for([:admin, @principle]) do |f| %>
+<%= simple_form_for([:admin, @principle], data: { turbo: false }) do |f| %>
   <%= f.input :name %>
   <%= f.association :possession_phase %>
   <%= f.input :tagline %>
