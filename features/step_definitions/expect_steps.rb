@@ -15,3 +15,7 @@ Then 'a validation error containing {string} is displayed' do |content|
                            with: { class: 'invalid-feedback' },
                            text: /#{content}/)
 end
+
+Then 'the user menu {does_or_not} contain the {string} link' do |does_or_not, link|
+  expect(page).public_send(does_or_not, have_selector('.navbar .dropdown-item', text: link))
+end

@@ -12,8 +12,16 @@ When 'the join page is shown' do
   visit new_user_registration_path
 end
 
+When 'the authenticated root page is shown' do
+  visit authenticated_root_path
+end
+
 When 'the admin users page is shown' do
   visit admin_users_path
+end
+
+When 'the admin equipment locations page is shown' do
+  visit admin_equipment_locations_path
 end
 
 When 'the profile page is shown' do

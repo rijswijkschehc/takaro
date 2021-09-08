@@ -19,3 +19,7 @@ Given '{string} is signed in' do |name|
   user = User.find_by(email: "#{name.downcase}@takaro.test")
   login_as(user)
 end
+
+Given 'an equipment location named {string}' do |name|
+  Equipment::Location.create(name: name)
+end
