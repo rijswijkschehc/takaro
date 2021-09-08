@@ -12,6 +12,10 @@ class PrivateController < ApplicationController
   end
 
   def constant_from_controller_name
-    controller_name.classify.constantize
+    [namespaces, controller_name.classify].join('::').constantize
+  end
+
+  def namespaces
+    self.class.module_parent.to_s.split('::').reject { |namespace| namespace == 'Admin' }.join('::')
   end
 end

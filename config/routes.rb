@@ -39,6 +39,11 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    namespace :equipment do
+      resources :locations
+      resources :locks
+    end
+    resource :equipment
     resources :periods
     resources :principles, concerns: %i[sortable]
     resources :techniques

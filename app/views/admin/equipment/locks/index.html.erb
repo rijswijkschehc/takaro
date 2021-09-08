@@ -1,0 +1,27 @@
+<div class="row page-header">
+  <div class="col-12 page-header-heading">
+    <h1><%= _('Locks') %></h1>
+    <%= link_to _('New lock'), new_admin_equipment_lock_path, class: 'btn btn-outline-primary' %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <table class="table">
+          <thead>
+          <tr>
+            <th><%= _('Number') %></th>
+            <th><%= _('Code') %></th>
+            <th><%= _('Location') %></th>
+          </tr>
+          </thead>
+          <tbody>
+          <%= render partial: 'lock', collection: @locks %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

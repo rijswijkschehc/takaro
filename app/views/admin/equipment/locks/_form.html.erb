@@ -1,0 +1,6 @@
+<%= simple_form_for([:admin, @lock], data: { turbo: false }) do |f| %>
+  <%= f.input :number %>
+  <%= f.input :code %>
+  <%= f.association :location %>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
