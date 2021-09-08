@@ -6,7 +6,7 @@ module Admin
       before_action { add_breadcrumb(_('Locations'), admin_equipment_locations_path) }
 
       def index
-        @locations = ::Equipment::Location.arrange
+        @locations = ::Equipment::Location.arrange(order: :name)
       end
 
       def new
