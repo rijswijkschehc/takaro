@@ -352,6 +352,6 @@ nl:
     option_must_be_hash:
     unknown_option:
     named_scope_depth_cache:
-    exclude_self:
+    exclude_self: "%{class_name} kan geen afstammeling van zichzelf zijn."
     cannot_delete_descendants:
     no_child_for_new_record:
