@@ -1,5 +1,5 @@
 <tr>
   <td><%= link_to lock.number, [:admin, lock] %></td>
   <td><%= lock.code %></td>
-  <td><%= lock.location.name %></td>
+  <td><%= lock.location&.name %></td>
 </tr>
