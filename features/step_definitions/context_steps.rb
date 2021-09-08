@@ -7,9 +7,11 @@ Given 'a user named {string}' do |name|
               profile_attributes: { screen_name: name })
 end
 
-Given 'an admin named {string}' do |name|
-  User.create(email: "#{name.downcase}@takaro.test", password: 'super-secret', confirmed_at: Time.current) do |user|
-    user.add_role(:administrator)
+Given 'a user named {string} with role(s):' do |name, table|
+  step "a user named '#{name}'"
+
+  User.find_by(email: "#{name.downcase}@takaro.test").tap do |user|
+    table.headers.each { |role| user.add_role(role) }
   end
 end
 
