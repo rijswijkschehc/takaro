@@ -7,5 +7,7 @@ module Equipment
     belongs_to :location, optional: true
 
     scope :unused, -> { where(location: nil) }
+
+    validates :number, uniqueness: true
   end
 end
