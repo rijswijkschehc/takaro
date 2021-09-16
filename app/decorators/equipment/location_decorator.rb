@@ -5,5 +5,9 @@ module Equipment
     delegate :name, :owner
 
     decorates_association :lock
+
+    def name_with_ancestry
+      model.path.pluck(:name).join(' / ')
+    end
   end
 end

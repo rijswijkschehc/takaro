@@ -2,6 +2,10 @@
 
 module Equipment
   class LockDecorator < ApplicationDecorator
+    delegate :code, :location, :number
+
+    decorates_association :location
+
     def number_and_code(link:)
       number = link ? h.link_to(model.number, h.admin_equipment_lock_path(model)) : model.number
       code = h.tag.code(model.code)
