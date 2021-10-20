@@ -20,6 +20,10 @@ Given '{string} is signed in' do |name|
   login_as(user)
 end
 
-Given 'an equipment location named {string}' do |name|
-  Equipment::Location.create(name: name)
+Given 'an equipment location named {string}' do |name_with_ancestry|
+  location = nil
+
+  name_with_ancestry.split('/').each do |name|
+    location = Equipment::Location.create(name: name.strip, parent: location)
+  end
 end

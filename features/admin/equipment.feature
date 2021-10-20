@@ -17,8 +17,8 @@ Feature: Admin Equipment
   Scenario: Get an overview of equipment locations
     Given a user named "Felix" with role:
       | equipment |
-    And an equipment location named "Garage 4 (rechts)"
+    And an equipment location named "Keepersgarage rechts / Locker 4"
     And "Felix" is signed in
     And the admin equipment locations page is shown
 
-    Then "Garage 4 (rechts)" is displayed
+    Then "Locker 4" is displayed
