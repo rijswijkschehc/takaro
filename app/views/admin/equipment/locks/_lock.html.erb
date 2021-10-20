@@ -1,5 +1,7 @@
 <tr>
   <td><%= link_to lock.number, [:admin, lock] %></td>
   <td><%= tag.code(lock.code) %></td>
-  <td><%= lock.location&.name_with_ancestry %></td>
+  <td>
+    <%= link_to(lock.location.name_with_ancestry, [:admin, lock.location]) if lock.location.present? %>
+  </td>
 </tr>
