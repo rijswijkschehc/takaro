@@ -4,6 +4,7 @@ module Admin
   module Equipment
     class LocationsController < EquipmentController
       before_action { add_breadcrumb(_('Locations'), admin_equipment_locations_path) }
+      before_action :set_location, only: %i[show update]
 
       def index
         @locations = ::Equipment::Location.arrange(order: :name)
@@ -23,13 +24,9 @@ module Admin
         end
       end
 
-      def show
-        @location = ::Equipment::Location.find(params[:id])
-      end
+      def show; end
 
       def update
-        @location = ::Equipment::Location.find(params[:id])
-
         if @location.update(safe_params)
           redirect_to admin_equipment_locations_path
         else
@@ -41,6 +38,10 @@ module Admin
 
       def safe_params
         params.require(:equipment_location).permit(:name, :owner, :parent_id)
+
+      def set_location
+        @location = ::Equipment::Location.find(params[:id])
+      end
       end
     end
   end
