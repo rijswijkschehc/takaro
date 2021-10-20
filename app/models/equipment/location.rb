@@ -8,7 +8,6 @@ module Equipment
     belongs_to :parent, class_name: 'Equipment::Location', optional: true
     has_one :lock, class_name: 'Equipment::Lock', dependent: :nullify
 
-    validates :name, presence: true,
-                     uniqueness: { scope: :ancestry }
+    validates :name, presence: true, format: { without: %r{/} }, uniqueness: { scope: :ancestry }
   end
 end
