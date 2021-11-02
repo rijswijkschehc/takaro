@@ -2,9 +2,9 @@
 
 module Admin
   class PrinciplesController < AdminController
-    before_action { add_breadcrumb(_('Principles'), admin_principles_path) }
-
     include Sortable
+
+    before_action { add_breadcrumb(_('Principles'), admin_principles_path) }
 
     def index
       @principles = Principle.order(:position)
