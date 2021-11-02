@@ -3,17 +3,21 @@
 <%= sortable_item(element: :li, item: current_location, class_list: %w[list-group-item]) do %>
   <div class="row">
     <div class="col-auto"><%= sortable_handle %></div>
-    <div class="col"><%= link_to current_location.name, admin_equipment_location_path(current_location) %></div>
-    <div class="col"><%= current_location.owner %></div>
-    <div class="col">
+    <div class="col d-flex align-items-center"><%= link_to current_location.name, admin_equipment_location_path(current_location) %></div>
+    <div class="col d-flex align-items-center"><%= current_location.owner %></div>
+    <div class="col d-flex align-items-center">
       <% if current_location.lock.present? %>
         <%= current_location.decorate.lock.number_and_code(link: true) %>
       <% end %>
     </div>
+    <% if children.present? %>
+      <div class="col-auto d-flex align-items-center"><%= link_to icon(id: 'plus'), "##{dom_id(current_location)}", data: { bs_toggle: 'collapse' } %></div>
+    <% end %>
   </div>
 
   <% if children.present? %>
-    <%= tag.ul(class: 'list-group',
+    <%= tag.ul(class: 'list-group collapse mt-2',
+               id: dom_id(current_location),
                data: { controller: 'sortable',
                        reposition_path: reposition_admin_equipment_locations_path }) do %>
       <% children.each do |child| %>
