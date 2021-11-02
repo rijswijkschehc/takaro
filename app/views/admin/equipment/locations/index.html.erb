@@ -9,11 +9,13 @@
   <div class="col">
     <div class="card">
       <div class="card-body">
-        <ul class="list-group">
+        <%= tag.ul(class: 'list-group',
+                   data: { controller: 'sortable',
+                           reposition_path: reposition_admin_equipment_locations_path }) do %>
           <% @locations.each do |location| %>
             <%= render partial: 'location', locals: { location: location } %>
           <% end %>
-        </ul>
+        <% end %>
       </div>
     </div>
   </div>

@@ -3,12 +3,14 @@
 module Admin
   module Equipment
     class LocationsController < EquipmentController
+      include Sortable
+
       before_action { add_breadcrumb(_('Locations'), admin_equipment_locations_path) }
       before_action :set_location, only: %i[show update]
       before_action :set_available_locks, only: %i[new show update]
 
       def index
-        @locations = ::Equipment::Location.includes(:lock).arrange(order: :name)
+        @locations = ::Equipment::Location.includes(:lock).arrange(order: %i[position name])
       end
 
       def new

@@ -10,6 +10,6 @@ module Sortable
   private
 
   def record
-    controller_name.classify.constantize.find(params[:id])
+    controller_path.gsub('admin/', '').classify.constantize.find(params[:id])
   end
 end

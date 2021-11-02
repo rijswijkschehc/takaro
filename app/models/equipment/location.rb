@@ -2,6 +2,7 @@
 
 module Equipment
   class Location < ApplicationRecord
+    acts_as_list
     has_ancestry orphan_strategy: :restrict
     has_paper_trail only: %i[name ancestry owner]
 

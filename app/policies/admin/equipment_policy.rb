@@ -26,6 +26,10 @@ module Admin
       user.has_role?(:equipment) || super
     end
 
+    def reposition?
+      update?
+    end
+
     def destroy?
       user.has_role?(:equipment) || super
     end

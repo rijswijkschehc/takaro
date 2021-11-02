@@ -40,7 +40,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     namespace :equipment do
-      resources :locations
+      resources :locations, concerns: %i[sortable]
       resources :locks
     end
     resource :equipment
