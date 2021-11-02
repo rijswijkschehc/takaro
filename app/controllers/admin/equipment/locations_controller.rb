@@ -5,9 +5,10 @@ module Admin
     class LocationsController < EquipmentController
       before_action { add_breadcrumb(_('Locations'), admin_equipment_locations_path) }
       before_action :set_location, only: %i[show update]
+      before_action :set_available_locks, only: %i[new show update]
 
       def index
-        @locations = ::Equipment::Location.arrange(order: :name)
+        @locations = ::Equipment::Location.includes(:lock).arrange(order: :name)
       end
 
       def new
@@ -37,11 +38,15 @@ module Admin
       private
 
       def safe_params
-        params.require(:equipment_location).permit(:name, :owner, :parent_id)
+        params.require(:equipment_location).permit(:lock_id, :name, :owner, :parent_id)
+      end
 
       def set_location
         @location = ::Equipment::Location.find(params[:id])
       end
+
+      def set_available_locks
+        @available_locks = ::Equipment::Lock.available(@location).order(:number)
       end
     end
   end

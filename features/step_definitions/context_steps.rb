@@ -23,7 +23,11 @@ end
 Given 'an equipment location named {string}' do |name_with_ancestry|
   location = nil
 
-  name_with_ancestry.split('/').each do |name|
-    location = Equipment::Location.create(name: name.strip, parent: location)
+  name_with_ancestry.split(' / ').each do |name|
+    location = Equipment::Location.create(name: name, parent: location)
   end
+end
+
+Given 'an equipment lock with number {int} and code {string}' do |number, code|
+  Equipment::Lock.create(number: number, code: code)
 end

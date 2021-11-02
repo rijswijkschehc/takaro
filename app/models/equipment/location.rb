@@ -9,5 +9,13 @@ module Equipment
     has_one :lock, class_name: 'Equipment::Lock', dependent: :nullify
 
     validates :name, presence: true, format: { without: %r{/} }, uniqueness: { scope: :ancestry }
+
+    def lock_id
+      lock&.id
+    end
+
+    def lock_id=(value)
+      self.lock = Lock.find(value) if value.present?
+    end
   end
 end

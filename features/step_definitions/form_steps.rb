@@ -4,6 +4,10 @@ When 'the user fills {string} in with {string}' do |input, value|
   fill_in input, with: value
 end
 
+When 'the user selects {string} for {string}' do |value, input|
+  select value, from: input
+end
+
 When 'the user submits the form with:' do |table|
   table.rows_hash.each do |field, value|
     fill_in field, with: value

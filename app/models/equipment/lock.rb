@@ -6,7 +6,7 @@ module Equipment
 
     belongs_to :location, optional: true
 
-    scope :unused, -> { where(location: nil) }
+    scope :available, ->(location) { where(location: [nil, location.id]) }
 
     validates :number, uniqueness: true
   end

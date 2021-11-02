@@ -2,5 +2,6 @@
   <%= f.input :name %>
   <%= f.input :owner %>
   <%= f.association :parent %>
+  <%= f.input :lock_id, collection: @available_locks, label_method: :number %>
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>
