@@ -4,7 +4,7 @@ class TrainingsController < PrivateController
   before_action { add_breadcrumb(_('Trainings'), trainings_path) }
 
   def index
-    @trainings = Training.all.decorate
+    @trainings = Training.all
   end
 
   def new
@@ -22,7 +22,7 @@ class TrainingsController < PrivateController
   end
 
   def show
-    @training = Training.find(params[:id]).decorate
+    @training = Training.find(params[:id])
 
     add_breadcrumb(@training.title)
   end

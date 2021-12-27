@@ -6,7 +6,7 @@ module Admin
       before_action { add_breadcrumb(_('Locks'), admin_equipment_locks_path) }
 
       def index
-        @locks = ::Equipment::Lock.order(:number).decorate
+        @locks = ::Equipment::Lock.order(:number)
       end
 
       def new

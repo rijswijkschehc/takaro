@@ -22,7 +22,7 @@ class ExercisesController < PrivateController
   end
 
   def show
-    @exercise = Exercise.includes(comments: :rich_text_content).find(params[:id]).decorate
+    @exercise = Exercise.includes(comments: :rich_text_content).find(params[:id])
 
     add_breadcrumb(@exercise.title)
   end

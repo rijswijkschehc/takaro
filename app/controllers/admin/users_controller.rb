@@ -5,7 +5,7 @@ module Admin
     before_action { add_breadcrumb(_('Users'), admin_users_path) }
 
     def index
-      @users = User.all.decorate
+      @users = User.all
     end
   end
 end

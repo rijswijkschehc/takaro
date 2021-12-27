@@ -3,14 +3,14 @@
     <h1>
       <%= icon(id: 'dumbbell') %>
       <%= @exercise.title %>
-      <% if policy(@exercise.model).edit? %>
+      <% if policy(@exercise).edit? %>
         <%= link_to icon(id: 'edit'), edit_exercise_path(@exercise) %>
       <% end %>
     </h1>
   </div>
   <div class="col-12">
-    <%= @exercise.step.badge %>
-    <%= safe_join(@exercise.principles.map(&:badge)) %>
+    <%= @exercise.decorate.step.badge %>
+    <%= safe_join(@exercise.decorate.principles.map(&:badge)) %>
     <p class="lead"><%= @exercise.objective %></p>
   </div>
 </div>
