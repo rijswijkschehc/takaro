@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Given 'a user named {string}' do |name|
-  User.create(email: "#{name.downcase}@takaro.test",
+  User.create(email: "#{name.parameterize}@takaro.test",
               password: 'super-secret',
               confirmed_at: Time.current,
               profile_attributes: { screen_name: name })
@@ -10,13 +10,12 @@ end
 Given 'a user named {string} with role(s):' do |name, table|
   step "a user named '#{name}'"
 
-  User.find_by(email: "#{name.downcase}@takaro.test").tap do |user|
+  User.find_by(email: "#{name.parameterize}@takaro.test").tap do |user|
     table.headers.each { |role| user.add_role(role) }
   end
 end
 
-Given '{string} is signed in' do |name|
-  user = User.find_by(email: "#{name.downcase}@takaro.test")
+Given '{user} is signed in' do |user|
   login_as(user)
 end
 

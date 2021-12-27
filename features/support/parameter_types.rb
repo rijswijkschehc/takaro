@@ -15,3 +15,7 @@ ParameterType(name: 'location',
 ParameterType(name: 'period',
               regexp: /(?:period)?\s*"([^"]+)"/,
               transformer: ->(name) { Period.find_by(name: name) })
+
+ParameterType(name: 'user',
+              regexp: /(?:user)?\s*"([^"]+)"/,
+              transformer: ->(name) { User.find_by(email: "#{name.parameterize}@takaro.test") })
