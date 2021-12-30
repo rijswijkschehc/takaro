@@ -62,7 +62,8 @@ group :development, :test do
 end
 
 group :test do
-  gem 'cucumber-rails', '~> 2.4', require: false
+  gem 'apparition', github: 'twalpole/apparition', ref: 'ca86be4d54af835d531dbcd2b86e7b2c77f85f34'
+  gem 'cucumber-rails', '~> 2.4'
   gem 'database_cleaner-active_record', '~> 2.0'
   gem 'matrix', '~> 0.4', require: false
   gem 'selenium-webdriver', '4.0.0.beta4'
