@@ -10,7 +10,7 @@
   </div>
   <div class="col-12">
     <%= @training.decorate.step.badge %>
-    <%= safe_join(@training.principles.map(&:badge)) %>
+    <%= safe_join(@training.decorate.principles.map(&:badge)) %>
     <p class="lead"><%= @training.objective %></p>
   </div>
 </div>
