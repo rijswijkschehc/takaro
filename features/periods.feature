@@ -1,6 +1,6 @@
 Feature: Periods
 
-  Scenario: Show the periods
+  Scenario: Show the period
     Given a user named "Joost"
     And a period named "Somewhere in the season"
     And "Joost" is signed in
