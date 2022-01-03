@@ -59,4 +59,3 @@ end
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
 World Warden::Test::Helpers
-World FactoryBot::Syntax::Methods
