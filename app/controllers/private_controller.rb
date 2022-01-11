@@ -16,6 +16,10 @@ class PrivateController < ApplicationController
   end
 
   def namespaces
-    self.class.module_parent.to_s.split('::').reject { |namespace| namespace == 'Admin' }.join('::')
+    rejectable_namespaces = %w[Admin Comments Exercises Trainings]
+
+    self.class.module_parent.to_s.split('::').reject do |namespace|
+      rejectable_namespaces.include?(namespace)
+    end.join('::')
   end
 end
