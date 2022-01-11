@@ -19,6 +19,5 @@ class Principle < ApplicationRecord
   validates :hex_color, presence: true, length: { is: 6 }
   validates :icon, presence: true
   validates :name, presence: true
-  validates :possession_phase, presence: true
   validates :tagline, presence: true
 end

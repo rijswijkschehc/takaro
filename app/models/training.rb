@@ -12,7 +12,6 @@ class Training < ApplicationRecord
 
   validates :title, presence: true
   validates :objective, presence: true
-  validates :step, presence: true
 
   aasm do
     state :draft, initial: true

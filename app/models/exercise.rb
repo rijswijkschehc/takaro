@@ -18,7 +18,6 @@ class Exercise < ApplicationRecord
   validates :aasm_state, presence: true
   validates :description, presence: true
   validates :objective, presence: true
-  validates :step, presence: true
   validates :tips, presence: true
   validates :variation, presence: true
 

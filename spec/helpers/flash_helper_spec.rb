@@ -15,9 +15,7 @@ RSpec.describe FlashHelper do
 
       it 'returns the flash message' do
         expect(helper.render_flash_messages)
-          .to have_tag('div',
-                       with: { class: %(alert alert-success) },
-                       text: 'It works')
+          .to have_selector('div.alert.alert-success', text: 'It works')
       end
     end
 
@@ -30,16 +28,12 @@ RSpec.describe FlashHelper do
 
       it 'returns the success flash messages' do
         expect(helper.render_flash_messages)
-          .to have_tag('div',
-                       with: { class: %(alert alert-success) },
-                       text: 'It works')
+          .to have_selector('div.alert.alert-success', text: 'It works')
       end
 
       it 'returns the danger flash messages' do
         expect(helper.render_flash_messages)
-          .to have_tag('div',
-                       with: { class: %(alert alert-danger) },
-                       text: 'This is serious')
+          .to have_selector('div.alert.alert-danger', text: 'This is serious')
       end
     end
 
@@ -50,8 +44,7 @@ RSpec.describe FlashHelper do
       end
 
       it 'returns the link with the alert-link class' do
-        expect(helper.render_flash_messages)
-          .to have_tag('a', with: { class: 'alert-link' })
+        expect(helper.render_flash_messages).to have_selector('a.alert-link')
       end
     end
 
@@ -63,9 +56,7 @@ RSpec.describe FlashHelper do
 
       it 'returns the flash message' do
         expect(helper.render_flash_messages)
-          .to have_tag('div',
-                       with: { class: %(alert alert-info) },
-                       text: 'A devise message')
+          .to have_selector('div.alert.alert-info', text: 'A devise message')
       end
     end
   end

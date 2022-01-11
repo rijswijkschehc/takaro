@@ -8,5 +8,4 @@ class Profile < ApplicationRecord
   has_one_attached :image
 
   validates :screen_name, presence: true, length: { maximum: 50 }
-  validates :user, presence: true
 end

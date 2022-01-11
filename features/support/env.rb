@@ -58,6 +58,5 @@ end
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
-World RSpecHtmlMatchers
 World Warden::Test::Helpers
 World FactoryBot::Syntax::Methods

@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.2'
+ruby '3.1.0'
 
 gem 'aasm', '~> 5.2'
 gem 'acts_as_list', '~> 1.0'
@@ -17,6 +17,9 @@ gem 'hotwire-rails', '~> 0.1'
 gem 'image_processing', '~> 1.12'
 gem 'lograge', '~> 0.11'
 gem 'memoist', '~> 0.16'
+gem 'net-imap', '~> 0.2'
+gem 'net-pop', '~> 0.1'
+gem 'net-smtp', '~> 0.3'
 gem 'paper_trail', '~> 12.0'
 gem 'pg', '~> 1.1'
 gem 'pry-rails', '~> 0.3'
@@ -44,10 +47,10 @@ group :development do
   gem 'listen', '~> 3.3'
   gem 'pry-rescue', '~> 1.5'
   gem 'rails-erd', '~> 1.6'
-  gem 'rubocop', '~> 1.20', require: false
-  gem 'rubocop-performance', '~> 1.11', require: false
-  gem 'rubocop-rails', '~> 2.11', require: false
-  gem 'rubocop-rspec', '~> 2.4', require: false
+  gem 'rubocop', '~> 1.24', require: false
+  gem 'rubocop-performance', '~> 1.13', require: false
+  gem 'rubocop-rails', '~> 2.13', require: false
+  gem 'rubocop-rspec', '~> 2.7', require: false
   gem 'spring'
 end
 
@@ -59,9 +62,9 @@ group :development, :test do
 end
 
 group :test do
-  gem 'cucumber-rails', '~> 2.2', require: false
+  gem 'cucumber-rails', '~> 2.4', require: false
   gem 'database_cleaner-active_record', '~> 2.0'
-  gem 'rspec-html-matchers', '~> 0.9'
+  gem 'matrix', '~> 0.4', require: false
   gem 'selenium-webdriver', '4.0.0.beta4'
   gem 'shoulda-matchers', '~> 5.0'
   gem 'simplecov', require: false
