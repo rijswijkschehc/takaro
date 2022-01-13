@@ -62,6 +62,7 @@ group :development, :test do
 end
 
 group :test do
+  # Because of: https://github.com/twalpole/apparition/issues/80
   gem 'apparition', github: 'twalpole/apparition', ref: 'ca86be4d54af835d531dbcd2b86e7b2c77f85f34'
   gem 'cucumber-rails', '~> 2.4'
   gem 'database_cleaner-active_record', '~> 2.0'
