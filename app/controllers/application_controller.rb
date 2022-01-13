@@ -7,7 +7,6 @@ class ApplicationController < ActionController::Base
 
   layout -> { user_signed_in? ? 'private' : 'public' }
 
-  before_action { add_breadcrumb(_('RHC playing style')) }
   before_action :set_paper_trail_whodunnit
   before_action :set_locale
 

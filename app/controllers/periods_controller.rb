@@ -14,4 +14,10 @@ class PeriodsController < PrivateController
 
     add_breadcrumb(@period.name)
   end
+
+  private
+
+  def authorize_user
+    authorize(@period || Period)
+  end
 end

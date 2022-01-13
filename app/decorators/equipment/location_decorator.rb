@@ -6,6 +6,10 @@ module Equipment
 
     decorates_association :lock
 
+    def breadcrumb_name
+      name
+    end
+
     def name_with_ancestry
       model.path.pluck(:name).join(' / ')
     end

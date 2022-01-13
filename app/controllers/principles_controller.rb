@@ -14,4 +14,10 @@ class PrinciplesController < PrivateController
 
     add_breadcrumb(@principle.name)
   end
+
+  private
+
+  def authorize_user
+    authorize(@principle || Principle)
+  end
 end

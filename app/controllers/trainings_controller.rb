@@ -50,4 +50,8 @@ class TrainingsController < PrivateController
   def safe_params
     params.require(:training).permit(:objective, :step_id, :title, principle_ids: [])
   end
+
+  def authorize_user
+    authorize(@training || Training)
+  end
 end

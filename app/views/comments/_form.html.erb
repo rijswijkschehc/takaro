@@ -1,4 +1,4 @@
-<% records = [local_assigns[:commentable], comment].compact %>
+<% records = [local_assigns[:commentable], local_assigns[:comment]].compact %>
 
 <%= simple_form_for(records,
                     data: local_assigns[:data],

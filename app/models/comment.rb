@@ -23,6 +23,6 @@ class Comment < ApplicationRecord
 
   after_destroy_commit do
     broadcast_remove_to(self)
-    broadcast_action_to self, action: :remove, target: "#{dom_id(self)}_with_comments"
+    broadcast_action_to(self, action: :remove, target: "#{dom_id(self)}_with_comments")
   end
 end

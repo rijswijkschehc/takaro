@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 class CommentsController < PrivateController
-  before_action :set_comment
+  extend Memoist
+
+  helper_method :comment, :commentable
 
   def show; end
 
@@ -14,15 +16,15 @@ class CommentsController < PrivateController
   end
 
   def update
-    if @comment.update(safe_params)
-      redirect_to @comment
+    if comment.update(safe_params)
+      redirect_to comment
     else
       render :edit, status: :unprocessable_entity
     end
   end
 
   def destroy
-    @comment.destroy
+    comment.destroy
 
     respond_to do |format|
       format.turbo_stream
@@ -31,11 +33,21 @@ class CommentsController < PrivateController
 
   private
 
-  def set_comment
-    @comment = Comment.find(params[:id])
+  def comment
+    Comment.find(params[:id])
   end
+  memoize :comment
+
+  def commentable
+    comment.commentable
+  end
+  memoize :commentable
 
   def safe_params
     params.require(:comment).permit(:content)
+  end
+
+  def authorize_user
+    authorize(comment)
   end
 end

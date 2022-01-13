@@ -7,5 +7,11 @@ module Admin
     def index
       @users = User.all
     end
+
+    private
+
+    def model
+      User
+    end
   end
 end

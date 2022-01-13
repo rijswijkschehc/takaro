@@ -12,6 +12,7 @@ class Principle < ApplicationRecord
   has_many :exercises, through: :exercise_principles
   has_many :period_principles, dependent: :destroy
   has_many :principle_steps, dependent: :destroy
+  has_many :trainings, dependent: :restrict_with_exception
 
   accepts_nested_attributes_for :principle_steps
 

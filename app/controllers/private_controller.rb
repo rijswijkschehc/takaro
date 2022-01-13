@@ -4,22 +4,4 @@ class PrivateController < ApplicationController
   before_action :authenticate_user!
   before_action :authorize_user
   after_action :verify_authorized
-
-  private
-
-  def authorize_user
-    authorize(constant_from_controller_name)
-  end
-
-  def constant_from_controller_name
-    [namespaces, controller_name.classify].join('::').constantize
-  end
-
-  def namespaces
-    rejectable_namespaces = %w[Admin Comments Exercises Trainings]
-
-    self.class.module_parent.to_s.split('::').reject do |namespace|
-      rejectable_namespaces.include?(namespace)
-    end.join('::')
-  end
 end

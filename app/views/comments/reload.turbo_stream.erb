@@ -1,5 +1,5 @@
 <%= turbo_stream.replace(
-     "#{dom_id(@comment)}_with_comments",
+     "#{dom_id(comment)}_with_comments",
      partial: 'comment_with_replies',
-     locals: { comment: @comment }
+     locals: { comment: comment }
    ) %>

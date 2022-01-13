@@ -2,14 +2,18 @@
 
 module Exercises
   class CommentsController < PrivateController
+    extend Memoist
     include CommentableController
-
-    before_action :set_commentable
 
     private
 
-    def set_commentable
-      @commentable = Exercise.find(params[:exercise_id])
+    def authorize_user
+      authorize(commentable, :show?)
     end
+
+    def commentable
+      Exercise.find(params[:exercise_id])
+    end
+    memoize :commentable
   end
 end

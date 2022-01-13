@@ -33,7 +33,7 @@
         </h6>
         <div class="ps-3 mb-3">
           <%= @exercise.tips %>
-          <%= safe_join(@exercise.techniques.map(&:badge)) %>
+          <%= safe_join(@exercise.decorate.techniques.map(&:badge)) %>
         </div>
         <h6>
           <%= icon(id: 'tachometer-alt', fixed: true) %>
