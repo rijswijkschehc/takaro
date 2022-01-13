@@ -1,0 +1,8 @@
+nl:
+  activerecord:
+    models:
+      equipment/location:
+        one: locatie
+        other: locaties
+  admin: beheer
+  equipment: materiaal
