@@ -14,15 +14,6 @@ Feature: Admin Equipment
 
     Then the user menu does contain the "Equipment" link
 
-  Scenario: Get an overview of equipment locations
-    Given a user named "Felix" with role:
-      | equipment |
-    And an equipment location named "Keepersgarage rechts / Locker 4"
-    And "Felix" is signed in
-    And the admin equipment locations page is shown
-
-    Then "Locker 4" is displayed
-
   Scenario: Add a lock to a location
     Given a user named "Felix" with role:
       | equipment |
