@@ -12,6 +12,7 @@ class AdminController < PrivateController
 
   def create
     if record.save
+      flash[:info] = format(_('%<model_name>s created successfully'), model_name: model_name)
       redirect_to(action: :index)
     else
       render :new
@@ -55,6 +56,10 @@ class AdminController < PrivateController
     end
   end
   memoize :record
+
+  def model_name
+    I18n.t("activerecord.models.#{record.model_name.i18n_key}", count: 1).upcase_first
+  end
 
   def authorize_user
     authorize((record || model), policy_class: "Admin::#{model}Policy".constantize)
