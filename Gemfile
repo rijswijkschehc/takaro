@@ -26,7 +26,7 @@ gem 'pry-rails', '~> 0.3'
 gem 'pry-stack_explorer', '~> 0.6'
 gem 'puma', '~> 5.0'
 gem 'pundit', '~> 2.1'
-gem 'rails', '~> 6.1'
+gem 'rails', '~> 7.0'
 gem 'rolify', '~> 6.0'
 gem 'sentry-rails', '~> 4.5'
 gem 'sentry-ruby', '~> 4.5'
@@ -46,7 +46,8 @@ group :development do
   gem 'guard-rubocop', '~> 1.4', require: false
   gem 'listen', '~> 3.3'
   gem 'pry-rescue', '~> 1.5'
-  gem 'rails-erd', '~> 1.6'
+  # rails-erd does not support Rails 7 just yet
+  # gem 'rails-erd', '~> 1.6'
   gem 'rubocop', '~> 1.24', require: false
   gem 'rubocop-performance', '~> 1.13', require: false
   gem 'rubocop-rails', '~> 2.13', require: false
@@ -55,7 +56,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'bullet', '~> 6.1'
+  gem 'bullet', '~> 7.0'
   gem 'factory_bot_rails', '~> 6.2'
   gem 'fuubar', '~> 2.5'
   gem 'rspec-rails', '~> 5.0'
@@ -64,7 +65,8 @@ end
 group :test do
   # Because of: https://github.com/twalpole/apparition/issues/80
   gem 'apparition', github: 'twalpole/apparition', ref: 'ca86be4d54af835d531dbcd2b86e7b2c77f85f34'
-  gem 'cucumber-rails', '~> 2.4'
+  # cucumber-rails 2.4 does not support Rails 7 just yet
+  gem 'cucumber-rails', '~> 2.4', github: 'rijswijkschehc/cucumber-rails'
   gem 'database_cleaner-active_record', '~> 2.0'
   gem 'matrix', '~> 0.4', require: false
   gem 'selenium-webdriver', '4.0.0.beta4'
