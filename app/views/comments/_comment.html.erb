@@ -14,7 +14,7 @@
             <% end %>
           </small>
         </div>
-        <% if session? %>
+        <% if session.exists? %>
           <% if policy(comment).edit? %>
             <div class="dropdown">
               <button class="btn btn-sm btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"></button>
