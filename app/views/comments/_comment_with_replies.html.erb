@@ -3,13 +3,15 @@
 <%= comment_wrapper(comment: comment) do %>
   <%= render comment %>
 
-  <%= link_to icon(id: 'reply'), '#', data: { action: 'comment#toggleReplyForm' } %>
-  <%= tag.div(id: "#{dom_id(comment)}_comments") do %>
-    <%= render partial: 'comments/form',
-               locals: { commentable: comment,
-                         comment: Comment.new,
-                         class: 'd-none',
-                         data: { comment_target: 'replyForm' } } %>
+  <% if session.enabled? %>
+    <%= link_to icon(id: 'reply'), '#', data: { action: 'comment#toggleReplyForm' } %>
+    <%= tag.div(id: "#{dom_id(comment)}_comments") do %>
+      <%= render partial: 'comments/form',
+                 locals: { commentable: comment,
+                           comment: Comment.new,
+                           class: 'd-none',
+                           data: { comment_target: 'replyForm' } } %>
+    <% end %>
     <%= render partial: 'comments/comment_with_replies', collection: comment.children, as: :comment %>
   <% end %>
 <% end %>
