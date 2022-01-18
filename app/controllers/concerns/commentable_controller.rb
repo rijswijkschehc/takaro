@@ -10,7 +10,7 @@ module CommentableController
 
     respond_to do |format|
       format.turbo_stream do
-        render turbo_stream: stream_comment_form(comment: response_comment)
+        render turbo_stream: stream_comment_form(comment: response_comment, clear: comment.persisted?)
       end
     end
   end
@@ -21,21 +21,21 @@ module CommentableController
     params.require(:comment).permit(:content)
   end
 
-  def stream_comment_form(comment:)
+  def stream_comment_form(comment:, clear:)
     turbo_stream.replace(
       helpers.combined_dom_id(parent || commentable, comment),
       partial: 'comments/form',
-      locals: locals(comment: comment)
+      locals: locals(comment: comment, clear: clear)
     )
   end
 
-  def locals(comment:)
+  def locals(comment:, clear:)
     {}.tap do |h|
       h[:commentable] = parent || commentable
       h[:comment] = comment
       if parent
         h[:data] = { comment_target: 'replyForm' }
-        h[:class] = 'd-none' if comment.persisted?
+        h[:class] = 'd-none' if clear
       end
     end
   end
