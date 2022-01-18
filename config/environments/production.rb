@@ -35,6 +35,8 @@ Rails.application.configure do
 
   config.active_storage.service = :amazon
 
+  config.action_controller.default_url_options = { host: 'rhc-takaro.herokuapp.com' }
+
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
