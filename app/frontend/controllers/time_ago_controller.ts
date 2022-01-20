@@ -1,7 +1,7 @@
 import { Controller } from 'stimulus';
 import { register, format } from 'timeago.js';
 
-const localeFunc = (number, index) => [
+const localeFunc = (number: number, index: number): [string, string] => [
   ['zojuist', 'nu'],
   ['%s seconden geleden', 'over %s seconden'],
   ['1 minuut geleden', 'over 1 minuut'],
@@ -16,12 +16,12 @@ const localeFunc = (number, index) => [
   ['%s maanden geleden', 'over %s maanden'],
   ['1 jaar geleden', 'over 1 jaar'],
   ['%s jaar geleden', 'over %s jaar'],
-][index];
+][index] as [string, string];
 
 register('nl', localeFunc);
 
 export default class extends Controller {
   connect() {
-    this.element.textContent = format(this.element.dateTime, 'nl', { minInterval: 60 });
+    this.element.textContent = format((this.element as HTMLTimeElement).dateTime, 'nl', { minInterval: 60 });
   }
 }

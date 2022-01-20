@@ -7,7 +7,7 @@ echo Run ERB Lint
 bin/erblint app/views
 
 echo Run eslint
-yarn run eslint app/frontend config/webpack
+yarn lint
 
 echo Run stylelint
 yarn run stylelint "app/frontend/stylesheets/**/*.scss"

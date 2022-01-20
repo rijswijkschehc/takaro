@@ -36,7 +36,7 @@ jobs:
       - name: Run ERB Lint
         run: bin/erblint app/views
       - name: Run eslint
-        run: yarn run eslint --color app/frontend config/webpack
+        run: yarn lint
       - name: Run stylelint
         run: yarn run stylelint --color "app/frontend/stylesheets/**/*.scss"
       - name: Run gherkin-lint

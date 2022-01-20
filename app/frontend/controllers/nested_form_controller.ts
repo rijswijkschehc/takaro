@@ -3,10 +3,13 @@ import { Controller } from 'stimulus';
 export default class extends Controller {
   static targets = ['target', 'template']
 
+  targetTarget: HTMLElement
+  templateTarget: HTMLElement
+
   addAssociation(event) {
     event.preventDefault();
 
-    const content = this.templateTarget.innerHTML.replace(/TEMPLATE/g, new Date().getTime());
+    const content = this.templateTarget.innerHTML.replace(/TEMPLATE/g, new Date().getTime().toString());
     this.targetTarget.insertAdjacentHTML('beforebegin', content);
   }
 
