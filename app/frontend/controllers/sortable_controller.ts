@@ -2,7 +2,7 @@ import { Controller } from 'stimulus';
 import Sortable from 'sortablejs';
 
 export default class extends Controller {
-  sortable: Sortable
+  sortable: Sortable;
 
   connect() {
     this.sortable = new Sortable((this.element as HTMLElement), {
