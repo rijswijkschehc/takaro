@@ -66,8 +66,7 @@ end
 group :test do
   # Because of: https://github.com/twalpole/apparition/issues/80
   gem 'apparition', github: 'twalpole/apparition', ref: 'ca86be4d54af835d531dbcd2b86e7b2c77f85f34'
-  # cucumber-rails 2.4 does not support Rails 7 just yet
-  gem 'cucumber-rails', '~> 2.4', github: 'rijswijkschehc/cucumber-rails'
+  gem 'cucumber-rails', '~> 2.5', require: false
   gem 'database_cleaner-active_record', '~> 2.0'
   gem 'matrix', '~> 0.4', require: false
   gem 'selenium-webdriver', '4.0.0.beta4'

@@ -1,17 +1,4 @@
 GIT
-  remote: https://github.com/rijswijkschehc/cucumber-rails.git
-  revision: f84f9a886e66b9f958f3fe3b186fea77c3cbca4d
-  specs:
-    cucumber-rails (2.4.0)
-      capybara (>= 2.18, < 4)
-      cucumber (>= 3.2, < 8)
-      mime-types (~> 3.3)
-      nokogiri (~> 1.10)
-      railties (>= 5.0, < 7.1)
-      rexml (~> 3.0)
-      webrick (~> 1.7)
-
-GIT
   remote: https://github.com/twalpole/apparition.git
   revision: ca86be4d54af835d531dbcd2b86e7b2c77f85f34
   ref: ca86be4d54af835d531dbcd2b86e7b2c77f85f34
@@ -167,10 +154,10 @@ GEM
       mime-types (~> 3.3, >= 3.3.1)
       multi_test (~> 0.1, >= 0.1.2)
       sys-uname (~> 1.2, >= 1.2.2)
-    cucumber-core (10.1.0)
+    cucumber-core (10.1.1)
       cucumber-gherkin (~> 22.0, >= 22.0.0)
       cucumber-messages (~> 17.1, >= 17.1.1)
-      cucumber-tag-expressions (~> 4.0, >= 4.0.2)
+      cucumber-tag-expressions (~> 4.1, >= 4.1.0)
     cucumber-create-meta (6.0.4)
       cucumber-messages (~> 17.1, >= 17.1.1)
       sys-uname (~> 1.2, >= 1.2.2)
@@ -180,6 +167,14 @@ GEM
     cucumber-html-formatter (17.0.0)
       cucumber-messages (~> 17.1, >= 17.1.0)
     cucumber-messages (17.1.1)
+    cucumber-rails (2.5.1)
+      capybara (>= 2.18, < 4)
+      cucumber (>= 3.2, < 8)
+      mime-types (~> 3.3)
+      nokogiri (~> 1.10)
+      railties (>= 5.0, < 8)
+      rexml (~> 3.0)
+      webrick (~> 1.7)
     cucumber-tag-expressions (4.1.0)
     cucumber-wire (6.2.1)
       cucumber-core (~> 10.1, >= 10.1.0)
@@ -548,7 +543,7 @@ DEPENDENCIES
   bootsnap (>= 1.4)
   brakeman (~> 5.0)
   bullet (~> 7.0)
-  cucumber-rails (~> 2.4)!
+  cucumber-rails (~> 2.5)
   database_cleaner-active_record (~> 2.0)
   devise (~> 4.8)
   devise-i18n (~> 1.9)
