@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   resources :periods, only: %i[index show]
   resources :principles, only: %i[index show]
   resources :steps, only: %i[index]
+  resources :teams, only: %i[show]
   resources :trainings do
     resources :comments, module: :trainings
   end

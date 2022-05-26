@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_02_141232) do
+ActiveRecord::Schema.define(version: 2022_05_26_102453) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -112,6 +112,12 @@ ActiveRecord::Schema.define(version: 2021_11_02_141232) do
     t.index ["step_id"], name: "index_exercises_on_step_id"
   end
 
+  create_table "people", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "period_principles", force: :cascade do |t|
     t.bigint "period_id", null: false
     t.bigint "principle_id", null: false
@@ -131,6 +137,15 @@ ActiveRecord::Schema.define(version: 2021_11_02_141232) do
     t.datetime "updated_at", precision: 6, null: false
     t.date "starts_on"
     t.date "ends_on"
+  end
+
+  create_table "person_user_connections", force: :cascade do |t|
+    t.bigint "person_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["person_id"], name: "index_person_user_connections_on_person_id"
+    t.index ["user_id"], name: "index_person_user_connections_on_user_id"
   end
 
   create_table "possession_phases", force: :cascade do |t|
@@ -204,6 +219,21 @@ ActiveRecord::Schema.define(version: 2021_11_02_141232) do
   end
 
   create_table "target_categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "team_members", force: :cascade do |t|
+    t.bigint "person_id", null: false
+    t.bigint "team_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["person_id"], name: "index_team_members_on_person_id"
+    t.index ["team_id"], name: "index_team_members_on_team_id"
+  end
+
+  create_table "teams", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -292,4 +322,8 @@ ActiveRecord::Schema.define(version: 2021_11_02_141232) do
   add_foreign_key "exercises", "steps"
   add_foreign_key "period_principles", "periods"
   add_foreign_key "period_principles", "principles"
+  add_foreign_key "person_user_connections", "people"
+  add_foreign_key "person_user_connections", "users"
+  add_foreign_key "team_members", "people"
+  add_foreign_key "team_members", "teams"
 end

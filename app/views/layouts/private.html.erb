@@ -80,6 +80,9 @@
               <% end %>
               <ul class="dropdown-menu dropdown-menu-end">
                 <li><%= link_to _('Your profile'), profile_path, class: 'dropdown-item' %></li>
+                <% current_user.teams.each do |team| %>
+                  <li><%= link_to team.name, team, class: 'dropdown-item' %></li>
+                <% end %>
                 <% if policy([:admin, :equipment]).show? %>
                   <li class="dropdown-divider"></li>
                   <li><%= link_to _('Equipment'), admin_equipment_path, class: 'dropdown-item' %></li>

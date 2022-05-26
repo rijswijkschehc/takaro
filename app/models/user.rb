@@ -10,6 +10,9 @@ class User < ApplicationRecord
   rolify role_join_table_name: :user_roles
 
   has_one :profile, dependent: :destroy
+  has_many :person_user_connections, dependent: :destroy
+  has_many :people, through: :person_user_connections
+  has_many :teams, through: :people
 
   accepts_nested_attributes_for :profile
 
