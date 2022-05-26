@@ -49,10 +49,10 @@ group :development do
   gem 'pry-rescue', '~> 1.5'
   # rails-erd does not support Rails 7 just yet
   # gem 'rails-erd', '~> 1.6'
-  gem 'rubocop', '~> 1.24', require: false
-  gem 'rubocop-performance', '~> 1.13', require: false
-  gem 'rubocop-rails', '~> 2.13', require: false
-  gem 'rubocop-rspec', '~> 2.7', require: false
+  gem 'rubocop', '~> 1.30', require: false
+  gem 'rubocop-performance', '~> 1.14', require: false
+  gem 'rubocop-rails', '~> 2.14', require: false
+  gem 'rubocop-rspec', '~> 2.11', require: false
   gem 'spring'
 end
 

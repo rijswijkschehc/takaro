@@ -34,7 +34,7 @@ group :red_green_refactor, halt_on_fail: true do
   end
 
   guard 'rubocop', all_on_start: false, cli: %w[--format fuubar] do
-    watch /.+\.rb$/
+    watch(/.+\.rb$/)
     watch(%r{(?:.+/)?\.rubocop(?:_todo)?\.yml$}) { |m| File.dirname(m[0]) }
   end
 end
