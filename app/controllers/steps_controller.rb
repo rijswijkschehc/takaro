@@ -6,10 +6,4 @@ class StepsController < PrivateController
   def index
     @steps = Step.order(:position)
   end
-
-  private
-
-  def authorize_user
-    authorize(@step || Step)
-  end
 end
