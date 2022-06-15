@@ -2,7 +2,9 @@
 
 <%= sortable_item(element: :li, item: current_location, class_list: %w[list-group-item]) do %>
   <div class="row">
-    <div class="col-auto"><%= sortable_handle %></div>
+    <% if params[:reorder] == 'true' %>
+      <div class="col-auto"><%= sortable_handle %></div>
+    <% end %>
     <div class="col d-flex align-items-center"><%= link_to current_location.name, admin_equipment_location_path(current_location) %></div>
     <div class="col d-flex align-items-center"><%= current_location.owner %></div>
     <div class="col d-flex align-items-center">
